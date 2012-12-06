@@ -1,8 +1,11 @@
 Taller de MapProxy
 =============================================
 
-Contents:
-
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
+   presentacion.rst
+   instalacion-configuracion.rst
+   casos-de-uso.rst
+   ejercicios/index.rst
+   referencias.rst
