@@ -118,8 +118,32 @@ biblioteca de *webmapping* `OpenLayers <http://www.openlayers.org>`_.
 .. note:: Para apagar el servidor de pruebas se debe pulsar la combinación de
 					teclas ``Control+C``.
 
+Finalmente, podemos comprobar cómo el servidor ha guardado algunas teselas al
+visitar la demostración en la carpeta ``confs/test/cache_data`` que podemos ver
+desde la consola si navegamos hasta esa carpeta y ejecutamos el comando
+``tree``.::
+
+  $ tree -d -L 3
+  .
+  └── osm_cache_EPSG900913
+      ├── 01
+      │   └── 000
+      ├── 03
+      │   └── 000
+      ├── 05
+      │   └── 000
+      ├── 07
+      │   └── 000
+      └── tile_locks
+
+Como vemos ha creado una carpeta para la *cache* de la capa ``osm`` y una
+estructura de carpetas donde se almacenan las imágenes.
+
+.. attention:: ¿Qué tamaño tienen las imágenes? ¿En qué formato están?
+
+
 Configuración
 --------------------
 
 
-
+.. warning:: Por hacer

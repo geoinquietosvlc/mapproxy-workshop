@@ -1,0 +1,77 @@
+services:
+  demo:
+  kml:
+  tms:
+  wmts:
+  wms:
+    srs: ['EPSG:3857', 'EPSG:900913', 'EPSG:4258', 'EPSG:4326', 'EPSG:25831']
+    image_formats: ['image/jpeg', 'image/png']
+    md:
+      # metadata used in capabilities documents
+      title: Taller MapProxy
+      abstract: Ejercicio de aceleración de WMS y OSM con MapProxy
+      online_resource: http://localhost:8080/service
+      contact:
+        person: Pedro-Juan Ferrer y Jorge Sanz
+        position: Facilitadores
+        organization: Geoinquietos Valencia
+        email: pferrer@osgeo.org y jsanz@osgeo.org
+      access_constraints:
+        Este servicio tiene únicamente objetivos educativos.
+      fees: 'None'
+
+layers:
+  - name: orto5m-icc
+    title: Ortofoto 1:5000 del ICC de la zona de Girona
+    sources: [icc_cache]
+  - name: osm
+    title: Teselas Open Streetmap de Girona
+    sources: [osm_cache]
+    
+caches:
+  icc_cache:
+    grids: [GLOBAL_MERCATOR, GLOBAL_GEODETIC,utm_girona]
+    sources: [icc_wms]
+  osm_cache:
+    sources: [osm_tiles_girona] 
+    format: image/png
+
+sources:
+  icc_wms:
+    type: wms
+    req:
+      url: http://shagrat.icc.es/lizardtech/iserv/ows
+      layers: orto5m
+    supported_srs: ['EPSG:4326', 'EPSG:25831']
+    coverage:
+      bbox: [2.67,41.88,2.97,42.07]
+      bbox_srs: 'EPSG:4326'
+
+  osm_tiles_girona:
+    type: tile
+    url: http://c.tile.openstreetmap.org/%(tms_path)s.%(format)s
+    grid: osm
+    coverage:
+      bbox: [2.67,41.88,2.97,42.07]
+      bbox_srs: 'EPSG:4326'
+
+grids:
+  utm_girona:
+    srs: 'EPSG:25831'
+    bbox: [2.67,41.88,2.97,42.07]
+    bbox_srs: 'EPSG:4326'
+    min_res: 2000 
+    max_res: .5 
+    align_resolutions_with: GLOBAL_MERCATOR
+  osm:
+    srs: 'EPSG:900913'
+    origin: 'nw'
+
+globals:
+  cache:
+    base_dir: 'cache_data'
+    lock_dir: 'cache_data/locks'
+
+  image:
+      resampling_method: bilinear
+      jpeg_quality: 90
