@@ -1,19 +1,19 @@
 Propuesta TALLER: Introducción a MapProxy y configuración básica
 ====================================================
 
-Facilitadores: 
+Facilitadores:
 ---------------------------
 
-Ferrer Matoses, Pedro -Juan 
+Ferrer Matoses, Pedro -Juan
 Sanz Salinas, Jorge Gaspar
 
-Nivel: Básico 
+Nivel: Básico
 ---------------------------
 
 Los asistentes deberán conocer conceptos básicos del servicio WMS, manejo básico
 de consola linux (cambiar de carpeta, listar contenidos).
 
-Descripción: 
+Descripción:
 ---------------------------
 
 MapProxy es un servidor de teselas y proxy WMS Open Source, acelera las
@@ -32,54 +32,53 @@ En la segunda parte del taller se revisarán algunos casos de uso de la
 aplicación y se realizarán ejercicios que resuelvan algunas de las dudas más
 frecuentes a la hora de empezar a usar este software.
 
-Aplicaciones necesarias: 
+Aplicaciones necesarias:
 ------------------------------------------
 
 SO Linux de Escritorio basado en Debian/Ubuntu con los siguientes paquetes
 instalados:
 
 
-- Navegador web 
-- Consola 
-- Editor de ficheros (gedit sirve pero vim its a
-  win!!!) 
+- Navegador web
+- Consola
+- Editor de ficheros (gedit sirve pero vim its a win!!!)
 - Algunas librerías de desarrollo y componentes Python
 
-Materiales necesarios: 
+Materiales necesarios:
 ------------------------------------------
 
 
-- Equipo con máquina virtual y conexión a internet 
+- Equipo con máquina virtual y conexión a internet
 - Documentación del taller
 
 
-Programa 
+Programa
 ---------------------------------
 
-Bloque Presentación: 
+Bloque Presentación:
 +++++++++++++++++++++++
 
-#. Agenda 
-#. Mover a los no linuxeros 
+#. Agenda
+#. Mover a los no linuxeros
 #. Introducción de Mapproxy
-#. Origenes del proyecto    
+#. Origenes del proyecto
 #. A donde va
 
 (~30 min)
 
-Bloque Instalación: 
+Bloque Instalación:
 ++++++++++++++++++++++++++
 
-#. Entornos virtuales en Python 
-#. Crear el “venv” 
-#. Instalar componentes 
-#. Archivo de configuración 
-#. Ejecución del servidor de desarrollo 
+#. Entornos virtuales en Python
+#. Crear el “venv”
+#. Instalar componentes
+#. Archivo de configuración
+#. Ejecución del servidor de desarrollo
 #. Ejercicio de instalación
 
 (~45 min)
 
-Bloque Configuración de MapProxy: 
+Bloque Configuración de MapProxy:
 +++++++++++++++++++++++++++++++++++
 
 #. Los archivos de configuración (servicio y seeding)
@@ -99,7 +98,7 @@ entrar en detalle que eso se hace luego) los siguientes puntos
    #. Estructura en árbol
 
 #. Caché -> Grid y Source
-#. Source -> Origenes soportados por MP 
+#. Source -> Origenes soportados por MP
 #. Grids ->
 #. Globals -> Importante dónde se guarda la caché
 

@@ -27,13 +27,13 @@ layers:
   - name: osm
     title: Teselas Open Streetmap de Girona
     sources: [osm_cache]
-    
+
 caches:
   icc_cache:
     grids: [GLOBAL_MERCATOR, GLOBAL_GEODETIC,utm_girona]
     sources: [icc_wms]
   osm_cache:
-    sources: [osm_tiles_girona] 
+    sources: [osm_tiles_girona]
     format: image/png
 
 sources:
@@ -49,7 +49,7 @@ sources:
 
   osm_tiles_girona:
     type: tile
-    url: http://c.tile.openstreetmap.org/%(tms_path)s.%(format)s
+    url: http://tile.openstreetmap.org/%(tms_path)s.%(format)s
     grid: osm
     coverage:
       bbox: [2.67,41.88,2.97,42.07]
@@ -60,8 +60,8 @@ grids:
     srs: 'EPSG:25831'
     bbox: [2.67,41.88,2.97,42.07]
     bbox_srs: 'EPSG:4326'
-    min_res: 2000 
-    max_res: .5 
+    min_res: 2000
+    max_res: .5
     align_resolutions_with: GLOBAL_MERCATOR
   osm:
     srs: 'EPSG:900913'

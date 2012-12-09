@@ -28,15 +28,15 @@ ofrecerse además de en estos dos sistemas de referencia y también en el más
 estándar ``EPSG:3857`` y también en UTM31N, es decir en ``EPSG:25831``.
 
 .. tip:: Resulta conveniente definir en el origen los dos sistemas de
-         coordenadas soportados por el servidor WMS ``EPSG:4326`` y 
-         ``EPSG:2581``. 
-         
-.. attention:: Con esta configuración recomendada, ¿qué *cache* se rellenará 
-               al pedir teselas en el sistema ``EPSG:900913``? ¿Sabrías decir 
+         coordenadas soportados por el servidor WMS ``EPSG:4326`` y
+         ``EPSG:2581``.
+
+.. attention:: Con esta configuración recomendada, ¿qué *cache* se rellenará
+               al pedir teselas en el sistema ``EPSG:900913``? ¿Sabrías decir
                por qué?
 
-Como nuestros técnicos usan a menido cartografía en coordenadas UTM, sería
-interesante que crearas una *cache* expresamente para ese sistema de coordenadas
+Como nuestros técnicos usan a menudo cartografía en coordenadas UTM, sería
+interesante que crearas una *cache* expresamente para ese sistema de coordenadas,
 de forma que MapProxy no tenga que reproyectar las teselas todo el tiempo.
 
 Segunda parte: cachear las teselas de OpenStreetMap
@@ -51,5 +51,5 @@ El ejercicio consiste en añadir a nuestro servicio para la zona de Girona una
 nueva capa con las teselas de OSM. Para ello definiremos una nueva capa, un
 nuevo servicio, una nueva *cache* y un nuevo *grid* de acuerdo a las
 especificaciones de OSM. Podemos usar como base la configuración que ofrece el
-proyecto en su `wiki <http://wiki.openstreetmap.org/wiki/Mappproxy_setup>`_.
+proyecto en su `wiki <http://wiki.openstreetmap.org/wiki/MapProxy_setup>`_.
 

@@ -1,0 +1,38 @@
+seeds:
+  gerona:
+    caches: [osm_cache]
+    grids: [GLOBAL_MERCATOR]
+    coverages: [gerona1]
+    levels:
+      from: 1
+      to: 10
+#     refresh_before:
+#       time: 2010-10-21T12:35:00
+
+
+# cleanups:
+#   clean1:
+#     caches: [osm_cache]
+#     grids: [GLOBAL_MERCATOR]
+#     remove_before:
+#       days: 7
+#       hours: 3
+#     levels: [2,3,5,7]
+
+  # clean2:
+  #   caches: [osm_roads]
+  #   grids: [GLOBAL_MERCATOR]
+  #   coverages: [germany, austria, switzerland]
+  #   remove_before:
+  #     time: 2011-01-31T12:00:00
+  #   levels:
+  #     from: 11
+  #     to: 14
+
+coverages:
+  gerona1:
+    bbox: [2.67,41.88,2.97,42.07]
+    bbox_srs: "EPSG:4326"
+  gerona2:
+    bbox: [7.90,16.61,7.95,16.65]
+    bbox_srs: "EPSG:4326"
