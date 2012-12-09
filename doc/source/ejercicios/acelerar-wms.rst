@@ -48,6 +48,13 @@ interesante que crearas una *cache* expresamente para ese sistema de coordenadas
 de forma que MapProxy no tenga que reproyectar las teselas todo el tiempo.
 
 
+.. figure:: /_static/exercise-wms1.png
+	 :width: 50%
+	 :alt: TMS de la ortofoto del ICC
+	 :align: center
+
+	 TMS de la ortofoto del ICC 
+
 Tercera parte: cachear las teselas de OpenStreetMap
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -61,4 +68,11 @@ nueva capa con las teselas de OSM. Para ello definiremos una nueva capa, un
 nuevo servicio, una nueva *cache* y un nuevo *grid* de acuerdo a las
 especificaciones de OSM. Podemos usar como base la configuración que ofrece el
 proyecto en su `wiki <http://wiki.openstreetmap.org/wiki/MapProxy_setup>`_.
+
+.. figure:: /_static/exercise-wms2.png
+	 :width: 50%
+	 :alt: WMS de OpenStreetMap servido en UTM 31N
+	 :align: center
+
+	 WMS de OpenStreetMap servido en UTM 31N 
 

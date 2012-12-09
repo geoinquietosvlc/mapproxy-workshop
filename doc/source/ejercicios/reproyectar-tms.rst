@@ -1,2 +1,0 @@
-Ejercicio: Reproyectar un TMS
------------------------------------
