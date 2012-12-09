@@ -12,22 +12,25 @@ services:
       abstract: Ejercicio de aceleración de WMS y OSM con MapProxy
       online_resource: http://localhost:8080/service
       contact:
-        person: Pedro-Juan Ferrer y Jorge Sanz
+        person: Pedro-Juan Ferrer, Iván Sánchez y Jorge Sanz
         position: Facilitadores
         organization: Geoinquietos Valencia
-        email: pferrer@osgeo.org y jsanz@osgeo.org
+        email: pferrer@osgeo.org , jsanz@osgeo.org y ivan@sanchezortega.es
       access_constraints:
         Este servicio tiene únicamente objetivos educativos.
       fees: 'None'
 
 layers:
+  - name: orto5m-icc-proxy
+    title: Ortofoto 1:5000 del ICC de la zona de Girona
+    sources: [icc_wms]
   - name: orto5m-icc
     title: Ortofoto 1:5000 del ICC de la zona de Girona
     sources: [icc_cache]
   - name: osm
     title: Teselas Open Streetmap de Girona
     sources: [osm_cache]
-    
+
 caches:
   icc_cache:
     grids: [GLOBAL_MERCATOR, GLOBAL_GEODETIC,utm_girona]
@@ -64,6 +67,7 @@ grids:
     max_res: .5 
     align_resolutions_with: GLOBAL_MERCATOR
   osm:
+    base: GLOBAL_MERCATOR
     srs: 'EPSG:900913'
     origin: 'nw'
 
