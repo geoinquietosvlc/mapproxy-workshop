@@ -26,16 +26,22 @@ vacía porque el elemento es obligatorio). La cache ha configurar es de tipo
 *mbtiles* y hay que indicar la ubicación del fichero que habrá que dejar en la
 carpeta ``cache_data``.
 
-.. tip:: Puede ser buena idea en este caso ofrecer una única capa en el servicio
-         WMS que agrupe tanto la capa de ortofoto como la de parkings para tener
-         de forma sencilla un visor de toda la información de forma conjunta,
-         aunque una *cache* esté ya generada y la de las ortofotos la
-         gestionemos de otra forma.
-
-
 .. figure:: /_static/exercise-mbtiles.png
 	 :width: 50%
 	 :alt: TMS de la capa de *parkings* diseñada en TileMill 
 	 :align: center
 
 	 TMS de la capa de *parkings* diseñada en TileMill 
+
+
+En la siguiente figura se muestran las dos capas accedidas por separado desde un
+cliente GIS de escritorio (QGis) en el que se ha establecido una transparencia
+del 50% a la capa de ortofoto de tal forma que las zonas de aparcamiento se
+visualizan de forma más efectiva.
+
+.. figure:: /_static/exercise-mbtiles2.png
+	 :width: 50%
+	 :alt:  Acceso a las dos capas desde QGis
+	 :align: center
+
+	 Acceso a las dos capas mediante WMS
