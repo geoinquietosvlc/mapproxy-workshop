@@ -33,7 +33,7 @@ Primero vamos a descargar los materiales del taller. En el home del usuario
 ejecutar::
 
   $ git clone https://github.com/geoinquietosvlc/mapproxy-workshop.git
-  $ wget -Omapproxy-workshop/mapproxy-workshop.pdf "http://bit.ly/mapproxy-workshop"
+  $ wget -O mapproxy-workshop/mapproxy-workshop.pdf "http://bit.ly/mapproxy-workshop"
 
 Con esto tendremos una nueva carpeta ``mapproxy-worksop`` con el documento pdf
 del taller así como los ejercicios resueltos, etc.
