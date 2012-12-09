@@ -11,13 +11,13 @@ Instalar paquetes iniciales::
 
   $ sudo apt-get install git tree python-virtualenv
 
-.. note:: Las líneas de esta documentación que comiencen con el símbolo 
+.. note:: Las líneas de esta documentación que comiencen con el símbolo
           del dólar indican instrucciones a ejecutar en una consola
           del sistema, **sin incluir el dólar**.
 
 Instalar dependencias de MapProxy::
 
-  $ sudo apt-get install sudo aptitude install python-imaging \ 
+  $ sudo apt-get install python-imaging \
     python-yaml libproj0 libgeos-dev python-lxml libgdal-dev \
     python-shapely build-essential python-dev libjpeg-dev \
     zlib1g-dev libfreetype6-dev
@@ -42,12 +42,12 @@ Moverse a la carpeta creada y crear el entorno virtual con::
 
   $ virtualenv venv
 
-Activar el entorno virtual con:: 
+Activar el entorno virtual con::
 
   $ source venv/bin/activate
 
 .. note:: Una vez activado el entorno virtual nos aparecerá entre paréntesis en
-          el símbolo del sistema el nombre del mismo. Se indica igualmente 
+          el símbolo del sistema el nombre del mismo. Se indica igualmente
           en estas instrucciones para recordarlo.
 
 Instalar la librería de tratamiento de imágenes PIL con::
@@ -63,7 +63,7 @@ instrucción ``mapproxy-util``::
 
   (venv)$ mapproxy-util --version
   MapProxy 1.5.0
-  
+
 Crear un proyecto de demostración
 +++++++++++++++++++++++++++++++++++++++++++
 
@@ -76,7 +76,7 @@ MapProxy incorpora para diferentes tareas ``mapproxy-util``.::
 	(venv)$ mapproxy-util create -t base-config test
 	writing test/mapproxy.yaml
 	writing test/seed.yaml
- 
+
 Esta instrucción ha creado la carpeta ``test`` y dentro de ella dos ficheros de
 configuración que veremos en la siguiente parte del taller. El fichero
 ``mapproxy.yaml`` configura el servidor de teselas y ``seed.yaml`` las tareas de
