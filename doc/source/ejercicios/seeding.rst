@@ -2,7 +2,6 @@ Ejercicio: *seeding* y borrado de *caches*
 --------------------------------------------
 
 
-
 Sembrar una caché
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -24,32 +23,50 @@ La tarea más sencilla es lanzar *una* **tarea** de sembrado *un* **cache** en *
 Hay que recordar que la caché es siempre una pirámide de imágenes, y que su extensión y niveles de zoom vienen referidos por el *grid* del *mapproxy.yaml*. Por eso, cuando se siembra una caché, se hace referencia a los niveles de zoom de esta pirámide.
 
 
-Primero queremos sembrar la caché de la capa de OpenStreetMap, en la zona de Gerona. Para hacer esto, escribid un fichero *seed.yaml* que contenga una tarea de sembrado que haga referencia a la *cache* apropiada y a una cobertura con el bounding box de Gerona, para niveles de zoom del 1 al 14.
+Primero queremos sembrar la caché de la capa de OpenStreetMap, en la zona de Gerona. Para hacer esto, escribid un fichero *seed.yaml* que contenga una tarea de sembrado que haga referencia a la *cache* apropiada y a una cobertura con el bounding box de Gerona, para niveles de zoom del 1 al 10.
 
-
+A continuación puedes crear una tarea de caché de la capa de la ortofoto para el grid UTM, para niveles de zoom del 1 al 7 y el mismo *coverage*.
 
 
 Limpiando cachés
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+Para asegurar que solo tenemos la caché de los datos que se usan en la oficina, vamos a crear una tarea de limpieza que borre los datos a partir del nivel 8 de la cache de la ortofoto del ICC en coordenadas UTM, pero solo aquellas teselas que tengan más de **1 semana**, **2 días**, **3 horas** y **4 minutos**.
+
+De esta forma mantenemos los niveles superiores pero nos deshacemos de aquellas teselas que no se visitan desde hace un tiempo.
 
 
+Comprobación
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+Si ejecutamos el comando ``mapproxy-seed`` pasando como parámetro la opción ``--summary`` obtendremos el siguiente resumen de las tareas ce sembrado y limpieza de teselas.
 
+::
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	========== Seeding tasks ==========
+	  girona_osm:
+	    Seeding cache 'osm_cache' with grid 'GLOBAL_MERCATOR' in EPSG:900913
+	    Limited to: 2.67000, 41.88000, 2.97000, 42.07000 (EPSG:4326)
+	    Levels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+	    Overwriting: no tiles
+	  girona_icc:
+	    Seeding cache 'icc_cache' with grid 'utm_girona' in EPSG:25831
+	    Limited to: 2.66902, 41.87953, 2.97009, 42.07047 (EPSG:4326)
+	    Levels: [1, 2, 3, 4, 5, 6, 7]
+	    Overwriting: no tiles
+	========== Cleanup tasks ==========
+	  girona:
+	    Cleaning up cache 'icc_cache' with grid 'GLOBAL_MERCATOR' in EPSG:900913
+	    Limited to: 2.67000, 41.88000, 2.97000, 42.07000 (EPSG:4326)
+	    Levels: [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+	    Remove: tiles older than 2013-01-25 15:20:58
+	  girona:
+	    Cleaning up cache 'icc_cache' with grid 'GLOBAL_GEODETIC' in EPSG:4326
+	    Limited to: 2.67000, 41.88000, 2.97000, 42.07000 (EPSG:4326)
+	    Levels: [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+	    Remove: tiles older than 2013-01-25 15:20:58
+	  girona:
+	    Cleaning up cache 'icc_cache' with grid 'utm_girona' in EPSG:25831
+	    Limited to: 2.66902, 41.87953, 2.97009, 42.07047 (EPSG:4326)
+	    Levels: [8, 9, 10, 11]
+	    Remove: tiles older than 2013-01-25 15:20:58
