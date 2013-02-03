@@ -11,8 +11,8 @@ Facilitadores:
 
 * Iván Sanchez `@realivansanchez <http://twitter.com/realivansanchez>`_ ivan@sanchezortega.es
 
- * PHPDev en Omnium SI
- * Más geofriki aún si cabe
+  * PHPDev en Omnium SI
+  * Más geofriki aún si cabe
 
 * Jorge Sanz `@xurxosanz <http://twitter.com/xurxosanz>`_ jsanz@osgeo.org
 
@@ -44,7 +44,6 @@ Un poco más sobre MapProxy
 
 * Es FOSS desde 2010
 
-* Actualmente está en el proceso previo a la `incubación en OSGeo <http://osgeo.org/incubator>`_
 
 Pero ¿para qué sirve?
 ---------------------------
@@ -73,7 +72,8 @@ Algunos casos de uso:
 ¿Cómo funciona?
 ---------------------------
 
-A través de scripts de configuración escritos en `YAML <http://http://www.yaml.org>`_.
+Se trata de un software de servidor que se configura a través de scripts 
+escritos en `YAML <http://http://www.yaml.org>`_.
 
 .. code-block:: yaml
     
@@ -98,5 +98,3 @@ A través de scripts de configuración escritos en `YAML <http://http://www.yaml
           access_constraints:
             Este servicio tiene únicamente objetivos educativos.
           fees: 'None'
-
-
