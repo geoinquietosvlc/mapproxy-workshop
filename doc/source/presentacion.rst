@@ -11,8 +11,8 @@ Facilitadores:
 
 * Iván Sanchez `@realivansanchez <http://twitter.com/realivansanchez>`_ ivan@sanchezortega.es
 
-  * PHPDev en Omnium SI
-  * Más geofriki aún si cabe
+ * PHPDev en Omnium SI
+ * Más geofriki aún si cabe
 
 * Jorge Sanz `@xurxosanz <http://twitter.com/xurxosanz>`_ jsanz@osgeo.org
 

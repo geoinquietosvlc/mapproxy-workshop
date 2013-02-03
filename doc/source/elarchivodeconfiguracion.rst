@@ -1,5 +1,5 @@
-El archivo de configuración
-=================================
+El archivo de configuración mappproxy.yaml
+=============================================
 
 Introducción
 ---------------------------------
@@ -76,7 +76,7 @@ Para el presente taller utilizaremos el servicio *wms* que se configura indicand
             Este servicio tiene únicamente objetivos educativos.
           fees: 'None'
 
-Puede encontrarse una descripción más completa de las claves y opciones de los servicios en `la correspondiente página de documentación de MapProxy <http://mapproxy.org/docs/1.5.0/services.html>`_
+Puede encontrarse una descripción más completa de las claves y opciones de los servicios en `la página de documentación de services de MapProxy <http://mapproxy.org/docs/1.5.0/services.html>`_
 
 layers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -94,7 +94,7 @@ La información mínima que se requiere es el nombre (**name**) como identificad
         sources: [icc_wms]
 
 
-Puede encontrarse más información sobre las capas así como otros parámetros configurables de las mismas en `la sección de configuración de la documentación de MapProxy <http://mapproxy.org/docs/1.5.0/configuration.html#layers>`_
+Puede encontrarse más información sobre las capas así como otros parámetros configurables de las mismas en `la sección de layers de la página de configuración de la documentación de MapProxy <http://mapproxy.org/docs/1.5.0/configuration.html#layers>`_
 
 caches
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -108,7 +108,7 @@ En *caches* se configuran la información de la que se va a almacenar copias en 
         grids: [utm_girona]
         sources: [osm_wms]
 
-Puede encontrarse más información sobre las caches así como otros parámetros configurables de los mismos en `la sección de configuración de la documentación de MapProxy <http://mapproxy.org/docs/1.5.0/configuration.html#caches>`_
+Puede encontrarse más información sobre las caches así como otros parámetros configurables de los mismos en `la sección de caches de la página de configuración de la documentación de MapProxy <http://mapproxy.org/docs/1.5.0/configuration.html#caches>`_
 
 sources
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -128,10 +128,14 @@ En esta sección se definen los diferentes orígenes de datos de los servicios q
           bbox: [2.67,41.88,2.97,42.07]
           bbox_srs: 'EPSG:4326'
 
-Puede encontrarse una descripción más completa de las claves de cada tipo en `la correspondiente página de documentación de MapProxy <http://mapproxy.org/docs/1.5.0/sources.html>`_
+Puede encontrarse una descripción más completa de las claves de cada tipo en `la página de sources de la documentación de MapProxy <http://mapproxy.org/docs/1.5.0/sources.html>`_
 
 grids
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+La sección de grids define las rejillas que emplea MapProxy a nivel interno para almacenar las imágenes generadas. Hay varias opciones de configuración, muchas pueden emplearse simultáneamente aunque tengan efectos contradictorios y produzcan resultados ambiguos.
+
+En general lo mínimo a definir *debería* ser el nombre, el sistema de referencia (**srs**), el *bounding box* (**bbox**) y las resoluciones (**min_res** y **max_res**) aunque en los grids que están basados en otros grids la lista de parámetros puede ser menor.
 
 .. code-block:: yaml
 
@@ -143,9 +147,12 @@ grids
         min_res: 2000
         max_res: .5
 
+Se puede consultar más información sobre las claves en la `sección de grids de la página de configuración de la documentación de MapProxy <http://mapproxy.org/docs/1.5.0/configuration.html#id5>`_
 
 globals
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+En esta sección se colocan directivas y claves que son comunes a todas las otras secciones o son internas de MapProxy.
 
 .. code-block:: yaml
 
@@ -157,3 +164,6 @@ globals
       image:
           resampling_method: bilinear
           jpeg_quality: 90
+
+Una vez más hay amplia información sobre las claves y directivas en la `sección de globals de la página de configuración de la documentación de MapProxy <http://mapproxy.org/docs/1.5.0/configuration.html#globals>`_
+

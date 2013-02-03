@@ -1,11 +1,8 @@
-Instalación y configuración de MapProxy
+Instalación de MapProxy
 =================================================
 
-Instalación
---------------------
-
 Descarga de dependencias del sistema
-+++++++++++++++++++++++++++++++++++++++++++++++++++
+---------------------------------------------------
 
 Instalar paquetes iniciales::
 
@@ -26,8 +23,8 @@ Esto descargará unas 200MB en binarios, tardará un buen rato...  A partir de
 aquí todo se ejecuta como un usuario normal.
 
 
-Instalación de MapProxy
-+++++++++++++++++++++++++++++++++++++++++++++++++++
+Como instalar MapProxy
+---------------------------------------------------
 
 Primero vamos a descargar los materiales del taller. En el home del usuario
 ejecutar::
@@ -67,7 +64,7 @@ instrucción ``mapproxy-util``::
   MapProxy 1.5.0
 
 Crear un proyecto de demostración
-+++++++++++++++++++++++++++++++++++++++++++
+------------------------------------------
 
 Para comprobar que MapProxy está funcionando correctamente vamos a crear un
 proyecto de ejemplo y lo arrancaremos con el servidor de pruebas que MapProxy
@@ -144,8 +141,3 @@ estructura de carpetas donde se almacenan las imágenes.
 .. attention:: ¿Qué tamaño tienen las imágenes? ¿En qué formato están?
 
 
-Configuración
---------------------
-
-
-.. warning:: Por hacer
