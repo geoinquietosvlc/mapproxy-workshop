@@ -21,7 +21,7 @@ aplicaciones de mapas a través de la pregeneración de tiles integrando múltip
 fuentes de datos y almacenándolos en una caché local.
 
 El objetivo del taller es dar a conocer la aplicación MapProxy; explicando
-cuáles son sus funcionalidades básicas, cuáles son sus potencialidades, repasar
+cuales son sus funcionalidades básicas, cuales son sus potencialidades, repasar
 algunos casos de éxito y finalmente escribir y desplegar una configuración
 básica con las opciones más comunes.
 
