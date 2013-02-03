@@ -7,6 +7,6 @@ Extensión: propuesta de ejercicios
 
 #. Redirigir el getLegendgraphic y el getFeatureInfo
 
-#. Publicar servicios diseñados con TileMill (MBTiles o el XML de Mapnik)
+#. Publicar servicios diseñados con TileMill (XML de Mapnik)
 
 #. Modo multimapa

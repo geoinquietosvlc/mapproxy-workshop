@@ -1,6 +1,8 @@
 Instalación de MapProxy
 =================================================
 
+.. note:: El sigiente proceso de intsalación está orientado a una máquina GNU/Linux de tipo Debian/Ubuntu o similar.
+
 Descarga de dependencias del sistema
 ---------------------------------------------------
 
@@ -10,7 +12,8 @@ Instalar paquetes iniciales::
 
 .. note:: Las líneas de esta documentación que comiencen con el símbolo
           del dólar indican instrucciones a ejecutar en una consola
-          del sistema, **sin incluir el dólar**.
+          del sistema. Si vas a copiar estas líneas en tu consola debes hacerlo
+          **sin incluir el dólar**.
 
 Instalar dependencias de MapProxy::
 
