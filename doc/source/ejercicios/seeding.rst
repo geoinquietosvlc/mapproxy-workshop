@@ -39,7 +39,7 @@ De esta forma mantenemos los niveles superiores pero nos deshacemos de aquellas 
 Comprobación
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Si ejecutamos el comando ``mapproxy-seed`` pasando como parámetro la opción ``--summary`` obtendremos el siguiente resumen de las tareas ce sembrado y limpieza de teselas.
+Si ejecutamos el comando ``mapproxy-seed`` pasando como parámetro la opción ``--summary`` obtendremos el siguiente resumen de las tareas de sembrado y limpieza de teselas.
 
 ::
 

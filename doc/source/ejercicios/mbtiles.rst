@@ -10,7 +10,8 @@ sin tener que *resamplear* las teselas al tratarse de un dato vectorial.
 
 El fichero *MBTiles* proporcionado consiste en una capa de la zona de trabajo
 del taller en la que se muestran carreteras y edificios en tonos de gris y una
-serie de puntos con la ubicación de zonas de aparcamiento.
+serie de puntos con la ubicación de zonas de aparcamiento. El archivo se puede
+descargar de `aquí <https://docs.google.com/file/d/0B28vBRfHgG9pZ3l3MXlQc09jSjQ/edit?usp=sharing>`_.
 
 El grid que define el fichero *MBTiles* es igual que el usado por Google Maps
 solo que se han exportado las teselas hasta el nivel 16, es decir::
