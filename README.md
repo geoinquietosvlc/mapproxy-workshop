@@ -8,4 +8,5 @@ Autores
 --------------
 
 - [Pedro-Juan Ferrer](http://twitter.com/vehrka)
+- [Iván Sanchez](http://twitter.com/realivansanchez)
 - [Jorge Sanz](http://twitter.com/xurxosanz)

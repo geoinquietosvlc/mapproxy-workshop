@@ -6,6 +6,6 @@ Taller de MapProxy
 
    presentacion.rst
    instalacion-configuracion.rst
-   casos-de-uso.rst
+   elarchivodeconfiguracion.rst
    ejercicios/index.rst
    referencias.rst
