@@ -8,11 +8,11 @@ Las diferentes funcionalidades de MapProxy se configuran a través de archivos *
 
 MapProxy se configura a través de los archivos **mappproxy.yaml** y **seed.yaml** definiendo para cada archivo una serie de secciones y de directivas en las secciones.
 
-En la presente sección hablaremos solo del archivo principal de configuración *mappproxy.yaml* dejando el otro archivo para la sección en la que hablemos del *seeding*.
+En la presente sección hablaremos solo del archivo principal de configuración *mappproxy.yaml*. Dejaremos el archivo *seed.yaml* para la sección en la que hablemos del *seeding* o *sembrado*.
 
 .. attention:: Modificar el texto y colocar los enlaces correspondientes
 
-Es muy importante respetar la identación en los archivos y esta debe realizarse con **espacios** y nunca con tabuladores.
+Es muy importante respetar la indentación en los archivos, y esta debe realizarse con **espacios** y nunca con tabuladores.
 
 mapproxy.yaml
 --------------------------------
@@ -57,7 +57,7 @@ Para cada uno se emplea su propia clave, que aparece listada entre corchetes, y 
 Para el presente taller utilizaremos el servicio *wms* que se configura indicando los sistemas de referencia en los que se va a servir (**srs**), los formatos de imagen (**image_formats**) y metadatos adicionales (**md**):
 
 .. code-block:: yaml
-    
+
     services:
       wms:
         srs: ['EPSG:3857', 'EPSG:900913', 'EPSG:4258', 'EPSG:4326', 'EPSG:25831']
@@ -87,7 +87,7 @@ La información mínima que se requiere es el nombre (**name**) como identificad
 
 
 .. code-block:: yaml
-    
+
     layers:
       - name: orto5m-icc-proxy
         title: Ortofoto 1:5000 del ICC de la zona de Girona
@@ -99,10 +99,10 @@ Puede encontrarse más información sobre las capas así como otros parámetros 
 caches
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-En *caches* se configuran la información de la que se va a almacenar copias en disco. La información que hay que proporcionar en este caso es el origen de datos (**sources**) y el grid o grids (**grids**) sobre los que queremos guardar los caches. En caso de haber varios grids se creará una caché separada por cada capa y cada *grid*
+En *caches* se configura la manera en la que se almacena una copia de la información en disco, para no tenerla que volver a pedir al servidor. La información que hay que proporcionar en este caso es el origen de datos (**sources**) y el grid o grids (**grids**) sobre los que queremos guardar los cachés. En caso de haber varios grids se creará una caché separada por cada capa y cada *grid*
 
 .. code-block:: yaml
-    
+
     caches:
       osm_cache:
         grids: [utm_girona]
@@ -116,7 +116,7 @@ sources
 En esta sección se definen los diferentes orígenes de datos de los servicios que ofrece el archivo de MapProxy, se define el nombre del origen de datos y se configuran parámetros del mismo como el tipo (**type**) del que admite *wms*, *tiles*, *mapserver*, *mapnik* y *debug*. Cada tipo tiene sus propias configuraciones.
 
 .. code-block:: yaml
-    
+
     sources:
       icc_wms:
         type: wms
@@ -147,6 +147,8 @@ En general lo mínimo a definir *debería* ser el nombre, el sistema de referenc
         min_res: 2000
         max_res: .5
 
+.. attention:: La resolución se mide en unidades del SRS por pixel. Como estamos usando EPSG:25831, que es una proyección UTM, podemos suponer que la resolución mínima es de 2000 metros/pixel y la máxima de 50 cm/pixel.
+
 Se puede consultar más información sobre las claves en la `sección de grids de la página de configuración de la documentación de MapProxy <http://mapproxy.org/docs/1.5.0/configuration.html#id5>`_
 
 globals
@@ -164,6 +166,8 @@ En esta sección se colocan directivas y claves que son comunes a todas las otra
       image:
           resampling_method: bilinear
           jpeg_quality: 90
+
+.. attention:: Si el directorio de caché no empieza por una barra "/", se supone que es un directorio *relativo* a donde se ejecute mapproxy.
 
 Una vez más hay amplia información sobre las claves y directivas en la `sección de globals de la página de configuración de la documentación de MapProxy <http://mapproxy.org/docs/1.5.0/configuration.html#globals>`_
 

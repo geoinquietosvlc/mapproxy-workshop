@@ -139,5 +139,7 @@ Como vemos ha creado una carpeta para la *cache* de la capa ``osm`` y una
 estructura de carpetas donde se almacenan las imágenes.
 
 .. attention:: ¿Qué tamaño tienen las imágenes? ¿En qué formato están?
+   Si tenemos *imagemagick* instalado en nuestro ordenador, podemos ver información sobre las imágenes del caché rápidamente ejecutando ``identify `find cache_data | grep png` ``
+
 
 

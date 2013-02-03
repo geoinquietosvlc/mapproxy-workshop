@@ -25,6 +25,8 @@ Hay que recordar que la caché es siempre una pirámide de imágenes, y que su e
 
 Primero queremos sembrar la caché de la capa de OpenStreetMap, en la zona de Gerona. Para hacer esto, escribid un fichero *seed.yaml* que contenga una tarea de sembrado que haga referencia a la *cache* apropiada y a una cobertura con el bounding box de Gerona, para niveles de zoom del 1 al 10.
 
+Una vez escrito el fichero *seed.yaml*, se puede hacer el sembrado ejecutando ``mapproxy-seed -f mapproxy.yaml -s seed.yaml -i``. Si estuviera en producción, cambiaríamos ``-i`` por ``-seed=ALL`` para poder automatizarlo.
+
 A continuación puedes crear una tarea de caché de la capa de la ortofoto para el grid UTM, para niveles de zoom del 1 al 7 y el mismo *coverage*.
 
 
@@ -70,3 +72,9 @@ Si ejecutamos el comando ``mapproxy-seed`` pasando como parámetro la opción ``
 	    Limited to: 2.66902, 41.87953, 2.97009, 42.07047 (EPSG:4326)
 	    Levels: [8, 9, 10, 11]
 	    Remove: tiles older than 2013-01-25 15:20:58
+
+
+Por otra parte, si ejecutamos ``mapproxy`` después de haber sembrado la caché, en su salida por consola se ven las peticiones WMS que está sirviendo, pero **no** las peticiones al *source* que debería estar haciendo (porque todas esas peticiones se han hecho durante el proceso de sembrado).
+
+
+
