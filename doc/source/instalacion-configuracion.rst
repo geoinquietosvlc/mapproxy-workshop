@@ -8,7 +8,7 @@ Descarga de dependencias del sistema
 
 Instalar paquetes iniciales::
 
-  $ sudo apt-get install git tree python-virtualenv
+  $ sudo apt-get install tree python-virtualenv
 
 .. note:: Las líneas de esta documentación que comiencen con el símbolo
           del dólar indican instrucciones a ejecutar en una consola
