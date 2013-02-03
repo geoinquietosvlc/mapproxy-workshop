@@ -1,4 +1,4 @@
-seeds: 
+seeds:
   girona_osm:
     caches: [osm_cache]
     grids: [GLOBAL_MERCATOR]

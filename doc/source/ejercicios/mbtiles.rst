@@ -8,6 +8,8 @@ trabajo con cualquiera de los servicios de MapProxy, aunque como es normal, se
 tendrán los mejores resultados en clientes que consuman directamente la *cache*
 sin tener que *resamplear* las teselas al tratarse de un dato vectorial.
 
+Un fichero *MBTiles* es un formato de fichero diseñado para almacenar pirámides de imágenes de manera eficiente. Consiste en una base de datos espacial SQLite  con imágenes individuales dentro.
+
 El fichero *MBTiles* proporcionado consiste en una capa de la zona de trabajo
 del taller en la que se muestran carreteras y edificios en tonos de gris y una
 serie de puntos con la ubicación de zonas de aparcamiento. El archivo se puede
@@ -29,10 +31,10 @@ carpeta ``cache_data``.
 
 .. figure:: /_static/exercise-mbtiles.png
 	 :width: 50%
-	 :alt: TMS de la capa de *parkings* diseñada en TileMill 
+	 :alt: TMS de la capa de *parkings* diseñada en TileMill
 	 :align: center
 
-	 TMS de la capa de *parkings* diseñada en TileMill 
+	 TMS de la capa de *parkings* diseñada en TileMill
 
 
 En la siguiente figura se muestran las dos capas accedidas por separado desde un
