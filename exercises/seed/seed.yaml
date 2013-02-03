@@ -1,18 +1,18 @@
 seeds: 
- girona_osm:
+  girona_osm:
     caches: [osm_cache]
     grids: [GLOBAL_MERCATOR]
     levels:
       from: 1
-      to: 14
-    coverages: [girona1]
-  girona:
+      to: 10
+    coverages: [girona]
+  girona_icc:
     caches: [icc_cache]
     grids: [utm_girona]
     levels:
       from: 1
       to: 7
-    coverages: [girona1]
+    coverages: [girona]
 
 cleanups:
   girona:
@@ -20,7 +20,7 @@ cleanups:
     grids: [GLOBAL_MERCATOR, GLOBAL_GEODETIC, utm_girona]
     levels:
       from: 8
-    coverages: [girona1]
+    coverages: [girona]
     remove_before:
       weeks: 1
       days: 2
@@ -28,9 +28,6 @@ cleanups:
       minutes: 4
 
 coverages:
-  girona1:
+  girona:
     bbox: [2.67,41.88,2.97,42.07]
-    bbox_srs: "EPSG:4326"
-  girona2:
-    bbox: [7.90,16.61,7.95,16.65]
     bbox_srs: "EPSG:4326"
