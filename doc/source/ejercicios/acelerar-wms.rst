@@ -1,7 +1,7 @@
 Ejercicio: acelerar el acceso a un WMS
 ----------------------------------------------
 
-Primera parte: cachear un servicio de ortoimágenes
+Primera parte: acceder a un servicio de ortoimágenes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Supongamos que trabajamos en una oficina con un acceso restringido a Internet.
@@ -47,13 +47,13 @@ Como nuestros técnicos usan a menudo cartografía en coordenadas UTM, sería
 interesante que crearas una *cache* expresamente para ese sistema de coordenadas,
 de forma que MapProxy no tenga que reproyectar las teselas todo el tiempo.
 
-
 .. figure:: /_static/exercise-wms1.png
 	 :width: 50%
 	 :alt: TMS de la ortofoto del ICC
 	 :align: center
 
 	 TMS de la ortofoto del ICC 
+
 
 Tercera parte: cachear las teselas de OpenStreetMap
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
