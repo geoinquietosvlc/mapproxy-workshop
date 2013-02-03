@@ -167,7 +167,7 @@ En esta sección se colocan directivas y claves que son comunes a todas las otra
           resampling_method: bilinear
           jpeg_quality: 90
 
-.. attention:: Si el directorio de caché no empieza por una barra "/", se supone que es un directorio *relativo* a donde se ejecute mapproxy.
+.. attention:: Si el directorio de caché no empieza por una barra "/", se supone que es un directorio *relativo* a donde se encuentre el fichero ``mapproxy.yaml``.
 
 Una vez más hay amplia información sobre las claves y directivas en la `sección de globals de la página de configuración de la documentación de MapProxy <http://mapproxy.org/docs/1.5.0/configuration.html#globals>`_
 

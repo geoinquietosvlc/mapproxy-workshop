@@ -120,6 +120,14 @@ biblioteca de *webmapping* `OpenLayers <http://www.openlayers.org>`_.
 .. note:: Para apagar el servidor de pruebas se debe pulsar la combinación de
 					teclas ``Control+C``.
 
+Si se observa cuidadosamente la salida de ``mapproxy-util``, se pueden tanto las peticiones que mapproxy hace al *source*::
+	[2013-02-03 20:08:15,241] mapproxy.source.request - INFO - GET http://shagrat.icc.es/lizardtech/iserv/ows?layers=orto5m&width=541&version=1.1.1&bbox=482127.752371,4636453.33696,497518.196187,4655724.38706&service=WMS&format=image%2Fpng&styles=&srs=EPSG%3A25831&request=GetMap&height=678 200 759.8 366
+
+Así como las peticiones que mapproxy *responde* al cliente::
+	[info] 127.0.0.1 - - [03/Feb/2013 20:08:23] "GET /service?LAYERS=orto5m-icc&FORMAT=image%2Fpng&SRS=EPSG%3A3857&EXCEPTIONS=application%2Fvnd.ogc.se_inimage&TRANSPARENT=TRUE&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&BBOX=284862.66336419,5137678.0304892,342979.26470981,5176813.788971&WIDTH=891&HEIGHT=600 HTTP/1.1" 200 -
+
+
+
 Finalmente, podemos comprobar cómo el servidor ha guardado algunas teselas al
 visitar la demostración en la carpeta ``confs/test/cache_data`` que podemos ver
 desde la consola si navegamos hasta esa carpeta y ejecutamos el comando
@@ -142,7 +150,7 @@ Como vemos ha creado una carpeta para la *cache* de la capa ``osm`` y una
 estructura de carpetas donde se almacenan las imágenes.
 
 .. attention:: ¿Qué tamaño tienen las imágenes? ¿En qué formato están?
-   Si tenemos *imagemagick* instalado en nuestro ordenador, podemos ver 
+   Si tenemos *imagemagick* instalado en nuestro ordenador, podemos ver
    información sobre las imágenes del caché rápidamente ejecutando::
 
     identify `find cache_data | grep png`
