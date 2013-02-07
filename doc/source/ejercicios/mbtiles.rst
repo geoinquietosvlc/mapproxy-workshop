@@ -8,7 +8,9 @@ trabajo con cualquiera de los servicios de MapProxy, aunque como es normal, se
 tendrán los mejores resultados en clientes que consuman directamente la *cache*
 sin tener que *resamplear* las teselas al tratarse de un dato vectorial.
 
-Un fichero *MBTiles* es un formato de fichero diseñado para almacenar pirámides de imágenes de manera eficiente. Consiste en una base de datos espacial SQLite  con imágenes individuales dentro.
+Un fichero *MBTiles* es un formato de fichero diseñado para almacenar pirámides
+de imágenes de manera eficiente. Consiste en una base de datos espacial SQLite  
+con imágenes individuales dentro.
 
 El fichero *MBTiles* proporcionado consiste en una capa de la zona de trabajo
 del taller en la que se muestran carreteras y edificios en tonos de gris y una

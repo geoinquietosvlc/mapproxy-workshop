@@ -1,7 +1,7 @@
 Instalación de MapProxy
 =================================================
 
-.. note:: El sigiente proceso de intsalación está orientado a una máquina GNU/Linux de tipo Debian/Ubuntu o similar.
+.. note:: El siguiente proceso de instalación está orientado a una máquina GNU/Linux de tipo Debian/Ubuntu o similar.
 
 Descarga de dependencias del sistema
 ---------------------------------------------------
@@ -26,7 +26,7 @@ Esto descargará unas 200MB en binarios, tardará un buen rato...  A partir de
 aquí todo se ejecuta como un usuario normal.
 
 
-Como instalar MapProxy
+Cómo instalar MapProxy
 ---------------------------------------------------
 
 Primero vamos a descargar los materiales del taller. En el home del usuario
@@ -37,7 +37,7 @@ ejecutar::
 ..  $ git clone https://github.com/geoinquietosvlc/mapproxy-workshop.git
 
 
-Con esto tendremos una nueva carpeta ``mapproxy-worksop`` con el documento pdf
+Con esto tendremos una nueva carpeta ``mapproxy-workshop`` con el documento pdf
 del taller así como los ejercicios resueltos, etc.
 
 Moverse a la carpeta creada y crear el entorno virtual con::
@@ -156,3 +156,31 @@ estructura de carpetas donde se almacenan las imágenes.
    información sobre las imágenes del caché rápidamente ejecutando::
 
     identify `find cache_data | grep png`
+
+Despliegue
+-----------------------
+
+No es objetivo de este taller describir el proceso de despliegue de MapProxy en
+un servidor de producción. MapProxy es una aplicación escrita en Python que
+sigue el estándar WSGI_ de publicación de aplicaciones web. Este estándar
+permite publicar aplicaciones de diferentes formas que dependerán en parte de
+nuestro entorno. En la `documentación de despliegue`_ de MapProxy se detallan las
+más importantes entre las que se podrían destacar:
+
+- Mediante `Apache + mod_WSGI`_: en esta configuración se activa este módulo de
+  Apache y se configura una sección en la configuración del mismo que apunte a
+  la ubicación de nuestro *server script*. Esta variante funciona tanto en
+  Windows como en servidores GNU/Linux.
+
+- Mediante Gunicorn_: en esta configuración se configura un servicio que arranca
+  un servidor gunicorn que se podrá a continuación exponer directamente u
+  ofrecer a través de un proxy inverso con otro servidor web como Apache o
+  Nginx. Esta variante solo se puede configurar en máquinas GNU/Linux.
+
+En ambos casos se utiliza un script de arranque de la aplicación WSGI que se
+puede generar con la herramienta ``mapproxy-util``.
+
+.. _WSGI: http://www.python.org/dev/peps/pep-3333/
+.. _documentación de despliegue: http://mapproxy.org/docs/1.5.0/deployment.html
+.. _Apache + mod_WSGI: http://mapproxy.org/docs/1.5.0/deployment.html#apache-mod-wsgi
+.. _Gunicorn: http://mapproxy.org/docs/1.5.0/deployment.html#gunicorn
