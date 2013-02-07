@@ -32,6 +32,7 @@ Cómo instalar MapProxy
 Primero vamos a descargar los materiales del taller. En el home del usuario
 ejecutar::
 
+  $ mkdir mapproxy-workshop
   $ wget -O mapproxy-workshop/mapproxy-workshop.pdf "http://bit.ly/mapproxy-workshop"
 
 ..  $ git clone https://github.com/geoinquietosvlc/mapproxy-workshop.git
