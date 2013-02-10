@@ -77,6 +77,9 @@ la carpeta ``confs``. Nos movemos a esa carpeta y ejecutamos la herramienta que
 MapProxy incorpora para diferentes tareas ``mapproxy-util``.::
 
 	(venv)$ mapproxy-util create -t base-config test
+
+Y veremos aparecer en pantalla la confirmación de que ha escrito los archivos::
+
 	writing test/mapproxy.yaml
 	writing test/seed.yaml
 
@@ -90,6 +93,9 @@ esta vez con la tarea de arrancar el servidor de pruebas.::
 
   (venv)$ cd test
   (venv)$ mapproxy-util serve-develop mapproxy.yaml
+
+Y veremos aparecer en pantalla líneas parecidas a estas::
+
   [2012-12-06 17:20:09,814] mapproxy.config - INFO - reading: /home/user/mapproxy-workshop/confs/test/mapproxy.yaml
   [2012-12-06 17:20:09,907] mapproxy.service.wmts - WARNING - grid 'global_geodetic_sqrt2' is not compatible with WMTS, skipping for layer 'osm'
   [2012-12-06 17:20:09,909] mapproxy.service.wmts - WARNING - grid 'global_geodetic_sqrt2' is not compatible with WMTS, skipping for layer 'osm'
@@ -136,18 +142,18 @@ visitar la demostración en la carpeta ``confs/test/cache_data`` que podemos ver
 desde la consola si navegamos hasta esa carpeta y ejecutamos el comando
 ``tree``::
 
-  $ tree -d -L 3
-  .
-  └── osm_cache_EPSG900913
-      ├── 01
-      │   └── 000
-      ├── 03
-      │   └── 000
-      ├── 05
-      │   └── 000
-      ├── 07
-      │   └── 000
-      └── tile_locks
+    $ tree -d -L 3
+    .
+    └── osm_cache_EPSG900913
+        ├── 01
+        │   └── 000
+        ├── 03
+        │   └── 000
+        ├── 05
+        │   └── 000
+        ├── 07
+        │   └── 000
+        └── tile_locks
 
 Como vemos ha creado una carpeta para la *cache* de la capa ``osm`` y una
 estructura de carpetas donde se almacenan las imágenes.

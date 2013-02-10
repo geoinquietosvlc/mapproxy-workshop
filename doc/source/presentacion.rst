@@ -4,17 +4,17 @@ Presentación
 Facilitadores:
 -------------------------
 
-* Pedro-Juan Ferrer `@vehrka <http://twitter.com/vehrka>`_ pferrer@osgeo.org
+* Pedro-Juan Ferrer `@vehrka`_ pferrer@osgeo.org
 
   * Project Manager en Omnium SI
   * Geofriki
 
-* Iván Sanchez `@realivansanchez <http://twitter.com/realivansanchez>`_ ivan@sanchezortega.es
+* Iván Sanchez `@realivansanchez`_ ivan@sanchezortega.es
 
   * PHPDev en Omnium SI
   * Más geofriki aún si cabe
 
-* Jorge Sanz `@xurxosanz <http://twitter.com/xurxosanz>`_ jsanz@osgeo.org
+* Jorge Sanz `@xurxosanz`_ jsanz@osgeo.org
 
   * GISguy en Prodevelop
   * Geofriki
@@ -36,9 +36,9 @@ Podría decirse que MapProxy es un *acelerador* de mapas en Internet, aunque no 
 Un poco más sobre MapProxy
 ---------------------------
 
-* Es un producto de `Omniscale <http://omniscale.com>`_ (`ImpOSM <http://imposm.org>`_)
+* Es un producto de `Omniscale`_ (`ImpOSM`_)
 
-* `Oliver Tonnhofer <http://twitter.com/oltonn>`_ es su desarrollador principal
+* `Oliver Tonnhofer`_ es su desarrollador principal
 
 * Está escrito en Python
 
@@ -73,7 +73,7 @@ Algunos casos de uso:
 ---------------------------
 
 Se trata de un software de servidor que se configura a través de scripts 
-escritos en `YAML <http://http://www.yaml.org>`_.
+escritos en `YAML`_.
 
 .. code-block:: yaml
     
@@ -98,3 +98,12 @@ escritos en `YAML <http://http://www.yaml.org>`_.
           access_constraints:
             Este servicio tiene únicamente objetivos educativos.
           fees: 'None'
+
+
+.. _@vehrka: http://twitter.com/vehrka
+.. _@realivansanchez: http://twitter.com/realivansanchez
+.. _@xurxosanz: http://twitter.com/xurxosanz
+.. _Omniscale: http://omniscale.com
+.. _ImpOSM: http://imposm.org
+.. _Oliver Tonnhofer: http://twitter.com/oltonn
+.. _YAML: http://http://www.yaml.org

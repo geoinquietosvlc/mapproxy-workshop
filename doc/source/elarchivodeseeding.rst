@@ -1,3 +1,5 @@
+.. _elarchivodeseeding:
+
 El archivo de configuración seed.yaml
 =============================================
 
@@ -38,7 +40,7 @@ En la sección se define **qué** debe ser sembrado haciendo referencia tanto a 
           to: 7
         coverages: [girona]
 
-Puede encontrarse más información sobre estas y otras claves de la sección en `la correspondiente sección sobre seeds de la página de seeding de la documentación de MapProxy <http://mapproxy.org/docs/1.5.0/seed.html#seeds>`_
+Puede encontrarse más información sobre estas y otras claves de la sección en `la correspondiente sección sobre seeds de la página de seeding de la documentación de MapProxy`_
 
 cleanups
 ^^^^^^^^^^^^^
@@ -63,14 +65,14 @@ Se debe dar un nombre a cada configuración de purga y definir a que cachés van
           minutes: 4
 
 
-Puede encontrarse más información sobre estas y otras claves de la sección en `la correspondiente sección sobre cleanups de la página de seeding de la documentación de MapProxy <http://mapproxy.org/docs/1.5.0/seed.html#cleanups>`_
+Puede encontrarse más información sobre estas y otras claves de la sección en `la correspondiente sección sobre cleanups de la página de seeding de la documentación de MapProxy`_
 
 coverages
 ^^^^^^^^^^^^^
 
 Por último, el archivo permite la definición de zonas en las que aplicar la tanto el sembrado como las purgas.
 
-Estas zonas pueden definirse tanto como un *bounding box* o como una región definida con *WKT* en un archivo de texto o a través de un polígono que pueda leerse empleando `OGR <http://www.gdal.org/ogr/>`_. 
+Estas zonas pueden definirse tanto como un *bounding box* o como una región definida con *WKT* en un archivo de texto o a través de un polígono que pueda leerse empleando OGR_.
 
 .. code-block:: yaml
     
@@ -80,5 +82,10 @@ Estas zonas pueden definirse tanto como un *bounding box* o como una región def
         bbox_srs: "EPSG:4326"
 
 
-Se pueden encontrar algunos ejemplos de configuración en `la correspondiente sección sobre coverages de la página de seeding de la documentación de MapProxy <http://mapproxy.org/docs/1.5.0/seed.html#id7>`_
+Se pueden encontrar algunos ejemplos de configuración en `la correspondiente sección sobre coverages de la página de seeding de la documentación de MapProxy`_
 
+
+.. _la correspondiente sección sobre seeds de la página de seeding de la documentación de MapProxy: http://mapproxy.org/docs/1.5.0/seed.html#seeds
+.. _la correspondiente sección sobre cleanups de la página de seeding de la documentación de MapProxy: http://mapproxy.org/docs/1.5.0/seed.html#cleanups
+.. _OGR: http://www.gdal.org/ogr/
+.. _la correspondiente sección sobre coverages de la página de seeding de la documentación de MapProxy: http://mapproxy.org/docs/1.5.0/seed.html#id7
