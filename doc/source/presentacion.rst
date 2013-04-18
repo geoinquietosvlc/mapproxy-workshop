@@ -1,7 +1,7 @@
 Presentación
 ============================
 
-Facilitadores:
+Autores/culpables:
 -------------------------
 
 * Pedro-Juan Ferrer `@vehrka`_ pferrer@osgeo.org
@@ -14,11 +14,10 @@ Facilitadores:
   * PHPDev en Omnium SI
   * Más geofriki aún si cabe
 
-* Jorge Sanz `@xurxosanz`_ jsanz@osgeo.org
+* **Jorge Sanz** `@xurxosanz`_ jsanz@osgeo.org
 
-  * GISguy en Prodevelop
+  * GISguy en `Prodevelop <http://www.prodevelop.es>`_
   * Geofriki
-
 
 Qué es MapProxy
 ---------------------------

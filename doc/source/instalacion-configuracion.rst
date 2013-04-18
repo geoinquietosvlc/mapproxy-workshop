@@ -1,7 +1,7 @@
 Instalación de MapProxy
 =================================================
 
-.. note:: El siguiente proceso de instalación está orientado a una máquina GNU/Linux de tipo Debian/Ubuntu o similar.
+.. note:: El siguiente proceso de instalación está orientado a una máquina GNU/Linux de tipo Debian/Ubuntu o similar. En `esta entrada del geomaticblog <http://geomaticblog.net/2012/10/10/instalando-mapproxy-en-windows-paso-a-paso/>`_ puede encontrarse unas notas de instalación en *Windows*.
 
 Descarga de dependencias del sistema
 ---------------------------------------------------
