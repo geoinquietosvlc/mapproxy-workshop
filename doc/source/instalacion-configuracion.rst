@@ -15,16 +15,17 @@ Instalar paquetes iniciales::
           del sistema. Si vas a copiar estas líneas en tu consola debes hacerlo
           **sin incluir el dólar**.
 
-Instalar dependencias de MapProxy::
+Instalar el resto de dependencias de MapProxy::
 
   $ sudo apt-get install python-imaging \
     python-yaml libproj0 libgeos-dev python-lxml libgdal-dev \
     python-shapely build-essential python-dev libjpeg-dev \
     zlib1g-dev libfreetype6-dev
 
-Esto descargará unas 200MB en binarios, tardará un buen rato...  A partir de
-aquí todo se ejecuta como un usuario normal.
-
+Esto descargará unas 200MB en binarios en un sistema nuevo, tardará un buen
+rato...  A partir de aquí todo se ejecuta como un usuario normal. En el caso
+de OSGeo Live muchos de estos paquetes ya están instalados y por tanto solo
+instalará los necesarios.
 
 Cómo instalar MapProxy
 ---------------------------------------------------
@@ -39,7 +40,7 @@ ejecutar::
 
 
 Con esto tendremos una nueva carpeta ``mapproxy-workshop`` con el documento pdf
-del taller así como los ejercicios resueltos, etc.
+del taller.
 
 Moverse a la carpeta creada y crear el entorno virtual con::
 
@@ -57,7 +58,7 @@ Instalar la librería de tratamiento de imágenes PIL con::
 
   (venv)$ pip install https://bitbucket.org/olt/pil-2009-raclette/get/default.tar.gz
 
-Y ya podemos instalar MapProxy::
+Y ya por fin podemos instalar MapProxy::
 
   (venv)$ pip install MapProxy
 
@@ -94,7 +95,7 @@ esta vez con la tarea de arrancar el servidor de pruebas.::
   (venv)$ cd test
   (venv)$ mapproxy-util serve-develop mapproxy.yaml
 
-Y veremos aparecer en pantalla líneas parecidas a estas::
+Y veremos aparecer en pantalla líneas similares a las siguientes::
 
   [2012-12-06 17:20:09,814] mapproxy.config - INFO - reading: /home/user/mapproxy-workshop/confs/test/mapproxy.yaml
   [2012-12-06 17:20:09,907] mapproxy.service.wmts - WARNING - grid 'global_geodetic_sqrt2' is not compatible with WMTS, skipping for layer 'osm'

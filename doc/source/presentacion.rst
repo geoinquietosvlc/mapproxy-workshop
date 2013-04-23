@@ -22,9 +22,12 @@ Autores/culpables:
 Qué es MapProxy
 ---------------------------
 
-MapProxy es un servidor de teselas que lee datos de WMS, TMS, configuraciones de Mapserver o Mapnik de TileCache, Google Maps, Bing Maps, etc.
-
-Podría decirse que MapProxy es un *acelerador* de mapas en Internet, aunque no solo ofrece servicios de *proxy*, también es un Servidor WMS, permite realizar *Sembrado (Seeding)* de capas, permite gestionar seguridad de acceso a capas, reproyectar capas, etc.
+MapProxy es un servidor de teselas que lee datos de WMS, TMS, configuraciones de
+Mapserver o Mapnik de TileCache, Google Maps, Bing Maps, etc. Podría decirse que
+MapProxy es un *acelerador* de mapas en Internet, aunque no solo ofrece
+servicios de *proxy*, también es un Servidor WMS, permite realizar *Sembrado
+(Seeding)* de capas, permite gestionar seguridad de acceso a capas, reproyectar
+capas, etc.
 
 .. figure:: img/mapproxy.png
    :align: center
@@ -35,14 +38,12 @@ Podría decirse que MapProxy es un *acelerador* de mapas en Internet, aunque no 
 Un poco más sobre MapProxy
 ---------------------------
 
-* Es un producto de `Omniscale`_ (`ImpOSM`_)
-
-* `Oliver Tonnhofer`_ es su desarrollador principal
-
-* Está escrito en Python
-
-* Es FOSS desde 2010
-
+- La web del proyecto es http://mapproxy.org
+- Es un producto de `Omniscale`_ (`ImpOSM`_)
+- `Oliver Tonnhofer`_ es su desarrollador principal
+- Está escrito en Python
+- Es FOSS desde 2010 (licencia Apache)
+- Tiene una `lista de correo`_ para soporte y dudas (en inglés)
 
 Pero ¿para qué sirve?
 ---------------------------
@@ -71,11 +72,14 @@ Algunos casos de uso:
 ¿Cómo funciona?
 ---------------------------
 
-Se trata de un software de servidor que se configura a través de scripts 
-escritos en `YAML`_.
+Se trata de un software de servidor que se configura a través de ficheros
+escritos en `YAML`_ y *scripts* Python. Una vez correctamente configurado se
+*despliega* el servicio mediante alguno de los procedimientos para aplicaciones
+*Python* que siguen el estándar WSGI_.
+
 
 .. code-block:: yaml
-    
+
     services:
       demo:
       kml:
@@ -102,7 +106,9 @@ escritos en `YAML`_.
 .. _@vehrka: http://twitter.com/vehrka
 .. _@realivansanchez: http://twitter.com/realivansanchez
 .. _@xurxosanz: http://twitter.com/xurxosanz
+.. _lista de correo: http://lists.osgeo.org/mailman/listinfo/mapproxy
 .. _Omniscale: http://omniscale.com
 .. _ImpOSM: http://imposm.org
 .. _Oliver Tonnhofer: http://twitter.com/oltonn
 .. _YAML: http://http://www.yaml.org
+.. _WSGI: http://www.python.org/dev/peps/pep-3333/
