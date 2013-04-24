@@ -2,15 +2,26 @@ Servir un fichero *MBTiles* creado con TileMill
 =====================================================
 
 El objetivo de este ejercicio es montar una capa en MapProxy que sirva una
-*cache* generada en TileMill. Es decir, realizamos todo el proceso de diseño
-cartográfico con esta herramienta y después ofrecemos a nuestros usuarios dicho
-trabajo con cualquiera de los servicios de MapProxy, aunque como es normal, se
-tendrán los mejores resultados en clientes que consuman directamente la *cache*
-sin tener que *resamplear* las teselas al tratarse de un dato vectorial.
+*cache* en formato MBTiles_ generada en TileMill_. Es decir, realizamos todo
+el proceso de diseño cartográfico con esta herramienta y después ofrecemos a
+nuestros usuarios dicho trabajo con cualquiera de los servicios de MapProxy,
+aunque como es normal, se tendrán los mejores resultados en clientes que
+consuman directamente la *cache* sin tener que *resamplear* las teselas al
+tratarse de un dato vectorial.
 
-Un fichero *MBTiles* es un formato de fichero diseñado para almacenar pirámides
-de imágenes de manera eficiente. Consiste en una base de datos espacial SQLite  
-con imágenes individuales dentro.
+
+.. note:: TileMill_ es una aplicación de *software* libre para el diseño de
+          cartografía usando un lenguaje similar a las hojas de estilo CSS
+          que se utilizan en diseño *web*. Una de las salidas de TileMill es
+          la *cache* en formato MBTiles_.
+
+.. note:: El formato MBTiles_ es en esencia una base de datos SQLite con un
+          esquema predefinido para almacenar teselas. Tiene la ventaja de ser
+          muy compacto porque en un único fichero se almacenan miles de
+          imágenes de una forma estandarizada.
+
+.. _TileMill: http://mapbox.com/tilemill/
+.. _MBTiles: http://mapbox.com/developers/mbtiles/
 
 El fichero *MBTiles* proporcionado consiste en una capa de la zona de trabajo
 del taller en la que se muestran carreteras y edificios en tonos de gris y una
@@ -28,7 +39,7 @@ solo que se han exportado las teselas hasta el nivel 16, es decir::
 Este ejercicio por tanto consiste en definir una nueva capa en MapProxy que
 apunte a una *cache* que no tiene *sources* (se debe indicar como una lista
 vacía porque el elemento es obligatorio). La cache ha configurar es de tipo
-*mbtiles* y hay que indicar la ubicación del fichero que habrá que dejar en la
+``mbtiles`` y hay que indicar la ubicación del fichero que habrá que dejar en la
 carpeta ``cache_data``.
 
 .. figure:: /_static/exercise-mbtiles.png
