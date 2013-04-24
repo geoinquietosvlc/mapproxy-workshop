@@ -1,7 +1,7 @@
 Presentación
 ============================
 
-Autores/culpables:
+Autores:
 -------------------------
 
 * Pedro-Juan Ferrer `@vehrka`_ pferrer@osgeo.org
