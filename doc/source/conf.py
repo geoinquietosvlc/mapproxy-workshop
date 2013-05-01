@@ -40,7 +40,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'MapProxy Workshop - FOSS4GBA 2013'
+project = u'MapProxy Workshop'
 copyright = u'2013, Geoinquietos Valencia'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -106,7 +106,7 @@ pygments_style = 'sphinx'
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = u'Taller MapProxy - FOSS4GBA 2013'
+html_title = u'Taller MapProxy'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
@@ -186,7 +186,7 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'MapProxyWorkshop.tex', u'Taller de MapProxy - FOSS4GBA 2013',
+  ('index', 'MapProxyWorkshop.tex', u'Taller de MapProxy',
    u'Geoinquietos Valencia', 'manual'),
 ]
 
@@ -213,7 +213,7 @@ latex_show_urls = True
 # -- Options for Epub output ---------------------------------------------------
 
 # Bibliographic Dublin Core info.
-epub_title = u'Taller MapProxy - FOSS4GBA 2013'
+epub_title = u'Taller MapProxy'
 epub_author = u'Geoinquietos Valencia'
 epub_publisher = u'Geoinquietos Valencia'
 epub_copyright = u'2013, Geoinquietos Valencia'
