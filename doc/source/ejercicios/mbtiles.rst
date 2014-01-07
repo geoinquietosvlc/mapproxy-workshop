@@ -61,3 +61,11 @@ visualizan de forma más efectiva.
 	 :align: center
 
 	 Acceso a las dos capas mediante WMS
+
+
+Autores:
+-------------------------
+
+* Pedro-Juan Ferrer `@vehrka <http://twitter.com/vehrka>`_ · pferrer@osgeo.org
+* Iván Sanchez `@realivansanchez <http://twitter.com/realivansanchez>`_ · ivan@sanchezortega.es
+* Jorge Sanz `@xurxosanz <http://twitter.com/xurxosanz>`_ · jsanz@osgeo.org

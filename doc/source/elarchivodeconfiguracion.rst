@@ -180,9 +180,16 @@ Para tener una idea global de como interrelacionan los distintos componentes de 
    :align: center
    :width: 500px
    :alt: Mapa conceptual de interrelacion entre los componentes de MapProxy
-  
+
    Mapa conceptual de interrelacion entre los componentes de MapProxy
 
+
+Autores:
+-------------------------
+
+* Pedro-Juan Ferrer `@vehrka <http://twitter.com/vehrka>`_ · pferrer@osgeo.org
+* Iván Sanchez `@realivansanchez <http://twitter.com/realivansanchez>`_ · ivan@sanchezortega.es
+* Jorge Sanz `@xurxosanz <http://twitter.com/xurxosanz>`_ · jsanz@osgeo.org
 
 .. _la página de documentación de services de MapProxy: http://mapproxy.org/docs/1.5.0/services.html
 .. _la sección de caches de la página de configuración de la documentación de MapProxy: http://mapproxy.org/docs/1.5.0/configuration.html#caches

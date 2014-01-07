@@ -4,7 +4,7 @@ Extensión: propuesta de ejercicios
 #. Ofrecer WMTS/TMS de servicios propios
 
    Esto es, a partir de un servicio WMS de nuestra organización, ofrecer un servicio TMS y WMTS cacheado
-   de ciertas capas para permitir un acceso más eficiente a las mismas. 
+   de ciertas capas para permitir un acceso más eficiente a las mismas.
 
 #. Restructurar árboles de capas como un nuevo servicio
 
@@ -27,4 +27,11 @@ Extensión: propuesta de ejercicios
 
    Hasta ahora solo hemos visto la generación de un servicio de MapProxy a partir de un archivo de configuración.
    MapProxy admite también un modo *multimapa* en el que es posible publicar un número indeterminado de archivos de
-   configuración. 
+   configuración.
+
+Autores:
+-------------------------
+
+* Pedro-Juan Ferrer `@vehrka <http://twitter.com/vehrka>`_ · pferrer@osgeo.org
+* Iván Sanchez `@realivansanchez <http://twitter.com/realivansanchez>`_ · ivan@sanchezortega.es
+* Jorge Sanz `@xurxosanz <http://twitter.com/xurxosanz>`_ · jsanz@osgeo.org

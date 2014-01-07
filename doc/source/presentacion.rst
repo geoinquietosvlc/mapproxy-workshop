@@ -4,17 +4,17 @@ Presentación
 Autores:
 -------------------------
 
-* Pedro-Juan Ferrer `@vehrka`_ pferrer@osgeo.org
+* Pedro-Juan Ferrer `@vehrka`_ · pferrer@osgeo.org
 
   * Project Manager en Omnium SI
   * Geofriki
 
-* Iván Sanchez `@realivansanchez`_ ivan@sanchezortega.es
+* Iván Sanchez `@realivansanchez`_ · ivan@sanchezortega.es
 
   * PHPDev en Omnium SI
   * Más geofriki aún si cabe
 
-* **Jorge Sanz** `@xurxosanz`_ jsanz@osgeo.org
+* Jorge Sanz `@xurxosanz`_ · jsanz@osgeo.org
 
   * GISguy en `Prodevelop <http://www.prodevelop.es>`_
   * Geofriki
