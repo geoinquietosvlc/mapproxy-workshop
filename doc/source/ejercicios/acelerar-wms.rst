@@ -76,3 +76,10 @@ proyecto en su `wiki <http://wiki.openstreetmap.org/wiki/MapProxy_setup>`_.
 
 	 WMS de OpenStreetMap servido en UTM 31N 
 
+
+Autores:
+-------------------------
+
+* Pedro-Juan Ferrer `@vehrka <http://twitter.com/vehrka>`_ · pferrer@osgeo.org
+* Iván Sanchez `@realivansanchez <http://twitter.com/realivansanchez>`_ · ivan@sanchezortega.es
+* Jorge Sanz `@xurxosanz <http://twitter.com/xurxosanz>`_ · jsanz@osgeo.org

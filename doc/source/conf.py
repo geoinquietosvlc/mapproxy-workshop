@@ -251,3 +251,14 @@ epub_copyright = u'2013, Geoinquietos Valencia'
 
 # Allow duplicate toc entries.
 #epub_tocdup = True
+
+# -- Substitutions Setup
+rst_prolog = u"""
+.. |jsanz|    replace:: Jorge Sanz `@xurxosanz`_ · jsanz@osgeo.org
+.. |pferrer|  replace:: Pedro-Juan Ferrer `@vehrka`_ · pferrer@osgeo.org
+.. |isanchez| replace::  Iván Sanchez `@realivansanchez`_ · ivan@sanchezortega.es
+
+.. _@vehrka: http://twitter.com/vehrka
+.. _@realivansanchez: http://twitter.com/realivansanchez
+.. _@xurxosanz: http://twitter.com/xurxosanz
+"""

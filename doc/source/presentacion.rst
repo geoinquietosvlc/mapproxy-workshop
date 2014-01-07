@@ -1,20 +1,35 @@
 Presentación
 ============================
 
+.. note::
+
+    Autores:
+
+    * |pferrer|
+    * |jsanz|
+    * |isanchez|
+
+    Licencia:
+
+    Excepto donde quede reflejado de otra manera, la presente documentación
+    se halla bajo licencia `Creative Commons Reconocimiento Compartir Igual
+    <https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES>`_
+
+
 Autores:
 -------------------------
 
-* Pedro-Juan Ferrer `@vehrka`_ pferrer@osgeo.org
+* Pedro-Juan Ferrer `@vehrka`_ · pferrer@osgeo.org
 
   * Project Manager en Omnium SI
   * Geofriki
 
-* Iván Sanchez `@realivansanchez`_ ivan@sanchezortega.es
+* Iván Sanchez `@realivansanchez`_ · ivan@sanchezortega.es
 
   * PHPDev en Omnium SI
   * Más geofriki aún si cabe
 
-* **Jorge Sanz** `@xurxosanz`_ jsanz@osgeo.org
+* Jorge Sanz `@xurxosanz`_ · jsanz@osgeo.org
 
   * GISguy en `Prodevelop <http://www.prodevelop.es>`_
   * Geofriki
@@ -103,9 +118,6 @@ escritos en `YAML`_ y *scripts* Python. Una vez correctamente configurado se
           fees: 'None'
 
 
-.. _@vehrka: http://twitter.com/vehrka
-.. _@realivansanchez: http://twitter.com/realivansanchez
-.. _@xurxosanz: http://twitter.com/xurxosanz
 .. _lista de correo: http://lists.osgeo.org/mailman/listinfo/mapproxy
 .. _Omniscale: http://omniscale.com
 .. _ImpOSM: http://imposm.org

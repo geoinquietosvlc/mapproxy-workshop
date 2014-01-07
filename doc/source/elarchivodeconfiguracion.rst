@@ -1,6 +1,20 @@
 El archivo de configuración mappproxy.yaml
 =============================================
 
+.. note::
+
+    Autores:
+
+    * |pferrer|
+    * |jsanz|
+    * |isanchez|
+
+    Licencia:
+
+    Excepto donde quede reflejado de otra manera, la presente documentación
+    se halla bajo licencia `Creative Commons Reconocimiento Compartir Igual
+    <https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES>`_
+
 Introducción
 ---------------------------------
 
@@ -180,7 +194,7 @@ Para tener una idea global de como interrelacionan los distintos componentes de 
    :align: center
    :width: 500px
    :alt: Mapa conceptual de interrelacion entre los componentes de MapProxy
-  
+
    Mapa conceptual de interrelacion entre los componentes de MapProxy
 
 

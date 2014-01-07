@@ -3,6 +3,21 @@
 El archivo de configuración seed.yaml
 =============================================
 
+
+.. note::
+
+    Autores:
+
+    * |pferrer|
+    * |jsanz|
+    * |isanchez|
+
+    Licencia:
+
+    Excepto donde quede reflejado de otra manera, la presente documentación
+    se halla bajo licencia `Creative Commons Reconocimiento Compartir Igual
+    <https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES>`_
+
 Introducción
 ---------------------------------
 
@@ -30,8 +45,8 @@ seeds
 En la sección se define **qué** debe ser sembrado haciendo referencia tanto a las caches (**caches**), como a las rejillas (**gids**) y por supuesto a los niveles de zoom (**levels**) pudiendo emplearse además claves de zonas (**coverages**).
 
 .. code-block:: yaml
-    
-    seeds: 
+
+    seeds:
       girona_icc:
         caches: [icc_cache]
         grids: [utm_girona]
@@ -50,7 +65,7 @@ La sección permite configurar las purgas de las cachés para evitar que se acum
 Se debe dar un nombre a cada configuración de purga y definir a que cachés van a atacar (**caches**), en qué rejillas (**grids**), a qué niveles (**levels**) o en que coberturas (**coverages**) y por supuesto la resolución temporal de la purgas (**remove_before**).
 
 .. code-block:: yaml
-    
+
     cleanups:
       girona:
         caches: [icc_cache]
@@ -75,7 +90,7 @@ Por último, el archivo permite la definición de zonas en las que aplicar la ta
 Estas zonas pueden definirse tanto como un *bounding box* o como una región definida con *WKT* en un archivo de texto o a través de un polígono que pueda leerse empleando OGR_.
 
 .. code-block:: yaml
-    
+
     coverages:
       girona:
         bbox: [2.67,41.88,2.97,42.07]
@@ -83,6 +98,7 @@ Estas zonas pueden definirse tanto como un *bounding box* o como una región def
 
 
 Se pueden encontrar algunos ejemplos de configuración en `la correspondiente sección sobre coverages de la página de seeding de la documentación de MapProxy`_
+
 
 
 .. _la correspondiente sección sobre seeds de la página de seeding de la documentación de MapProxy: http://mapproxy.org/docs/1.5.0/seed.html#seeds

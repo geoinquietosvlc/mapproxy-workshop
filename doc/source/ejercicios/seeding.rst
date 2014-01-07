@@ -104,4 +104,9 @@ en su salida por consola se ven las peticiones WMS que está sirviendo, pero
 peticiones se han hecho durante el proceso de sembrado).
 
 
+Autores:
+-------------------------
 
+* Pedro-Juan Ferrer `@vehrka <http://twitter.com/vehrka>`_ · pferrer@osgeo.org
+* Iván Sanchez `@realivansanchez <http://twitter.com/realivansanchez>`_ · ivan@sanchezortega.es
+* Jorge Sanz `@xurxosanz <http://twitter.com/xurxosanz>`_ · jsanz@osgeo.org
