@@ -1,23 +1,20 @@
-Presentación
+Introducción
 ============================
 
-Autores:
--------------------------
+.. note::
 
-* Pedro-Juan Ferrer `@vehrka`_ · pferrer@osgeo.org
+    Autores:
 
-  * Project Manager en Omnium SI
-  * Geofriki
+    * |pferrer|
+    * |jsanz|
+    * |isanchez|
 
-* Iván Sanchez `@realivansanchez`_ · ivan@sanchezortega.es
+    Licencia:
 
-  * PHPDev en Omnium SI
-  * Más geofriki aún si cabe
+    Excepto donde quede reflejado de otra manera, la presente documentación
+    se halla bajo licencia `Creative Commons Reconocimiento Compartir Igual
+    <https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES>`_
 
-* Jorge Sanz `@xurxosanz`_ · jsanz@osgeo.org
-
-  * GISguy en `Prodevelop <http://www.prodevelop.es>`_
-  * Geofriki
 
 Qué es MapProxy
 ---------------------------
