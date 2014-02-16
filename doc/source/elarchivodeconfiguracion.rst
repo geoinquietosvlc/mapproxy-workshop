@@ -197,7 +197,6 @@ Para tener una idea global de como interrelacionan los distintos componentes de 
 
    Mapa conceptual de interrelacion entre los componentes de MapProxy
 
-
 .. _la página de documentación de services de MapProxy: http://mapproxy.org/docs/1.5.0/services.html
 .. _la sección de caches de la página de configuración de la documentación de MapProxy: http://mapproxy.org/docs/1.5.0/configuration.html#caches
 .. _la página de sources de la documentación de MapProxy: http://mapproxy.org/docs/1.5.0/sources.html

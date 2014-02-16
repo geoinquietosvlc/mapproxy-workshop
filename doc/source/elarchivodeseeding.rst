@@ -99,8 +99,6 @@ Estas zonas pueden definirse tanto como un *bounding box* o como una región def
 
 Se pueden encontrar algunos ejemplos de configuración en `la correspondiente sección sobre coverages de la página de seeding de la documentación de MapProxy`_
 
-
-
 .. _la correspondiente sección sobre seeds de la página de seeding de la documentación de MapProxy: http://mapproxy.org/docs/1.5.0/seed.html#seeds
 .. _la correspondiente sección sobre cleanups de la página de seeding de la documentación de MapProxy: http://mapproxy.org/docs/1.5.0/seed.html#cleanups
 .. _OGR: http://www.gdal.org/ogr/
