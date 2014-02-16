@@ -103,12 +103,3 @@ escritos en `YAML`_ y *scripts* Python. Una vez correctamente configurado se
           fees: 'None'
 
 
-.. _@vehrka: http://twitter.com/vehrka
-.. _@realivansanchez: http://twitter.com/realivansanchez
-.. _@xurxosanz: http://twitter.com/xurxosanz
-.. _lista de correo: http://lists.osgeo.org/mailman/listinfo/mapproxy
-.. _Omniscale: http://omniscale.com
-.. _ImpOSM: http://imposm.org
-.. _Oliver Tonnhofer: http://twitter.com/oltonn
-.. _YAML: http://http://www.yaml.org
-.. _WSGI: http://www.python.org/dev/peps/pep-3333/

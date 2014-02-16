@@ -1,5 +1,63 @@
-Taller de MapProxy
-=============================================
+Taller de introducción a MapProxy y configuración básica
+===========================================================
+
+.. image:: img/jornadasSIGLibrebanner2014.png
+   :width: 500px
+
+La principal motivación de las `Jornadas de SIG Libre en Girona
+<http://www.sigte.udg.edu/jornadassiglibre/>`,
+es arrojar un poco más de luz sobre el tema y que éste sea el punto de
+encuentro para una Comunidad, la de usuarios de SIG, en el cual poder
+compartir e intercambiar experiencias y conocimientos, así como establecer
+un espacio de debate activo poniendo de manifiesto la salud y el vigor del
+software SIG Libre.
+
+Facilitadores:
+---------------------------
+
+* |pferrer|
+* |jsanz|
+
+Nivel: Básico
+---------------------------
+
+Los asistentes deberán conocer conceptos básicos del `protocolo WMS
+<https://en.wikipedia.org/wiki/Web_Map_Service>` y manejo básico de consola
+GNU/Linux (cambiar de carpeta, listar contenidos).
+
+Descripción:
+---------------------------
+
+`MapProxy <http://mapproxy.org/>` es un servidor de teselas y proxy WMS Open
+Source, acelera las aplicaciones de mapas a través de la pregeneración de
+tiles integrando múltiples fuentes de datos y almacenándolos en una caché
+
+El objetivo del taller es dar a conocer la aplicación MapProxy;
+explicando cuáles son sus funcionalidades básicas, cuáles son sus
+potencialidades, repasar algunos casos de éxito y finalmente escribir
+y desplegar una configuración básica con las opciones más comunes.
+
+La primera parte del taller consistirá en realizar una introducción,
+instalación del software, creación de un proyecto de ejemplo y
+comprobar su funcionamiento.
+
+En la segunda parte del taller se revisarán algunos casos de uso de la
+aplicación y se realizarán ejercicios que resuelvan algunas de las
+dudas más frecuentes a la hora de empezar a usar este software.
+
+Aplicaciones necesarias:
+------------------------------------------
+
+Se recomienda emplear un sistema Operativo GNU/Linux basado en Debian/Ubuntu
+con los siguientes paquetes instalados:
+
+- Navegador web
+- Consola
+- Editor de ficheros (gedit sirve pero **vim its a win!!!**)
+- Algunas librerías de desarrollo y componentes Python
+
+Tabla de contenidos 
+--------------------
 
 .. toctree::
    :maxdepth: 1
