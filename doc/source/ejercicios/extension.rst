@@ -1,21 +1,6 @@
 Extensión: propuesta de ejercicios
 -------------------------------------
 
-.. note::
-
-    Autores:
-
-    * |pferrer|
-    * |jsanz|
-    * |isanchez|
-
-    Licencia:
-
-    Excepto donde quede reflejado de otra manera, la presente documentación
-    se halla bajo licencia `Creative Commons Reconocimiento Compartir Igual
-    <https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES>`_
-
-
 #. Ofrecer WMTS/TMS de servicios propios
 
    Esto es, a partir de un servicio WMS de nuestra organización, ofrecer un servicio TMS y WMTS cacheado

@@ -1,20 +1,6 @@
 Servir un fichero *MBTiles* creado con TileMill
 =====================================================
 
-.. note::
-
-    Autores:
-
-    * |pferrer|
-    * |jsanz|
-    * |isanchez|
-
-    Licencia:
-
-    Excepto donde quede reflejado de otra manera, la presente documentación
-    se halla bajo licencia `Creative Commons Reconocimiento Compartir Igual
-    <https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES>`_
-
 El objetivo de este ejercicio es montar una capa en MapProxy que sirva una
 *cache* en formato MBTiles_ generada en TileMill_. Es decir, realizamos todo
 el proceso de diseño cartográfico con esta herramienta y después ofrecemos a
