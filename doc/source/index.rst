@@ -4,8 +4,8 @@ Taller de introducción a MapProxy y configuración básica
 .. image:: img/jornadasSIGLibrebanner2014.png
    :width: 500px
 
-La principal motivación de las `Jornadas de SIG Libre en Girona
-<http://www.sigte.udg.edu/jornadassiglibre/>`,
+La principal motivación de las
+`Jornadas de SIG Libre en Girona <http://www.sigte.udg.edu/jornadassiglibre/>`_,
 es arrojar un poco más de luz sobre el tema y que éste sea el punto de
 encuentro para una Comunidad, la de usuarios de SIG, en el cual poder
 compartir e intercambiar experiencias y conocimientos, así como establecer
@@ -21,8 +21,8 @@ Facilitadores
 Nivel: Básico
 ---------------------------
 
-Los asistentes deberán conocer conceptos básicos del `protocolo WMS
-<https://en.wikipedia.org/wiki/Web_Map_Service>` y manejo básico de consola
+Los asistentes deberán conocer conceptos básicos del
+`protocolo WMS <https://en.wikipedia.org/wiki/Web_Map_Service>`_ y manejo básico de consola
 GNU/Linux (cambiar de carpeta, listar contenidos).
 
 Descripción
