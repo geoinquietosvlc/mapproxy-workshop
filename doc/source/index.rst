@@ -68,3 +68,6 @@ Tabla de contenidos
    elarchivodeseeding.rst
    ejercicios/index.rst
    referencias.rst
+
+
+Taller para las `VIII Jornadas de SIG Libre <http://www.sigte.udg.edu/jornadassiglibre/>`_.
