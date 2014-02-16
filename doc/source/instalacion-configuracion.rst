@@ -203,8 +203,6 @@ más importantes entre las que se podrían destacar:
 En ambos casos se utiliza un script de arranque de la aplicación WSGI que se
 puede generar con la herramienta ``mapproxy-util``.
 
-
-
 .. _WSGI: http://www.python.org/dev/peps/pep-3333/
 .. _documentación de despliegue: http://mapproxy.org/docs/1.5.0/deployment.html
 .. _Apache + mod_WSGI: http://mapproxy.org/docs/1.5.0/deployment.html#apache-mod-wsgi

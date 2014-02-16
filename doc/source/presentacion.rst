@@ -15,25 +15,6 @@ Presentación
     se halla bajo licencia `Creative Commons Reconocimiento Compartir Igual
     <https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES>`_
 
-
-Autores:
--------------------------
-
-* Pedro-Juan Ferrer `@vehrka`_ · pferrer@osgeo.org
-
-  * Project Manager en Omnium SI
-  * Geofriki
-
-* Iván Sanchez `@realivansanchez`_ · ivan@sanchezortega.es
-
-  * PHPDev en Omnium SI
-  * Más geofriki aún si cabe
-
-* Jorge Sanz `@xurxosanz`_ · jsanz@osgeo.org
-
-  * GISguy en `Prodevelop <http://www.prodevelop.es>`_
-  * Geofriki
-
 Qué es MapProxy
 ---------------------------
 
