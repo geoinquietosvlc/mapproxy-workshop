@@ -12,4 +12,4 @@ Taller de MapProxy
    referencias.rst
 
 
-Taller para las [VIII Jornadas de SIG Libre](http://www.sigte.udg.edu/jornadassiglibre/).
+Taller para las `VIII Jornadas de SIG Libre <http://www.sigte.udg.edu/jornadassiglibre/>`_.
