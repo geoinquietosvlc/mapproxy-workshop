@@ -57,7 +57,7 @@ vacía porque el elemento es obligatorio). La cache ha configurar es de tipo
 ``mbtiles`` y hay que indicar la ubicación del fichero que habrá que dejar en la
 carpeta ``cache_data``.
 
-.. figure:: /_static/exercise-mbtiles.png
+.. figure:: ../_static/exercise-mbtiles.png
 	 :width: 50%
 	 :alt: TMS de la capa de *parkings* diseñada en TileMill
 	 :align: center
@@ -70,7 +70,7 @@ cliente GIS de escritorio (QGis) en el que se ha establecido una transparencia
 del 50% a la capa de ortofoto de tal forma que las zonas de aparcamiento se
 visualizan de forma más efectiva.
 
-.. figure:: /_static/exercise-mbtiles2.png
+.. figure:: ../_static/exercise-mbtiles2.png
 	 :width: 50%
 	 :alt:  Acceso a las dos capas desde QGis
 	 :align: center
