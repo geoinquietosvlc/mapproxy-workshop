@@ -8,6 +8,7 @@ Descarga de dependencias del sistema
 
 Instalar paquetes iniciales::
 
+  $ sudo apt-get update
   $ sudo apt-get install tree python-virtualenv
 
 .. note:: Las líneas de esta documentación que comiencen con el símbolo
@@ -44,6 +45,7 @@ del taller.
 
 Moverse a la carpeta creada y crear el entorno virtual con::
 
+  $ cd mapproxy-workshop
   $ virtualenv venv
 
 Activar el entorno virtual con::
@@ -54,9 +56,9 @@ Activar el entorno virtual con::
           el símbolo del sistema el nombre del mismo. Se indica igualmente
           en estas instrucciones para recordarlo.
 
-Instalar la librería de tratamiento de imágenes PIL con::
+Instalar la librería de tratamiento de imágenes Pillow con::
 
-  (venv)$ pip install https://bitbucket.org/olt/pil-2009-raclette/get/default.tar.gz
+  (venv)$ pip install Pillow
 
 Y ya por fin podemos instalar MapProxy::
 
@@ -66,7 +68,7 @@ Al finalizar podremos comprobar que MapProxy está instalado usando la
 instrucción ``mapproxy-util``::
 
   (venv)$ mapproxy-util --version
-  MapProxy 1.5.0
+  MapProxy 1.6.0
 
 Crear un proyecto de demostración
 ------------------------------------------
@@ -83,11 +85,16 @@ Y veremos aparecer en pantalla la confirmación de que ha escrito los archivos::
 
 	writing test/mapproxy.yaml
 	writing test/seed.yaml
+	writing test/full_example.yaml
+	writing test/full_seed_example.yaml
 
-Esta instrucción ha creado la carpeta ``test`` y dentro de ella dos ficheros de
-configuración que veremos en la siguiente parte del taller. El fichero
+Esta instrucción ha creado la carpeta ``test`` y dentro de ella cuatro ficheros de
+configuración dos de los cuales veremos en la siguiente parte del taller. El fichero
 ``mapproxy.yaml`` configura el servidor de teselas y ``seed.yaml`` las tareas de
-pregeneración y/o limpieza de teselas.
+pregeneración y/o limpieza de teselas. Los otros dos son ejemplos que
+muestran configuraciones de casi todos los parámetros que admite MapProxy;
+no están pensados para ejecutarse (de hecho tienen configuraciones
+incompatibles) están pensados para demostrar opciones de configuración.
 
 Para ejecutar el servidor de pruebas se utilizará de nuevo ``mapproxy-util``
 esta vez con la tarea de arrancar el servidor de pruebas.::
@@ -97,21 +104,17 @@ esta vez con la tarea de arrancar el servidor de pruebas.::
 
 Y veremos aparecer en pantalla líneas similares a las siguientes::
 
-  [2012-12-06 17:20:09,814] mapproxy.config - INFO - reading: /home/user/mapproxy-workshop/confs/test/mapproxy.yaml
-  [2012-12-06 17:20:09,907] mapproxy.service.wmts - WARNING - grid 'global_geodetic_sqrt2' is not compatible with WMTS, skipping for layer 'osm'
-  [2012-12-06 17:20:09,909] mapproxy.service.wmts - WARNING - grid 'global_geodetic_sqrt2' is not compatible with WMTS, skipping for layer 'osm'
-  [info]  * Running on http://127.0.0.1:8080/
-  [info]  * Restarting with reloader: stat() polling
-  [2012-12-06 17:20:10,234] mapproxy.config - INFO - reading: /home/user/mapproxy-workshop/confs/test/mapproxy.yaml
-  [2012-12-06 17:20:10,321] mapproxy.service.wmts - WARNING - grid 'global_geodetic_sqrt2' is not compatible with WMTS, skipping for layer 'osm'
-  [2012-12-06 17:20:10,324] mapproxy.service.wmts - WARNING - grid 'global_geodetic_sqrt2' is not compatible with WMTS, skipping for layer 'osm'
+    [2014-02-25 22:20:01,823] mapproxy.config - INFO - reading: /home/user/mapproxy-workshop/test/mapproxy.yaml
+    [info]  * Running on http://127.0.0.1:8080/
+    [info]  * Restarting with reloader: stat() polling
+    [2014-02-25 22:20:01,997] mapproxy.config - INFO - reading: /home/user/mapproxy-workshop/test/mapproxy.yaml
 
 Si nos dirigimos con nuestro navegador a la dirección web http://localhost:8080
 podremos ver un mensaje de bienvenida y si hacemos clic en el enlace *demo*
 MapProxy nos mostrará su interfaz de demostración de servicios. En esta página
 podemos ver diferentes enlaces a ficheros de capacidades y a visores. Podemos
 probar con el servicio **TMS** y ver la capa ``osm`` en el sistema de
-coordenadas ``EPSG:900913`` en formato ``png``.
+coordenadas ``EPSG:3857`` en formato ``png``.
 
 .. figure:: _static/demo-test.png
 	 :width: 50%
@@ -130,22 +133,21 @@ biblioteca de *webmapping* `OpenLayers <http://www.openlayers.org>`_.
 
 Si se observa cuidadosamente la salida de ``mapproxy-util``, se pueden tanto las peticiones que mapproxy hace al *source*::
 
-   [2013-02-03 20:08:15,241] mapproxy.source.request - INFO - GET http://shagrat.icc.es/lizardtech/iserv/ows?layers=orto5m&width=541&version=1.1.1&bbox=482127.752371,4636453.33696,497518.196187,4655724.38706&service=WMS&format=image%2Fpng&styles=&srs=EPSG%3A25831&request=GetMap&height=678 200 759.8 366
+    [2014-02-25 22:20:13,844] mapproxy.source.request - INFO - GET http://osm.omniscale.net/proxy/service?layers=osm&width=512&version=1.1.1&bbox=-20037508.3428,-20037508.3428,20037508.3428,20037508.3428&service=WMS&format=image%2Fpng&styles=&srs=EPSG%3A3857&request=GetMap&height=512 200 30.1 326
 
 Así como las peticiones que mapproxy *responde* al cliente::
 
-   [info] 127.0.0.1 - - [03/Feb/2013 20:08:23] "GET /service?LAYERS=orto5m-icc&FORMAT=image%2Fpng&SRS=EPSG%3A3857&EXCEPTIONS=application%2Fvnd.ogc.se_inimage&TRANSPARENT=TRUE&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&BBOX=284862.66336419,5137678.0304892,342979.26470981,5176813.788971&WIDTH=891&HEIGHT=600 HTTP/1.1" 200 -
-
-
+    [info] 127.0.0.1 - - [25/Feb/2014 22:20:13] "GET /tms/1.0.0/osm/webmercator/0/1/1.png HTTP/1.1" 200 -
 
 Finalmente, podemos comprobar cómo el servidor ha guardado algunas teselas al
 visitar la demostración en la carpeta ``confs/test/cache_data`` que podemos ver
 desde la consola si navegamos hasta esa carpeta y ejecutamos el comando
 ``tree``::
 
+    $ cd cache_data
     $ tree -d -L 3
     .
-    └── osm_cache_EPSG900913
+    └── osm_cache_EPSG3857
         ├── 01
         │   └── 000
         ├── 03
@@ -163,7 +165,7 @@ estructura de carpetas donde se almacenan las imágenes.
    Si tenemos *imagemagick* instalado en nuestro ordenador, podemos ver
    información sobre las imágenes del caché rápidamente ejecutando::
 
-    identify `find cache_data | grep png`
+    identify `find . | grep png`
 
 Despliegue
 -----------------------
@@ -190,6 +192,6 @@ puede generar con la herramienta ``mapproxy-util``.
 
 
 .. _WSGI: http://www.python.org/dev/peps/pep-3333/
-.. _documentación de despliegue: http://mapproxy.org/docs/1.5.0/deployment.html
-.. _Apache + mod_WSGI: http://mapproxy.org/docs/1.5.0/deployment.html#apache-mod-wsgi
-.. _Gunicorn: http://mapproxy.org/docs/1.5.0/deployment.html#gunicorn
+.. _documentación de despliegue: http://mapproxy.org/docs/1.6.0/deployment.html
+.. _Apache + mod_WSGI: http://mapproxy.org/docs/1.6.0/deployment.html#apache-mod-wsgi
+.. _Gunicorn: http://mapproxy.org/docs/1.6.0/deployment.html#gunicorn
