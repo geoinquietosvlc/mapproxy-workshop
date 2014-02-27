@@ -1,6 +1,16 @@
 Ejercicio: acelerar el acceso a un WMS
 ----------------------------------------------
 
+Te sugerimos que para resolver los ejercicios inicies un proyecto
+nuevo llamado *ej01*::
+
+    $ cd /home/user/mapproxy-workshop/
+    $ mapproxy-util create -t base-config ej01 
+    $ cd ej01
+    $ leafpad mapproxy.yaml
+
+y borres el contenido del archivo usando la combinación de teclas ``Control+A`` y después la tecla ``Supr``.
+
 Primera parte: acceder a un servicio de ortoimágenes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -15,6 +25,12 @@ rectángulo máximo:
 - Latitud mínima: 41.88
 - Longitud máxima: 2.97
 - Latitud máxima: 42.07
+
+Te recordamos que para lanzar un servidor debes usar la orden::
+
+    $ mapproxy-util serve-develop mapproxy.yaml
+
+y para pararlo se debe pulsar la combinación de teclas ``Control+C``.
 
 
 Segunda parte: cachear un servicio de ortoimágenes

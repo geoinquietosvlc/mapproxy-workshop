@@ -1,17 +1,31 @@
 El archivo de configuración mappproxy.yaml
 =============================================
 
-
 Introducción
 ---------------------------------
 
-Las diferentes funcionalidades de MapProxy se configuran a través de archivos *YAML* que es un estandar de serialización de datos que se emplea en diversos lenguajes de programación.
+Las diferentes funcionalidades de MapProxy se configuran a través de archivos
+*YAML* que es un estandar de serialización de datos que se emplea en diversos
+lenguajes de programación.
 
-MapProxy se configura a través de los archivos **mappproxy.yaml** y **seed.yaml** definiendo para cada archivo una serie de secciones y de directivas en las secciones.
+MapProxy se configura a través de los archivos **mappproxy.yaml** y
+**seed.yaml** definiendo para cada archivo una serie de secciones y de
+directivas en las secciones.
 
-En la presente sección hablaremos solo del archivo principal de configuración *mappproxy.yaml*. Dejaremos el archivo *seed.yaml* para la sección :ref:`elarchivodeseeding`.
+En la presente sección hablaremos solo del archivo principal de configuración
+*mappproxy.yaml*. Dejaremos el archivo *seed.yaml* para la sección
+:ref:`elarchivodeseeding`.
 
-Es muy importante respetar la indentación en los archivos, y esta debe realizarse con **espacios** y nunca con tabuladores.
+Es muy importante respetar la indentación en los archivos, y esta debe
+realizarse con **espacios** y nunca con tabuladores.
+
+Para seguir el taller crearemos un proyecto llamado *girona01* y editaremos el
+contenido de su archivo mapproxy.yaml::
+
+    $ cd /home/user/mapproxy-workshop/
+    $ mapproxy-util create -t base-config girona01
+    $ cd girona01
+    $ leafpad mapproxy.yaml
 
 mapproxy.yaml
 --------------------------------
@@ -38,7 +52,23 @@ El archivo está compuesto de las siguientes secciones
 
 El orden en el que aparecen las secciones no es importante.
 
-El archivo puede subdividirse en varios archivos utilizando la directiva **base**.
+El archivo puede subdividirse en varios archivos utilizando la directiva
+**base**.
+
+Relación entre los componentes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Para tener una idea global de como interrelacionan los distintos componentes de
+MapProxy podemos consultar el mapa conceptual de la figura :ref:`mcmapproxy`.
+
+.. _mcmapproxy:
+
+.. figure:: img/Esquema_funcionamiento_MapProxy.png
+   :align: center
+   :width: 500px
+   :alt: Mapa conceptual de interrelacion entre los componentes de MapProxy
+
+   Mapa conceptual de interrelacion entre los componentes de MapProxy
 
 services
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -51,9 +81,15 @@ MapProxy puede generar los siguientes tipos de servicio:
 * Web Map Tile Services (WMTS) [**wmts**]
 * MapProxy Demo Service [**demo**]
 
-Para cada uno se emplea su propia clave, que aparece listada entre corchetes, y en algunos casos se pueden configurar opciones adicionales.
+Para cada uno se emplea su propia clave, que aparece listada entre corchetes, y
+en algunos casos se pueden configurar opciones adicionales.
 
-Para el presente taller utilizaremos el servicio *wms* que se configura indicando los sistemas de referencia en los que se va a servir (**srs**), los formatos de imagen (**image_formats**) y metadatos adicionales (**md**):
+Para el presente taller utilizaremos el servicio *wms* que se configura
+indicando los sistemas de referencia en los que se va a servir (**srs**), los
+formatos de imagen (**image_formats**) y metadatos adicionales (**md**):
+
+Remplaza el contenido de la sección *services* por el contenido que hay a
+continuación:
 
 .. code-block:: yaml
 
@@ -75,15 +111,22 @@ Para el presente taller utilizaremos el servicio *wms* que se configura indicand
             Este servicio tiene únicamente objetivos educativos.
           fees: 'None'
 
-Puede encontrarse una descripción más completa de las claves y opciones de los servicios en `la página de documentación de services de MapProxy`_
+Puede encontrarse una descripción más completa de las claves y opciones de los
+servicios en `la página de documentación de services de MapProxy`_
 
 layers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Las capas definen la información que MapProxy proporciona y están formadas por una lista (una lista de *YAML*) de pares clave - valor.
+Las capas definen la información que MapProxy proporciona y están formadas por
+una lista (una lista de *YAML*) de pares clave - valor.
 
-La información mínima que se requiere es el nombre (**name**) como identificador único, el título (**title**) como pequeña descripción y el origen u orígenes de datos (del propio archivo de MapProxy) que la conforman (**source**):
+La información mínima que se requiere es el nombre (**name**) como identificador
+único, el título (**title**) como pequeña descripción y el origen u orígenes de
+datos (del propio archivo de MapProxy) que la conforman (**source**):
 
+
+Remplaza el contenido de la sección *layers* por el contenido que hay a
+continuación:
 
 .. code-block:: yaml
 
@@ -93,12 +136,19 @@ La información mínima que se requiere es el nombre (**name**) como identificad
         sources: [icc_wms]
 
 
-Puede encontrarse más información sobre las capas así como otros parámetros configurables de las mismas en `la sección de layers de la página de configuración de la documentación de MapProxy <http://mapproxy.org/docs/1.5.0/configuration.html#layers>`_
+Puede encontrarse más información sobre las capas así como otros parámetros configurables de las mismas en `la sección de layers de la página de configuración de la documentación de MapProxy`_
 
 caches
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-En *caches* se configura la manera en la que se almacena una copia de la información en disco, para no tenerla que volver a pedir al servidor. La información que hay que proporcionar en este caso es el origen de datos (**sources**) y el grid o grids (**grids**) sobre los que queremos guardar los cachés. En caso de haber varios grids se creará una caché separada por cada capa y cada *grid*
+En *caches* se configura la manera en la que se almacena una copia de la
+información en disco, para no tenerla que volver a pedir al servidor. La
+información que hay que proporcionar en este caso es el origen de datos
+(**sources**) y el grid o grids (**grids**) sobre los que queremos guardar los
+cachés. En caso de haber varios grids se creará una caché separada por cada capa
+y cada *grid*
+
+Remplaza el contenido de la sección *caches* por el contenido que hay a continuación:
 
 .. code-block:: yaml
 
@@ -113,6 +163,8 @@ sources
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 En esta sección se definen los diferentes orígenes de datos de los servicios que ofrece el archivo de MapProxy, se define el nombre del origen de datos y se configuran parámetros del mismo como el tipo (**type**) del que admite *wms*, *tiles*, *mapserver*, *mapnik* y *debug*. Cada tipo tiene sus propias configuraciones.
+
+Remplaza el contenido de la sección *sources* por el contenido que hay a continuación:
 
 .. code-block:: yaml
 
@@ -132,9 +184,17 @@ Puede encontrarse una descripción más completa de las claves de cada tipo en `
 grids
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-La sección de grids define las rejillas que emplea MapProxy a nivel interno para almacenar las imágenes generadas. Hay varias opciones de configuración, muchas pueden emplearse simultáneamente aunque tengan efectos contradictorios y produzcan resultados ambiguos.
+La sección de grids define las rejillas que emplea MapProxy a nivel interno para
+almacenar las imágenes generadas. Hay varias opciones de configuración, muchas
+pueden emplearse simultáneamente aunque tengan efectos contradictorios y
+produzcan resultados ambiguos.
 
-En general lo mínimo a definir *debería* ser el nombre, el sistema de referencia (**srs**), el *bounding box* (**bbox**) y las resoluciones (**min_res** y **max_res**) aunque en los grids que están basados en otros grids la lista de parámetros puede ser menor.
+En general lo mínimo a definir *debería* ser el nombre, el sistema de referencia
+(**srs**), el *bounding box* (**bbox**) y las resoluciones (**min_res** y
+**max_res**) aunque en los grids que están basados en otros grids la lista de
+parámetros puede ser menor.
+
+Remplaza el contenido de la sección *grids* por el contenido que hay a continuación:
 
 .. code-block:: yaml
 
@@ -146,14 +206,17 @@ En general lo mínimo a definir *debería* ser el nombre, el sistema de referenc
         min_res: 2000
         max_res: .5
 
-.. attention:: La resolución se mide en unidades del SRS por pixel. Como estamos usando EPSG:25831, que es una proyección UTM, podemos suponer que la resolución mínima es de 2000 metros/pixel y la máxima de 50 cm/pixel.
+.. attention:: La resolución se mide en unidades del SRS por pixel. Como estamos
+   usando EPSG:25831, que es una proyección UTM, podemos suponer que la
+   resolución mínima es de 2000 metros/pixel y la máxima de 50 cm/pixel.
 
 Se puede consultar más información sobre las claves en la `sección de grids de la página de configuración de la documentación de MapProxy`_
 
 globals
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-En esta sección se colocan directivas y claves que son comunes a todas las otras secciones o son internas de MapProxy.
+En esta sección se colocan directivas y claves que son comunes a todas las otras
+secciones o son internas de MapProxy.
 
 .. code-block:: yaml
 
@@ -166,26 +229,16 @@ En esta sección se colocan directivas y claves que son comunes a todas las otra
           resampling_method: bilinear
           jpeg_quality: 90
 
-.. attention:: Si el directorio de caché no empieza por una barra "/", se supone que es un directorio *relativo* a donde se encuentre el fichero ``mapproxy.yaml``.
+.. attention:: Si el directorio de caché no empieza por una barra "/", se supone
+   que es un directorio *relativo* a donde se encuentre el fichero
+   ``mapproxy.yaml``.
 
 Una vez más hay amplia información sobre las claves y directivas en la `sección de globals de la página de configuración de la documentación de MapProxy`_
 
-Relación entre los componentes
-----------------------------------
 
-Para tener una idea global de como interrelacionan los distintos componentes de MapProxy podemos consultar el mapa conceptual de la figura :ref:`mcmapproxy`.
-
-.. _mcmapproxy:
-
-.. figure:: img/Esquema_funcionamiento_MapProxy.png
-   :align: center
-   :width: 500px
-   :alt: Mapa conceptual de interrelacion entre los componentes de MapProxy
-
-   Mapa conceptual de interrelacion entre los componentes de MapProxy
-
-.. _la página de documentación de services de MapProxy: http://mapproxy.org/docs/1.5.0/services.html
-.. _la sección de caches de la página de configuración de la documentación de MapProxy: http://mapproxy.org/docs/1.5.0/configuration.html#caches
-.. _la página de sources de la documentación de MapProxy: http://mapproxy.org/docs/1.5.0/sources.html
-.. _sección de globals de la página de configuración de la documentación de MapProxy: http://mapproxy.org/docs/1.5.0/configuration.html#globals
-.. _sección de grids de la página de configuración de la documentación de MapProxy: http://mapproxy.org/docs/1.5.0/configuration.html#id5
+.. _la página de documentación de services de MapProxy: http://mapproxy.org/docs/1.6.0/services.html
+.. _la sección de layers de la página de configuración de la documentación de MapProxy: http://mapproxy.org/docs/1.6.0/configuration.html#layers
+.. _la sección de caches de la página de configuración de la documentación de MapProxy: http://mapproxy.org/docs/1.6.0/configuration.html#caches
+.. _la página de sources de la documentación de MapProxy: http://mapproxy.org/docs/1.6.0/sources.html
+.. _sección de globals de la página de configuración de la documentación de MapProxy: http://mapproxy.org/docs/1.6.0/configuration.html#globals
+.. _sección de grids de la página de configuración de la documentación de MapProxy: http://mapproxy.org/docs/1.6.0/configuration.html#id5
