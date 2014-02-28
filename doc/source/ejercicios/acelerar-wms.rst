@@ -90,7 +90,7 @@ de forma que MapProxy no tenga que reproyectar las teselas todo el tiempo.
 
 
 .. note:: Por defecto las cachés hemos visto que se almacenan en formato :file:`png`.
-          Esta *cache* es de una ortofoto por lo que parece más adecuado utilijar el
+          Esta *cache* es de una ortofoto por lo que parece más adecuado utilizar el
           formato :file:`jpeg` para almacenar y transmitir nuestras teselas. ¿Cómo
           configuramos MapProxy para que nuestra *cache* se almacene en este formato?
 
