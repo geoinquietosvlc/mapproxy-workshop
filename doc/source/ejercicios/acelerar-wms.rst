@@ -34,6 +34,7 @@ Te recordamos que para lanzar un servidor debes usar la orden::
 y para pararlo se debe pulsar la combinación de teclas :kbd:`Control+C`.
 
 .. figure:: ../_static/exercise-wms3.png
+   :width: 40%
    :alt: Servicio de demostración del proxy de nuestro WMS
    :align: center
 
@@ -58,6 +59,7 @@ servidor WMS debe ofrecer además de estos dos sistemas de referencia, también 
 el más estándar ``EPSG:3857`` y también en UTM31N, es decir en ``EPSG:25831``.
 
 .. figure:: ../_static/exercise-wms4.png
+   :width: 40%
    :alt: Servicio de demostración de nuestra capa cacheada
    :align: center
 
