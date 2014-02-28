@@ -1,8 +1,9 @@
+============================================
 Ejercicio: *seeding* y borrado de *caches*
---------------------------------------------
+============================================
 
 Sembrar una caché
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+=====================
 
 
 Sembrar una caché significa llenar toda la caché de antemano. Hay un par de
@@ -20,7 +21,7 @@ MapProxy sirve las imágenes sin necesidad de pedirlas al origen.
 
 
 Sembrado sencillo
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+=====================
 
 La tarea más sencilla es lanzar *una* **tarea** de sembrado *un* **cache** en
 *una* **cobertura** (área) para algunos **niveles de zoom**. La *cache* (con sus
@@ -48,7 +49,7 @@ grid UTM, para niveles de zoom del 1 al 7 y el mismo *coverage*.
 
 
 Limpiando cachés
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+=====================
 
 Para asegurar que solo tenemos la caché de los datos que se usan en la oficina,
 vamos a crear una tarea de limpieza que borre los datos a partir del nivel 8 de
@@ -60,7 +61,7 @@ teselas que no se visitan desde hace un tiempo.
 
 
 Comprobación
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+=====================
 
 Si ejecutamos el comando ``mapproxy-seed`` pasando como parámetro la opción
 ``--summary`` obtendremos el siguiente resumen de las tareas de sembrado y

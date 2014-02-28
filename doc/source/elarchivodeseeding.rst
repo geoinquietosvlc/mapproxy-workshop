@@ -1,17 +1,18 @@
 .. _elarchivodeseeding:
 
-El archivo de configuración seed.yaml
+=============================================
+El archivo de configuración :file:`seed.yaml`
 =============================================
 
 Introducción
----------------------------------
+==============
 
 MapProxy genera teselas bajo demanda y las puede almacenar en una cache, pero para acelerar el proceso, sobretodo de capas que no se prevea que vayan a cambiar demasiado, se puede *sembrar* la caché para tener imágenes pregeneradas.
 
 El proceso de sembrado o *seeding* se puede lanzar a través de una herramienta de consola llamada **mapproxy-seed** y configurarse fácilmente a través de un script en *YAML* llamado *seed.yaml*
 
-seed.yaml
----------------------------------------------
+:file:`seed.yaml`
+=====================
 
 El archivo consta de las siguientes secciones
 
@@ -25,7 +26,7 @@ El archivo consta de las siguientes secciones
   En esta sección se definen zonas que después se pueden emplear tanto en el sembrado como en las purgas.
 
 seeds
-^^^^^^^^^^^^^
+==========
 
 En la sección se define **qué** debe ser sembrado haciendo referencia tanto a las caches (**caches**), como a las rejillas (**gids**) y por supuesto a los niveles de zoom (**levels**) pudiendo emplearse además claves de zonas (**coverages**).
 
@@ -43,7 +44,7 @@ En la sección se define **qué** debe ser sembrado haciendo referencia tanto a 
 Puede encontrarse más información sobre estas y otras claves de la sección en `la correspondiente sección sobre seeds de la página de seeding de la documentación de MapProxy`_
 
 cleanups
-^^^^^^^^^^^^^
+============
 
 La sección permite configurar las purgas de las cachés para evitar que se acumulen imágenes viejas en disco.
 
@@ -68,7 +69,7 @@ Se debe dar un nombre a cada configuración de purga y definir a que cachés van
 Puede encontrarse más información sobre estas y otras claves de la sección en `la correspondiente sección sobre cleanups de la página de seeding de la documentación de MapProxy`_
 
 coverages
-^^^^^^^^^^^^^
+===============
 
 Por último, el archivo permite la definición de zonas en las que aplicar la tanto el sembrado como las purgas.
 

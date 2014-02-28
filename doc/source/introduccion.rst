@@ -1,8 +1,9 @@
+============================
 Introducción
 ============================
 
 Qué es MapProxy
----------------------------
+============================
 
 MapProxy es un servidor de teselas que lee datos de servidores WMS, TMS, configuraciones de
 Mapserver o Mapnik, Google Maps, Bing Maps, etc. Podría decirse que
@@ -17,7 +18,7 @@ servicios de *proxy*, también es un Servidor WMS, permite realizar *Sembrado
    Esquema de una red con MapProxy configurado
 
 Un poco más sobre MapProxy
----------------------------
+============================
 
 - La web del proyecto es http://mapproxy.org
 - Es un producto de `Omniscale`_ (desarrolladores también de `ImpOSM`_)
@@ -27,7 +28,7 @@ Un poco más sobre MapProxy
 - Tiene una `lista de correo`_ para soporte y dudas (en inglés)
 
 Pero ¿para qué sirve?
----------------------------
+============================
 
 Algunos casos de uso:
 
@@ -51,7 +52,7 @@ Algunos casos de uso:
   servicio TMS que solo nos llega en el sistema Mercator.
 
 ¿Cómo funciona?
----------------------------
+============================
 
 Se trata de un software de servidor que se configura a través de ficheros
 escritos en `YAML`_ y *scripts* Python. Una vez correctamente configurado se

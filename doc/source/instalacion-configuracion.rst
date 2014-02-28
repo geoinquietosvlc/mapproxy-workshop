@@ -152,21 +152,15 @@ Si se observa cuidadosamente la salida de :command:`mapproxy-util`, se pueden ta
 Finalmente, podemos comprobar cómo el servidor ha guardado algunas teselas al
 visitar la demostración en la carpeta ``confs/test/cache_data`` que podemos ver
 desde la consola si navegamos hasta esa carpeta y ejecutamos el comando
-``tree``::
+:command:`tree`:
 
-    $ cd cache_data
-    $ tree -d -L 3
-    .
-    └── osm_cache_EPSG3857
-        ├── 01
-        │   └── 000
-        ├── 03
-        │   └── 000
-        ├── 05
-        │   └── 000
-        ├── 07
-        │   └── 000
-        └── tile_locks
+.. figure:: _static/tree.png
+   :width: 40%
+   :alt: Presentando la estructura de carpetas de la cache
+   :align: center
+
+   Presentando la estructura de carpetas de la *cache*
+
 
 Como vemos MapProxy ha creado una carpeta para la *cache* de la capa ``osm`` y una
 estructura de carpetas donde se almacenan las imágenes.
