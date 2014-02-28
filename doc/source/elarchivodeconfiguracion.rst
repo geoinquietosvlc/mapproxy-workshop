@@ -5,19 +5,20 @@ Introducción
 ---------------------------------
 
 Las diferentes funcionalidades de MapProxy se configuran a través de archivos
-*YAML* que es un estandar de serialización de datos que se emplea en diversos
+*YAML*, un estandar de serialización de datos que se emplea en diversos
 lenguajes de programación.
 
-MapProxy se configura a través de los archivos **mappproxy.yaml** y
-**seed.yaml** definiendo para cada archivo una serie de secciones y de
-directivas en las secciones.
+MapProxy se configura a través de los archivos :file:`mappproxy.yaml` y
+:file:`seed.yaml`, definiendo para cada archivo una serie de secciones y de
+directivas en las secciones. Estos nombres de fichero son solo una propuesta,
+desde luego se pueden elegir otros que se adecuen a nuestro proyecto.
 
 En la presente sección hablaremos solo del archivo principal de configuración
-*mappproxy.yaml*. Dejaremos el archivo *seed.yaml* para la sección
+:file:`mappproxy.yaml`. Dejaremos el archivo :file:`seed.yaml` para la sección
 :ref:`elarchivodeseeding`.
 
 Es muy importante respetar la indentación en los archivos, y esta debe
-realizarse con **espacios** y nunca con tabuladores.
+realizarse con **espacios** y **NUNCA** con tabuladores.
 
 Para seguir el taller crearemos un proyecto llamado *girona01* y editaremos el
 contenido de su archivo mapproxy.yaml::
@@ -25,7 +26,12 @@ contenido de su archivo mapproxy.yaml::
     $ cd /home/user/mapproxy-workshop/
     $ mapproxy-util create -t base-config girona01
     $ cd girona01
-    $ leafpad mapproxy.yaml
+    $ leafpad mapproxy.yaml &
+
+.. note:: :command:`leafpad` es un editor de texto disponible en *OSGeo Live*.
+          Puedes usar cualquier editor de ficheros de texto plano para trabajar
+          con ficheros :file:`.yaml` siempre y cuando se respete el uso de
+          espacios y la codificación de caracteres.
 
 mapproxy.yaml
 --------------------------------
@@ -50,15 +56,15 @@ El archivo está compuesto de las siguientes secciones
 **globals:**
     En esta sección generalmente se definen parámetros que son comunes a todas las secciones.
 
-El orden en el que aparecen las secciones no es importante.
+El orden en el que aparecen las secciones **no** es importante.
 
 El archivo puede subdividirse en varios archivos utilizando la directiva
-**base**.
+**base** (`documentación <http://mapproxy.org/docs/1.6.0/configuration.html#base>`_).
 
 Relación entre los componentes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Para tener una idea global de como interrelacionan los distintos componentes de
+Para tener una idea global de cómo interrelacionan los distintos componentes de
 MapProxy podemos consultar el mapa conceptual de la figura :ref:`mcmapproxy`.
 
 .. _mcmapproxy:
@@ -133,7 +139,7 @@ continuación:
     layers:
       - name: orto5m-icc-proxy
         title: Ortofoto 1:5000 del ICC de la zona de Girona
-        sources: [icc_wms]
+        sources: [icc_cache]
 
 
 Puede encontrarse más información sobre las capas así como otros parámetros configurables de las mismas en `la sección de layers de la página de configuración de la documentación de MapProxy`_
@@ -153,9 +159,9 @@ Remplaza el contenido de la sección *caches* por el contenido que hay a continu
 .. code-block:: yaml
 
     caches:
-      osm_cache:
+      icc_cache:
         grids: [utm_girona]
-        sources: [osm_wms]
+        sources: [icc_wms]
 
 Puede encontrarse más información sobre las caches así como otros parámetros configurables de los mismos en `la sección de caches de la página de configuración de la documentación de MapProxy`_
 

@@ -1,16 +1,22 @@
+*************************************************************
 Taller de introducción a MapProxy y configuración básica
-===========================================================
+*************************************************************
 
 .. image:: img/jornadasSIGLibrebanner2014.png
    :width: 500px
 
+
 La principal motivación de las
 `Jornadas de SIG Libre en Girona <http://www.sigte.udg.edu/jornadassiglibre/>`_,
-es arrojar un poco más de luz sobre el tema y que éste sea el punto de
-encuentro para una Comunidad, la de usuarios de SIG, en el cual poder
+es arrojar un poco más de luz sobre el tema del *software libre geoespacial*
+y que este evento sea el punto de encuentro para una Comunidad,
+la de usuarios de SIG, en el cual poder
 compartir e intercambiar experiencias y conocimientos, así como establecer
 un espacio de debate activo poniendo de manifiesto la salud y el vigor del
-software SIG Libre.
+*software* SIG Libre.
+
+Sobre el taller
+===================
 
 Facilitadores
 ---------------------------
@@ -18,14 +24,14 @@ Facilitadores
 * |pferrer|
 * |jsanz|
 
-Nivel: Básico
+Nivel requerido: básico
 ---------------------------
 
 Los asistentes deberán conocer conceptos básicos del
-`protocolo WMS <https://en.wikipedia.org/wiki/Web_Map_Service>`_ y manejo básico de consola
-GNU/Linux (cambiar de carpeta, listar contenidos).
+`protocolo WMS <https://en.wikipedia.org/wiki/Web_Map_Service>`_ y
+manejo básico de consola GNU/Linux (cambiar de carpeta, listar contenidos).
 
-Descripción
+Qué vamos a ver
 ---------------------------
 
 `MapProxy <http://mapproxy.org/>`_ es un servidor de teselas y proxy WMS Open
@@ -56,20 +62,6 @@ con los siguientes paquetes instalados:
 - Editor de ficheros (gedit sirve pero **vim its a win!!!**)
 - Algunas librerías de desarrollo y componentes Python
 
-Tabla de contenidos
---------------------
-
-.. toctree::
-   :maxdepth: 1
-
-   introduccion.rst
-   instalacion-configuracion.rst
-   elarchivodeconfiguracion.rst
-   elarchivodeseeding.rst
-   ejercicios/index.rst
-   referencias.rst
-
-
 Autores
 ----------
 
@@ -99,3 +91,15 @@ se halla bajo licencia `Creative Commons Reconocimiento Compartir Igual
 .. image:: img/by-sa.png
    :width: 200px
    :alt: CC BY SA
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: 1
+
+   introduccion.rst
+   instalacion-configuracion.rst
+   elarchivodeconfiguracion.rst
+   elarchivodeseeding.rst
+   ejercicios/index.rst
+   referencias.rst

@@ -4,12 +4,11 @@ Introducción
 Qué es MapProxy
 ---------------------------
 
-MapProxy es un servidor de teselas que lee datos de WMS, TMS, configuraciones de
-Mapserver o Mapnik de TileCache, Google Maps, Bing Maps, etc. Podría decirse que
+MapProxy es un servidor de teselas que lee datos de servidores WMS, TMS, configuraciones de
+Mapserver o Mapnik, Google Maps, Bing Maps, etc. Podría decirse que
 MapProxy es un *acelerador* de mapas en Internet, aunque no solo ofrece
 servicios de *proxy*, también es un Servidor WMS, permite realizar *Sembrado
-(Seeding)* de capas, permite gestionar seguridad de acceso a capas, reproyectar
-capas, etc.
+(Seeding)* de capas, permite gestionar seguridad de acceso a capas, reproyectarlas, etc.
 
 .. figure:: img/mapproxy.png
    :align: center
@@ -21,7 +20,7 @@ Un poco más sobre MapProxy
 ---------------------------
 
 - La web del proyecto es http://mapproxy.org
-- Es un producto de `Omniscale`_ (`ImpOSM`_)
+- Es un producto de `Omniscale`_ (desarrolladores también de `ImpOSM`_)
 - `Oliver Tonnhofer`_ es su desarrollador principal
 - Está escrito en Python
 - Es FOSS desde 2010 (licencia Apache)
@@ -44,12 +43,12 @@ Algunos casos de uso:
 * Mezclar cartografía de diferentes servicios de mapas
 
 * Descargar cartografía a equipos que se van a desplazar a zonas sin acceso a
-  Internet (caso del equipo HOT de OSM)
+  Internet (caso del equipo `HOT`_ de OSM)
 
-* Servir cartografía diseñada con TileMill
+* Servir cartografía diseñada con `TileMill`_
 
 * Ofrecer servicios en diferentes sistemas de coordenadas a partir de un
-  servicio TMS que solo nos llega en el Mercator.
+  servicio TMS que solo nos llega en el sistema Mercator.
 
 ¿Cómo funciona?
 ---------------------------
@@ -91,3 +90,5 @@ escritos en `YAML`_ y *scripts* Python. Una vez correctamente configurado se
 .. _Oliver Tonnhofer: http://twitter.com/oltonn
 .. _YAML: http://http://www.yaml.org
 .. _WSGI: http://www.python.org/dev/peps/pep-3333/
+.. _TileMill: https://www.mapbox.com/tilemill
+.. _HOT: hot.openstreetmap.org/

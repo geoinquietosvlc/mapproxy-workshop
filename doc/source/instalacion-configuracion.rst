@@ -6,7 +6,8 @@ Instalación de MapProxy
 Descarga de dependencias del sistema
 ---------------------------------------------------
 
-Instalar paquetes iniciales::
+Vamos a instalar un par de paquetes iniciales, para ello abre un
+*emulador de terminal* y ejecuta:::
 
   $ sudo apt-get update
   $ sudo apt-get install tree python-virtualenv
@@ -16,7 +17,10 @@ Instalar paquetes iniciales::
           del sistema. Si vas a copiar estas líneas en tu consola debes hacerlo
           **sin incluir el dólar**.
 
-Instalar el resto de dependencias de MapProxy::
+.. note:: En el *OSGeo Live* puedes acceder al emulador de terminal desde el menú
+          :menuselection:`Applications --> Accessories --> Terminal Emulator`
+
+A continuación puedes instalar el resto de dependencias de MapProxy::
 
   $ sudo apt-get install python-imaging \
     python-yaml libproj0 libgeos-dev python-lxml libgdal-dev \
@@ -25,23 +29,27 @@ Instalar el resto de dependencias de MapProxy::
 
 Esto descargará unas 200MB en binarios en un sistema nuevo, tardará un buen
 rato...  A partir de aquí todo se ejecuta como un usuario normal. En el caso
-de OSGeo Live muchos de estos paquetes ya están instalados y por tanto solo
+de *OSGeo Live* muchos de estos paquetes ya están instalados y por tanto solo
 instalará los necesarios.
 
 Cómo instalar MapProxy
 ---------------------------------------------------
 
-Primero vamos a descargar los materiales del taller. En el home del usuario
-ejecutar::
+Primero vamos a descargar los materiales del taller. Usando la misma terminal de la sección
+anterior, si no te has cambiado estarás en la carpeta raíz del usuario. En el caso de
+*OSGeo Live* esta carpeta es :file:`/home/user`. Encontrándonos en esta carpeta ejecutar::
 
   $ mkdir mapproxy-workshop
   $ wget -O mapproxy-workshop/mapproxy-workshop.pdf "http://bit.ly/mapproxy-workshop-gviii"
 
 ..  $ git clone https://github.com/geoinquietosvlc/mapproxy-workshop.git
 
+.. note:: En una terminal Linux puedes volver en cualquier momento a la carpeta raíz del
+          usuario utilizando el comando :command:`cd` sin parámetros.
 
-Con esto tendremos una nueva carpeta ``mapproxy-workshop`` con el documento pdf
-del taller.
+Con esto tendremos una nueva carpeta :file:`mapproxy-workshop` con el documento pdf
+del taller. En *OSGeo Live* podemos abrir el archivo pdf usando el *software* disponible
+en :menuselection:`Applications --> Office --> Document Viewer`.
 
 Moverse a la carpeta creada y crear el entorno virtual con::
 
@@ -76,10 +84,12 @@ Crear un proyecto de demostración
 Para comprobar que MapProxy está funcionando correctamente vamos a crear un
 proyecto de ejemplo y lo arrancaremos con el servidor de pruebas que MapProxy
 incorpora. Para ello, nos colocaremos en la carpeta raíz del taller y crearemos
-la carpeta ``confs``. Nos movemos a esa carpeta y ejecutamos la herramienta que
-MapProxy incorpora para diferentes tareas ``mapproxy-util``.::
+la carpeta :file:`confs`. Nos movemos a esa carpeta y ejecutamos la herramienta que
+MapProxy incorpora para diferentes tareas :command:`mapproxy-util`::
 
-	(venv)$ mapproxy-util create -t base-config test
+  (venv)$ mkdir confs
+  (venv)$ cd confs
+  (venv)$ mapproxy-util create -t base-config test
 
 Y veremos aparecer en pantalla la confirmación de que ha escrito los archivos::
 
@@ -88,15 +98,15 @@ Y veremos aparecer en pantalla la confirmación de que ha escrito los archivos::
 	writing test/full_example.yaml
 	writing test/full_seed_example.yaml
 
-Esta instrucción ha creado la carpeta ``test`` y dentro de ella cuatro ficheros de
+Esta instrucción ha creado la carpeta :file:`test` y dentro de ella cuatro ficheros de
 configuración dos de los cuales veremos en la siguiente parte del taller. El fichero
-``mapproxy.yaml`` configura el servidor de teselas y ``seed.yaml`` las tareas de
+:file:`mapproxy.yaml` configura el servidor de teselas y :file:`seed.yaml` las tareas de
 pregeneración y/o limpieza de teselas. Los otros dos son ejemplos que
 muestran configuraciones de casi todos los parámetros que admite MapProxy;
 no están pensados para ejecutarse (de hecho tienen configuraciones
 incompatibles) están pensados para demostrar opciones de configuración.
 
-Para ejecutar el servidor de pruebas se utilizará de nuevo ``mapproxy-util``
+Para ejecutar el servidor de pruebas se utilizará de nuevo :command:`mapproxy-util`
 esta vez con la tarea de arrancar el servidor de pruebas.::
 
   (venv)$ cd test
@@ -117,7 +127,7 @@ probar con el servicio **TMS** y ver la capa ``osm`` en el sistema de
 coordenadas ``EPSG:3857`` en formato ``png``.
 
 .. figure:: _static/demo-test.png
-	 :width: 50%
+	 :width: 70%
 	 :alt: Interfaz de demostración de MapProxy
 	 :align: center
 
@@ -129,13 +139,13 @@ resolución así como el código mínimo necesario para cargar dicha capa usando
 biblioteca de *webmapping* `OpenLayers <http://www.openlayers.org>`_.
 
 .. note:: Para apagar el servidor de pruebas se debe pulsar la combinación de
-					teclas ``Control+C``.
+					teclas :kbd:`Control+C`.
 
-Si se observa cuidadosamente la salida de ``mapproxy-util``, se pueden tanto las peticiones que mapproxy hace al *source*::
+Si se observa cuidadosamente la salida de :command:`mapproxy-util`, se pueden tanto las peticiones que mapproxy hace al *source*...::
 
     [2014-02-25 22:20:13,844] mapproxy.source.request - INFO - GET http://osm.omniscale.net/proxy/service?layers=osm&width=512&version=1.1.1&bbox=-20037508.3428,-20037508.3428,20037508.3428,20037508.3428&service=WMS&format=image%2Fpng&styles=&srs=EPSG%3A3857&request=GetMap&height=512 200 30.1 326
 
-Así como las peticiones que mapproxy *responde* al cliente::
+...como las peticiones que MapProxy *responde* al cliente::
 
     [info] 127.0.0.1 - - [25/Feb/2014 22:20:13] "GET /tms/1.0.0/osm/webmercator/0/1/1.png HTTP/1.1" 200 -
 
@@ -158,37 +168,36 @@ desde la consola si navegamos hasta esa carpeta y ejecutamos el comando
         │   └── 000
         └── tile_locks
 
-Como vemos ha creado una carpeta para la *cache* de la capa ``osm`` y una
+Como vemos MapProxy ha creado una carpeta para la *cache* de la capa ``osm`` y una
 estructura de carpetas donde se almacenan las imágenes.
 
 .. attention:: ¿Qué tamaño tienen las imágenes? ¿En qué formato están?
    Si tenemos *imagemagick* instalado en nuestro ordenador, podemos ver
-   información sobre las imágenes del caché rápidamente ejecutando::
-
-    identify `find . | grep png`
+   información sobre las imágenes del caché rápidamente ejecutando
+   :command:`identify \`find . | grep png\``
 
 Despliegue
 -----------------------
 
 No es objetivo de este taller describir el proceso de despliegue de MapProxy en
 un servidor de producción. MapProxy es una aplicación escrita en Python que
-sigue el estándar WSGI_ de publicación de aplicaciones web. Este estándar
+sigue el estándar WSGI_ de publicación de aplicaciones *web*. Este estándar
 permite publicar aplicaciones de diferentes formas que dependerán en parte de
 nuestro entorno. En la `documentación de despliegue`_ de MapProxy se detallan las
 más importantes entre las que se podrían destacar:
 
-- Mediante `Apache + mod_WSGI`_: en esta configuración se activa este módulo de
-  Apache y se configura una sección en la configuración del mismo que apunte a
+- Mediante `Apache + mod_WSGI`_: en esta alternativa se activa el módulo WSGI de
+  Apache y se prepara una sección en la configuración que apunte a
   la ubicación de nuestro *server script*. Esta variante funciona tanto en
   Windows como en servidores GNU/Linux.
 
-- Mediante Gunicorn_: en esta configuración se configura un servicio que arranca
+- Mediante Gunicorn_: en este caso se configura un servicio que arranca
   un servidor gunicorn que se podrá a continuación exponer directamente u
-  ofrecer a través de un proxy inverso con otro servidor web como Apache o
-  Nginx. Esta variante solo se puede configurar en máquinas GNU/Linux.
+  ofrecer a través de un proxy inverso con otro servidor web Apache,
+  Nginx o cualquier otro. Esta variante solo se puede configurar en máquinas GNU/Linux.
 
-En ambos casos se utiliza un script de arranque de la aplicación WSGI que se
-puede generar con la herramienta ``mapproxy-util``.
+En ambos casos se utiliza un *script* de arranque de la aplicación WSGI que se
+puede generar con la herramienta :command:`mapproxy-util`.
 
 
 .. _WSGI: http://www.python.org/dev/peps/pep-3333/
