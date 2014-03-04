@@ -2,9 +2,27 @@
 Ejercicio: *seeding* y borrado de *caches*
 ============================================
 
+Te sugerimos que para resolver los ejercicios inicies un proyecto
+nuevo llamado *ej02*::
+
+    $ cd /home/user/mapproxy-workshop/
+    $ mapproxy-util create -t base-config ej02
+    $ cd ej02
+    $ leafpad seed.yaml &
+
+y borres el contenido del archivo usando la combinación de
+teclas :kbd:`Control+A` y después la tecla :kbd:`Supr`.
+
+.. attention:: Como hemos creado un proyecto nuevo el archivo
+   :file:`mapproxy.yaml` será el generado por defecto. Pero para este
+   ejercicio deberás emplear un
+   archivo con la configuración trabajada en el :ref:`ejer01`.
+
+.. note:: Puedes copiar el archivo :file:`mapproxy.yaml` del :ref:`ejer01` o
+   descargarlo de `aquí <https://drive.google.com/file/d/0B5WCUEi1gAf9N2xiQzhBNDBaWm8/edit?usp=sharing>`_.
+
 Sembrar una *cache*
 =====================
-
 
 Llamamos **sembrar** una *cache* a generar toda la *cache* de antemano. Hay un par de
 casos de uso típicos para los que es adecuado sembrar:
@@ -14,7 +32,7 @@ casos de uso típicos para los que es adecuado sembrar:
 * Acelerar el acceso a las capas cacheadas, descargando todo (por ejemplo) la
   noche anterior
 
-En este ejercicio vamos a sembrar los datos de OSM en el área de Gerona, pero
+En este ejercicio vamos a sembrar los datos de OSM en el área de Girona, pero
 sólo para unos cuantos niveles de *zoom*. Una vez hecho el sembrado, veremos cómo
 MapProxy sirve las imágenes sin necesidad de pedirlas al origen.
 
@@ -33,11 +51,10 @@ extensión y niveles de *zoom* vienen referidos por el *grid* del fichero
 :file:`mapproxy.yaml`. Por eso, cuando se siembra una *cache*, se hace
 referencia a los niveles de *zoom* de esta pirámide.
 
-
 Primero queremos sembrar la *cache* de la capa de OpenStreetMap, en la zona de
 Girona. Para hacer esto, escribid un fichero :file:`seed.yaml` que contenga una tarea
 de sembrado que haga referencia a la *cache* apropiada y a una cobertura con el
-*bounding box* de Girona, para niveles de *zoom* del 1 al **7**.
+*bounding box* de Girona, para niveles de *zoom* del **1** al **7**.
 
 Una vez escrito el fichero :file:`seed.yaml`, se puede hacer el sembrado ejecutando
 :command:`mapproxy-seed -f mapproxy.yaml -s seed.yaml -i`. Si estuviera en producción,

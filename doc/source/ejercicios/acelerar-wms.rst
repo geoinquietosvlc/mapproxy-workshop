@@ -1,3 +1,5 @@
+.. _ejer01:
+
 Ejercicio: acelerar el acceso a un WMS
 ----------------------------------------------
 

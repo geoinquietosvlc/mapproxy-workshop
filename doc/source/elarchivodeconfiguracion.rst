@@ -1,3 +1,5 @@
+.. _elarchivodeconfig:
+
 =====================================================
 El archivo de configuración :file:`mappproxy.yaml`
 =====================================================
@@ -22,7 +24,7 @@ Es muy importante respetar la indentación en los archivos, y esta debe
 realizarse con **espacios** y **NUNCA** con tabuladores.
 
 Para seguir el taller crearemos un proyecto llamado *girona01* y editaremos el
-contenido de su archivo mapproxy.yaml::
+contenido de su archivo :file:`mapproxy.yaml`::
 
     $ cd /home/user/mapproxy-workshop/
     $ mapproxy-util create -t base-config girona01

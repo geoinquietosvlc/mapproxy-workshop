@@ -7,9 +7,22 @@ El archivo de configuración :file:`seed.yaml`
 Introducción
 ==============
 
-MapProxy genera teselas bajo demanda y las puede almacenar en una cache, pero para acelerar el proceso, sobretodo de capas que no se prevea que vayan a cambiar demasiado, se puede *sembrar* la caché para tener imágenes pregeneradas.
+MapProxy genera teselas bajo demanda y las puede almacenar en una cache,
+pero para acelerar el proceso, sobretodo de capas que no se prevea que vayan
+a cambiar demasiado, se puede *sembrar* la caché para tener imágenes
+pregeneradas.
 
-El proceso de sembrado o *seeding* se puede lanzar a través de una herramienta de consola llamada **mapproxy-seed** y configurarse fácilmente a través de un script en *YAML* llamado *seed.yaml*
+El proceso de sembrado o *seeding* se puede lanzar a través de una
+herramienta de consola llamada **mapproxy-seed** y configurarse fácilmente a
+través de un script en *YAML* llamado *seed.yaml*
+
+Para seguir el taller seguiremos empleando el proyecto llamado girona01
+creado en la sección :ref:`elarchivodeconfig`. Editaremos el contenido del
+archivo :file:`seed.yaml`::
+
+    $ cd /home/user/mapproxy-workshop/girona01
+    $ leafpad seed.yaml &
+    
 
 :file:`seed.yaml`
 =====================
@@ -28,7 +41,13 @@ El archivo consta de las siguientes secciones
 seeds
 ==========
 
-En la sección se define **qué** debe ser sembrado haciendo referencia tanto a las caches (**caches**), como a las rejillas (**gids**) y por supuesto a los niveles de zoom (**levels**) pudiendo emplearse además claves de zonas (**coverages**).
+En la sección se define **qué** debe ser sembrado haciendo referencia tanto
+a las caches (**caches**), como a las rejillas (**gids**) y por supuesto a
+los niveles de zoom (**levels**) pudiendo emplearse además claves de zonas
+(**coverages**).
+
+Remplaza el contenido de la sección *seeds* por el contenido que hay a
+continuación:
 
 .. code-block:: yaml
 
@@ -46,9 +65,16 @@ Puede encontrarse más información sobre estas y otras claves de la sección en
 cleanups
 ============
 
-La sección permite configurar las purgas de las cachés para evitar que se acumulen imágenes viejas en disco.
+La sección permite configurar las purgas de las cachés para evitar que se
+acumulen imágenes viejas en disco.
 
-Se debe dar un nombre a cada configuración de purga y definir a que cachés van a atacar (**caches**), en qué rejillas (**grids**), a qué niveles (**levels**) o en que coberturas (**coverages**) y por supuesto la resolución temporal de la purgas (**remove_before**).
+Se debe dar un nombre a cada configuración de purga y definir a que cachés
+van a atacar (**caches**), en qué rejillas (**grids**), a qué niveles
+(**levels**) o en que coberturas (**coverages**) y por supuesto la
+resolución temporal de la purgas (**remove_before**).
+
+Remplaza el contenido de la sección *cleanups* por el contenido que hay a
+continuación:
 
 .. code-block:: yaml
 
@@ -74,6 +100,8 @@ coverages
 Por último, el archivo permite la definición de zonas en las que aplicar la tanto el sembrado como las purgas.
 
 Estas zonas pueden definirse tanto como un *bounding box* o como una región definida con *WKT* en un archivo de texto o a través de un polígono que pueda leerse empleando OGR_.
+
+Añade el contenido hay a continuación a la sección *coverages*:
 
 .. code-block:: yaml
 
