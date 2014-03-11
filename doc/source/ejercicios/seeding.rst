@@ -19,7 +19,7 @@ teclas :kbd:`Control+A` y después la tecla :kbd:`Supr`.
    archivo con la configuración trabajada en el :ref:`ejer01`.
 
 .. note:: Puedes copiar el archivo :file:`mapproxy.yaml` del :ref:`ejer01` o
-   descargarlo de `aquí <https://drive.google.com/file/d/0B5WCUEi1gAf9N2xiQzhBNDBaWm8/edit?usp=sharing>`_.
+   descargarlo de `aquí <https://raw.github.com/geoinquietosvlc/mapproxy-workshop/feature/sig_libre_viii/exercises/wms/mapproxy.yaml>`_.
 
 Sembrar una *cache*
 =====================
@@ -51,14 +51,23 @@ extensión y niveles de *zoom* vienen referidos por el *grid* del fichero
 :file:`mapproxy.yaml`. Por eso, cuando se siembra una *cache*, se hace
 referencia a los niveles de *zoom* de esta pirámide.
 
+Primera parte
+-------------
+
 Primero queremos sembrar la *cache* de la capa de OpenStreetMap, en la zona de
 Girona. Para hacer esto, escribid un fichero :file:`seed.yaml` que contenga una tarea
 de sembrado que haga referencia a la *cache* apropiada y a una cobertura con el
 *bounding box* de Girona, para niveles de *zoom* del **1** al **7**.
 
-Una vez escrito el fichero :file:`seed.yaml`, se puede hacer el sembrado ejecutando
-:command:`mapproxy-seed -f mapproxy.yaml -s seed.yaml -i`. Si estuviera en producción,
-cambiaríamos :command:`-i` por :command:`-seed=ALL` para poder automatizarlo.
+Una vez escrito el fichero :file:`seed.yaml`, se puede hacer el sembrado ejecutando::
+
+    $ mapproxy-seed -f mapproxy.yaml -s seed.yaml -i
+
+Si el servicio estuviera en producción, cambiaríamos :command:`-i` por
+:command:`-seed=ALL` para poder automatizarlo.
+
+Segunda parte
+---------------
 
 A continuación puedes crear una tarea de *cache* de la capa de la ortofoto para el
 grid UTM o el ``GLOBAL_MERCATOR``, para niveles de *zoom* del 1 al 7 y el mismo *coverage*.
@@ -76,11 +85,15 @@ De esta forma mantenemos los niveles superiores pero nos deshacemos de aquellas
 teselas que no se visitan desde hace un tiempo.
 
 
-Comprobación
-=====================
+Comprobación de tareas del seed
+==================================
 
 Si ejecutamos el comando :command:`mapproxy-seed` pasando como parámetro la opción
-:command:`--summary` obtendremos el siguiente resumen de las tareas de sembrado y
+:command:`--summary` ::
+
+    $ mapproxy-seed -f mapproxy.yaml -s seed.yaml --summary
+
+obtendremos el siguiente resumen de las tareas de sembrado y
 limpieza de teselas.
 
 ::
@@ -119,3 +132,7 @@ después de haber sembrado la *cache*, en su salida por consola se ven las
 peticiones WMS que está sirviendo, pero **no** las peticiones al *source*
 que debería estar haciendo (porque todas esas peticiones se han hecho
 durante el proceso de sembrado).
+
+Te recordamos que para lanzar un servidor debes usar la orden::
+
+    $ mapproxy-util serve-develop mapproxy.yaml

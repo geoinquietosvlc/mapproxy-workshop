@@ -1,6 +1,23 @@
 Servir un fichero *MBTiles* creado con TileMill
 =====================================================
 
+Te sugerimos que para resolver los ejercicios inicies un proyecto
+nuevo llamado *ej03*::
+
+    $ cd /home/user/mapproxy-workshop/
+    $ mapproxy-util create -t base-config ej03
+    $ cd ej03
+    $ leafpad mapproxy.yaml &
+
+y borres el contenido del archivo usando la combinación de
+teclas :kbd:`Control+A` y después la tecla :kbd:`Supr`.
+
+.. attention:: Para este ejercicio deberás emplear un archivo con la
+   configuración trabajada en el :ref:`ejer01`.
+
+.. note:: Puedes copiar el archivo :file:`mapproxy.yaml` del :ref:`ejer01` o
+   descargarlo de `aquí <https://raw.github.com/geoinquietosvlc/mapproxy-workshop/feature/sig_libre_viii/exercises/wms/mapproxy.yaml>`_.
+
 El objetivo de este ejercicio es montar una capa en MapProxy que sirva una
 *cache* en formato MBTiles_ generada en TileMill_. Es decir, realizamos todo
 el proceso de diseño cartográfico con esta herramienta y después ofrecemos a
@@ -26,7 +43,7 @@ tratarse de un dato vectorial.
 El fichero *MBTiles* proporcionado consiste en una capa de la zona de trabajo
 del taller en la que se muestran carreteras y edificios en tonos de gris y una
 serie de puntos con la ubicación de zonas de aparcamiento. El archivo se puede
-descargar de `aquí <https://docs.google.com/file/d/0B28vBRfHgG9pZ3l3MXlQc09jSjQ/edit?usp=sharing>`_.
+descargar de `aquí <https://github.com/geoinquietosvlc/mapproxy-workshop/blob/feature/sig_libre_viii/exercises/mbtiles/cache_data/girona.mbtiles>`_.
 
 El grid que define el fichero *MBTiles* es igual que el usado por Google Maps
 solo que se han exportado las teselas hasta el nivel 16, es decir::
@@ -36,7 +53,10 @@ solo que se han exportado las teselas hasta el nivel 16, es decir::
       base: GLOBAL_MERCATOR
       num_levels: 17
 
-Este ejercicio por tanto consiste en definir una nueva capa en MapProxy que
+Parte única
+-------------
+
+Este ejercicio consiste en definir una nueva capa en MapProxy que
 apunte a una *cache* que no tiene *sources* (se debe indicar como una lista
 vacía porque el elemento es obligatorio). La cache ha configurar es de tipo
 ``mbtiles`` y hay que indicar la ubicación del fichero que habrá que dejar en la
@@ -49,6 +69,9 @@ carpeta ``cache_data``.
 
 	 TMS de la capa de *parkings* diseñada en TileMill
 
+Te recordamos que para lanzar un servidor debes usar la orden::
+
+    $ mapproxy-util serve-develop mapproxy.yaml
 
 En la siguiente figura se muestran las dos capas accedidas por separado desde un
 cliente GIS de escritorio (QGis) en el que se ha establecido una transparencia
