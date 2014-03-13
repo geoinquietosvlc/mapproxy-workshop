@@ -32,20 +32,21 @@ tratarse de un dato vectorial.
           que se utilizan en diseño *web*. Una de las salidas de TileMill es
           la *cache* en formato MBTiles_.
 
-.. note:: El formato MBTiles_ es en esencia una base de datos SQLite con un
+.. note:: El formato MBTiles_ es en esencia una base de datos SQLite_ con un
           esquema predefinido para almacenar teselas. Tiene la ventaja de ser
-          muy compacto porque en un único fichero se almacenan miles de
+          muy compacto porque en un único fichero se pueden almacenar miles de
           imágenes de una forma estandarizada.
 
 .. _TileMill: http://mapbox.com/tilemill/
 .. _MBTiles: http://mapbox.com/developers/mbtiles/
+.. _SQLite: https://sqlite.org/
 
 El fichero *MBTiles* proporcionado consiste en una capa de la zona de trabajo
 del taller en la que se muestran carreteras y edificios en tonos de gris y una
 serie de puntos con la ubicación de zonas de aparcamiento. El archivo se puede
-descargar de `aquí <https://github.com/geoinquietosvlc/mapproxy-workshop/blob/feature/sig_libre_viii/exercises/mbtiles/cache_data/girona.mbtiles>`_.
+descargar de `aquí <https://docs.google.com/file/d/0B28vBRfHgG9pZ3l3MXlQc09jSjQ/edit?pli=1>`_.
 
-El grid que define el fichero *MBTiles* es igual que el usado por Google Maps
+El *grid* que define el fichero *MBTiles* es igual que el usado por Google Maps
 solo que se han exportado las teselas hasta el nivel 16, es decir::
 
   grids:
@@ -60,9 +61,9 @@ Este ejercicio consiste en definir una nueva capa en MapProxy que
 apunte a una *cache* que no tiene *sources* (se debe indicar como una lista
 vacía porque el elemento es obligatorio). La cache ha configurar es de tipo
 ``mbtiles`` y hay que indicar la ubicación del fichero que habrá que dejar en la
-carpeta ``cache_data``.
+carpeta :file:`cache_data`.
 
-.. figure:: /_static/exercise-mbtiles.png
+.. figure:: ../_static/exercise-mbtiles.png
 	 :width: 50%
 	 :alt: TMS de la capa de *parkings* diseñada en TileMill
 	 :align: center
@@ -78,7 +79,7 @@ cliente GIS de escritorio (QGis) en el que se ha establecido una transparencia
 del 50% a la capa de ortofoto de tal forma que las zonas de aparcamiento se
 visualizan de forma más efectiva.
 
-.. figure:: /_static/exercise-mbtiles2.png
+.. figure:: ../_static/exercise-mbtiles2.png
 	 :width: 50%
 	 :alt:  Acceso a las dos capas desde QGis
 	 :align: center
