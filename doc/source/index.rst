@@ -30,6 +30,10 @@ un espacio de debate activo poniendo de manifiesto la salud y el vigor del
    :width: 500px
 
 
+.. note:: La url del taller es **http://bit.ly/siglibre8-mapproxy** 
+
+
+
 Facilitadores
 ---------------
 
