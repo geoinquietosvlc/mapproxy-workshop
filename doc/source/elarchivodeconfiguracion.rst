@@ -1,7 +1,7 @@
 .. _elarchivodeconfig:
 
 =====================================================
-El archivo de configuración :file:`mappproxy.yaml`
+El archivo de configuración :file:`mapproxy.yaml`
 =====================================================
 
 Introducción
@@ -11,13 +11,13 @@ Las diferentes funcionalidades de MapProxy se configuran a través de archivos
 *YAML*, un estandar de serialización de datos que se emplea en diversos
 lenguajes de programación.
 
-MapProxy se configura a través de los archivos :file:`mappproxy.yaml` y
+MapProxy se configura a través de los archivos :file:`mapproxy.yaml` y
 :file:`seed.yaml`, definiendo para cada archivo una serie de secciones y de
 directivas en las secciones. Estos nombres de fichero son solo una propuesta,
 desde luego se pueden elegir otros que se adecuen a nuestro proyecto.
 
 En la presente sección hablaremos solo del archivo principal de configuración
-:file:`mappproxy.yaml`. Dejaremos el archivo :file:`seed.yaml` para la sección
+:file:`mapproxy.yaml`. Dejaremos el archivo :file:`seed.yaml` para la sección
 :ref:`elarchivodeseeding`.
 
 Es muy importante respetar la indentación en los archivos, y esta debe
