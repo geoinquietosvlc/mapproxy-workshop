@@ -33,6 +33,13 @@ no se han visitado en el taller.
    TileMill por ejemplo. Esto convierte a MapProxy efectivamente en un
    servidor de mapas.
 
+#. Configurar coberturas con orígenes de datos OGR
+
+   Utilizar un *shapefile* o una tabla en PostGIS para delimitar las zonas que afectan
+   tanto a un *source* como a las tareas de *seeding* y *cleanup*. Por ejemplo, puedes
+   integrar varios servicios WMS municipales limitando cada origen a su límite 
+   administrativo.
+
 #. Modo multimapa
 
    Hasta ahora solo hemos visto la generación de un servicio de MapProxy a
