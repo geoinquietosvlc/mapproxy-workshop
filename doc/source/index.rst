@@ -16,23 +16,47 @@ Taller de introducción a MapProxy y configuración básica
 Sobre el taller
 =====================
 
-La principal motivación de las
-`Jornadas de SIG Libre en Girona <http://www.sigte.udg.edu/jornadassiglibre/>`_,
-es arrojar un poco más de luz sobre el tema del *software libre geoespacial*
-y que este evento sea el punto de encuentro para una Comunidad,
-la de usuarios de SIG, en el cual poder
-compartir e intercambiar experiencias y conocimientos, así como establecer
-un espacio de debate activo poniendo de manifiesto la salud y el vigor del
-*software* SIG Libre.
+El objetivo del taller es dar a conocer la aplicación `MapProxy <mapproxy.org>`_; explicando
+cuáles son sus funcionalidades básicas, cuáles son sus potencialidades,
+repasar algunos casos de éxito y finalmente escribir y desplegar una
+configuración básica con las opciones más comunes.
 
+.. figure:: img/logo_mapproxy.png
+   :align: center
+   :alt: Logo de MapProxy
 
-.. image:: img/jornadasSIGLibrebanner2014.png
-   :width: 500px
+   Logo de MapProxy
 
+La primera parte del taller consistirá en realizar una introducción,
+instalación del software, creación de un proyecto de ejemplo y comprobar su
+funcionamiento.
 
-.. note:: La url del taller es **http://bit.ly/siglibre8-mapproxy** 
+En la segunda parte del taller se revisarán algunos casos de uso de la
+aplicación y se realizarán ejercicios que resuelvan algunas de las dudas más
+frecuentes a la hora de empezar a usar este software.
 
+.. note:: La url del taller es **http://bit.ly/cfp2014-mapproxy** 
 
+¿Qué es Geoinquietos Valencia?
+------------------------------
+
+La idea detrás de Geoinquietos Valencia es la misma que la que hay detrás de
+los otros grupos de Geoinquietos (Barcelona, Cantabria, Zona norte y Madrid)
+se trata de compartir la pasión  que tenemos por todo lo geo y mantenernos
+al tanto de noticias y novedades.  ¿Cómo? Pues muy fácil, asistiendo a las
+reuniones que tienen lugar aproximadamente cada mes. 
+
+La estructura de estas reuniones no puede ser más sencilla... nos reunimos
+en un sitio con suficiente espacio y a ser posible conexión a Internet y a
+ser muy posible proyector, para tratar los temas que se hayan propuesto con
+anterioridad usando `una wiki <http://wiki.osgeo.org/wiki/Category:Geoinquietos_Valencia>`_ como espacio
+de colaboración ágil. Todo el mundo está invitado a añadir contenidos para
+enriquecer la página.
+
+Estos temas a tratar también pueden estar aderezados con alguna pequeña
+charla de uno de los asistentes en la que puede explicar en que consiste su
+trabajo, su hobby, algo que le haya resultado curioso, pero todo relacionado
+con el mundillo geo.
 
 Facilitadores
 ---------------
