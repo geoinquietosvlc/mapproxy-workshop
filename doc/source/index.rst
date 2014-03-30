@@ -25,8 +25,6 @@ configuración básica con las opciones más comunes.
    :align: center
    :alt: Logo de MapProxy
 
-   Logo de MapProxy
-
 La primera parte del taller consistirá en realizar una introducción,
 instalación del software, creación de un proyecto de ejemplo y comprobar su
 funcionamiento.
