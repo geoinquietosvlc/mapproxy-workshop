@@ -16,7 +16,7 @@ teclas :kbd:`Control+A` y después la tecla :kbd:`Supr`.
    configuración trabajada en el :ref:`ejer01`.
 
 .. note:: Puedes copiar el archivo :file:`mapproxy.yaml` del :ref:`ejer01` o
-   descargarlo de `aquí <https://raw.github.com/geoinquietosvlc/mapproxy-workshop/feature/sig_libre_viii/exercises/wms/mapproxy.yaml>`_.
+   descargarlo de `aquí <https://raw.github.com/geoinquietosvlc/mapproxy-workshop/feature/cfp_2014/exercises/wms/mapproxy.yaml>`_.
 
 El objetivo de este ejercicio es montar una capa en MapProxy que sirva una
 *cache* en formato MBTiles_ generada en TileMill_. Es decir, realizamos todo
@@ -42,17 +42,16 @@ tratarse de un dato vectorial.
 .. _SQLite: https://sqlite.org/
 
 El fichero *MBTiles* proporcionado consiste en una capa de la zona de trabajo
-del taller en la que se muestran carreteras y edificios en tonos de gris y una
-serie de puntos con la ubicación de zonas de aparcamiento. El archivo se puede
-descargar de `aquí <https://docs.google.com/file/d/0B28vBRfHgG9pZ3l3MXlQc09jSjQ/edit?pli=1>`_.
+del taller en la que se muestran calles y edificios en tonos de gris. El archivo se puede
+descargar de `aquí <https://drive.google.com/file/d/0B28vBRfHgG9pcTRJQUl5QlBVcFU/edit?usp=sharing>`_.
 
 El *grid* que define el fichero *MBTiles* es igual que el usado por Google Maps
-solo que se han exportado las teselas hasta el nivel 16, es decir::
+solo que se han exportado las teselas hasta el nivel 15, es decir::
 
   grids:
-    parkings:
+    valencia:
       base: GLOBAL_MERCATOR
-      num_levels: 17
+      num_levels: 16
 
 Parte única
 -------------
@@ -75,13 +74,12 @@ Te recordamos que para lanzar un servidor debes usar la orden::
     $ mapproxy-util serve-develop mapproxy.yaml
 
 En la siguiente figura se muestran las dos capas accedidas por separado desde un
-cliente GIS de escritorio (QGis) en el que se ha establecido una transparencia
-del 50% a la capa de ortofoto de tal forma que las zonas de aparcamiento se
-visualizan de forma más efectiva.
+cliente GIS de escritorio (QGIS) en el que se ha establecido una transparencia
+del 35% a la capa de las calles.
 
 .. figure:: ../_static/exercise-mbtiles2.png
 	 :width: 50%
-	 :alt:  Acceso a las dos capas desde QGis
+	 :alt:  Acceso a las dos capas desde QGIS
 	 :align: center
 
 	 Acceso a las dos capas mediante WMS
