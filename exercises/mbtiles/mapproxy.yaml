@@ -4,7 +4,7 @@ services:
   tms:
   wmts:
   wms:
-    srs: ['EPSG:3857', 'EPSG:900913', 'EPSG:4258', 'EPSG:4326', 'EPSG:25831']
+    srs: ['EPSG:3857', 'EPSG:900913', 'EPSG:4258', 'EPSG:4326', 'EPSG:25830']
     image_formats: ['image/jpeg', 'image/png']
     md:
       # metadata used in capabilities documents
@@ -22,49 +22,41 @@ services:
 
 layers:
   - name: compuesta
-    title: Parkings sobre ortofoto
+    title: osm sobre ortofoto
     layers:
-      - name: orto5m-icc
-        title: Ortofoto 1:5000 del ICC de la zona de Girona
-        sources: [icc_cache]
-      - name: parkings
-        title: Parkings de Girona 
-        sources: [parkings_cache]
+      - name: orto-icv
+        title: Ortofoto 1:5000 del ICV de la zona de Valencia
+        sources: [icv_cache]
+      - name: osm-valencia
+        title: Valencia en tonos de gris
+        sources: [vlc_gris_cache]
 
 caches:
-  icc_cache:
+  icv_cache:
     grids: [GLOBAL_MERCATOR]
-    sources: [icc_wms]
-  parkings_cache:
-    grids: [parkings]
+    sources: [icv_wms]
+  vlc_gris_cache:
+    grids: [valencia]
     sources: []
     cache:
       type: mbtiles
-      filename: girona.mbtiles
+      filename: valencia.mbtiles
 
 sources:
-  icc_wms:
+  icv_wms:
     type: wms
     req:
-      url: http://shagrat.icc.es/lizardtech/iserv/ows
-      layers: orto5m
-    supported_srs: ['EPSG:4326', 'EPSG:25831']
+      url: http://terramapas.icv.gva.es/odcv05_etrs89h30_2010
+      layers: odcv05_etrs89h30_2010
+    supported_srs: ['EPSG:4326', 'EPSG:25830']
     coverage:
-      bbox: [2.67,41.88,2.97,42.07]
-      bbox_srs: 'EPSG:4326'
-
-  osm_tiles_girona:
-    type: tile
-    url: http://tile.openstreetmap.org/%(tms_path)s.%(format)s
-    grid: osm
-    coverage:
-      bbox: [2.67,41.88,2.97,42.07]
+      bbox: [-0.45, 39.26, -0.26, 39.56]
       bbox_srs: 'EPSG:4326'
 
 grids:
-  parkings:
+  valencia:
     base: GLOBAL_MERCATOR
-    num_levels: 17
+    num_levels: 16
 
 globals:
   cache:
