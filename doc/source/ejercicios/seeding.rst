@@ -5,7 +5,7 @@ Ejercicio: *seeding* y borrado de *caches*
 Te sugerimos que para resolver los ejercicios inicies un proyecto
 nuevo llamado *ej02*::
 
-    $ cd /home/user/mapproxy-workshop/
+    $ cd /home/user/mapproxy-workshop/confs/
     $ mapproxy-util create -t base-config ej02
     $ cd ej02
     $ leafpad seed.yaml &
@@ -98,33 +98,33 @@ limpieza de teselas.
 
 ::
 
-	========== Seeding tasks ==========
-	  girona_osm:
-	    Seeding cache 'osm_cache' with grid 'GLOBAL_MERCATOR' in EPSG:900913
-	    Limited to: 2.67000, 41.88000, 2.97000, 42.07000 (EPSG:4326)
-	    Levels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-	    Overwriting: no tiles
-	  girona_icc:
-	    Seeding cache 'icc_cache' with grid 'utm_girona' in EPSG:25831
-	    Limited to: 2.66902, 41.87953, 2.97009, 42.07047 (EPSG:4326)
-	    Levels: [1, 2, 3, 4, 5, 6, 7]
-	    Overwriting: no tiles
-	========== Cleanup tasks ==========
-	  girona:
-	    Cleaning up cache 'icc_cache' with grid 'GLOBAL_MERCATOR' in EPSG:900913
-	    Limited to: 2.67000, 41.88000, 2.97000, 42.07000 (EPSG:4326)
-	    Levels: [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
-	    Remove: tiles older than 2013-01-25 15:20:58
-	  girona:
-	    Cleaning up cache 'icc_cache' with grid 'GLOBAL_GEODETIC' in EPSG:4326
-	    Limited to: 2.67000, 41.88000, 2.97000, 42.07000 (EPSG:4326)
-	    Levels: [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
-	    Remove: tiles older than 2013-01-25 15:20:58
-	  girona:
-	    Cleaning up cache 'icc_cache' with grid 'utm_girona' in EPSG:25831
-	    Limited to: 2.66902, 41.87953, 2.97009, 42.07047 (EPSG:4326)
-	    Levels: [8, 9, 10, 11]
-	    Remove: tiles older than 2013-01-25 15:20:58
+    ========== Seeding tasks ==========
+      valencia_icv:
+        Seeding cache 'icv_cache' with grid 'utm_valencia' in EPSG:25830
+        Limited to: -0.46090, 39.25569, -0.24824, 39.56432 (EPSG:4326)
+        Levels: [1, 2, 3, 4, 5, 6, 7]
+        Overwriting: no tiles
+      valencia_osm:
+        Seeding cache 'osm_cache' with grid 'GLOBAL_MERCATOR' in EPSG:900913
+        Limited to: -0.45000, 39.26000, -0.26000, 39.56000 (EPSG:4326)
+        Levels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        Overwriting: no tiles
+    ========== Cleanup tasks ==========
+      valencia_icv:
+        Cleaning up cache 'icv_cache' with grid 'GLOBAL_MERCATOR' in EPSG:900913
+        Limited to: -0.45000, 39.26000, -0.26000, 39.56000 (EPSG:4326)
+        Levels: [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+        Remove: tiles older than 2014-03-22 17:55:40
+      valencia_icv:
+        Cleaning up cache 'icv_cache' with grid 'GLOBAL_GEODETIC' in EPSG:4326
+        Limited to: -0.45000, 39.26000, -0.26000, 39.56000 (EPSG:4326)
+        Levels: [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+        Remove: tiles older than 2014-03-22 17:55:40
+      valencia_icv:
+        Cleaning up cache 'icv_cache' with grid 'utm_valencia' in EPSG:25830
+        Limited to: -0.46090, 39.25569, -0.24824, 39.56432 (EPSG:4326)
+        Levels: [8, 9, 10, 11]
+        Remove: tiles older than 2014-03-22 17:55:40
 
 
 Por otra parte, si ejecutamos el servidor de pruebas (comando :command:`mapproxy-util`)

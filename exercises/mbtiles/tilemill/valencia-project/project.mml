@@ -1,0 +1,248 @@
+{
+  "bounds": [
+    -0.4286,
+    39.4185,
+    -0.2973,
+    39.5048
+  ],
+  "center": [
+    -0.3775,
+    39.476,
+    13
+  ],
+  "format": "png",
+  "interactivity": false,
+  "minzoom": 11,
+  "maxzoom": 17,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss",
+    "roads.mss",
+    "labels.mss"
+  ],
+  "Layer": [
+    {
+      "id": "countries",
+      "name": "countries",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "geometry": "polygon",
+      "Datasource": {
+        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-admin-0-countries.zip",
+        "type": "shape",
+        "id": "countries",
+        "project": "base_espanya",
+        "srs": null
+      },
+      "class": "",
+      "srs-name": "900913"
+    },
+    {
+      "Datasource": {
+        "type": "postgis",
+        "table": "osm_landusages",
+        "extent": "",
+        "key_field": "",
+        "geometry_field": "",
+        "host": "localhost",
+        "port": "5432",
+        "user": "user",
+        "password": "user",
+        "dbname": "valencia"
+      },
+      "id": "landuse",
+      "class": "land",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "name": "landuse"
+    },
+    {
+      "geometry": "linestring",
+      "Datasource": {
+        "type": "postgis",
+        "table": "osm_waterways",
+        "extent": "",
+        "key_field": "",
+        "geometry_field": "",
+        "host": "localhost",
+        "port": "5432",
+        "user": "user",
+        "password": "user",
+        "dbname": "valencia"
+      },
+      "id": "water_ways",
+      "class": "water",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "name": "water_ways"
+    },
+    {
+      "Datasource": {
+        "type": "postgis",
+        "table": "osm_waterareas",
+        "extent": "",
+        "key_field": "",
+        "geometry_field": "",
+        "host": "localhost",
+        "port": "5432",
+        "user": "user",
+        "password": "user",
+        "dbname": "valencia"
+      },
+      "id": "water_areas",
+      "class": "water",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "name": "water_areas"
+    },
+    {
+      "geometry": "linestring",
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from osm_railways where type = 'rail') as s4",
+        "extent": "",
+        "key_field": "",
+        "geometry_field": "",
+        "host": "localhost",
+        "port": "5432",
+        "user": "user",
+        "password": "user",
+        "dbname": "valencia"
+      },
+      "id": "railway_mask",
+      "class": "rail mask",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "name": "railway_mask"
+    },
+    {
+      "geometry": "linestring",
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from osm_railways where type = 'rail') as s3",
+        "extent": "",
+        "key_field": "",
+        "geometry_field": "",
+        "host": "localhost",
+        "port": "5432",
+        "user": "user",
+        "password": "user",
+        "dbname": "valencia"
+      },
+      "id": "railway",
+      "class": "rail line",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "name": "railway"
+    },
+    {
+      "Datasource": {
+        "type": "postgis",
+        "table": "osm_roads",
+        "extent": "",
+        "key_field": "",
+        "geometry_field": "",
+        "host": "localhost",
+        "port": "5432",
+        "user": "user",
+        "password": "user",
+        "dbname": "valencia",
+        "id": "roads_g0",
+        "project": "base_espanya",
+        "srs": null
+      },
+      "id": "roads_outline",
+      "class": "road line",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "name": "roads_outline"
+    },
+    {
+      "Datasource": {
+        "type": "postgis",
+        "table": "osm_roads",
+        "extent": "",
+        "key_field": "",
+        "geometry_field": "",
+        "host": "localhost",
+        "port": "5432",
+        "user": "user",
+        "password": "user",
+        "dbname": "valencia",
+        "id": "roads",
+        "project": "base_espanya",
+        "srs": null
+      },
+      "id": "roads",
+      "class": "road fill",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "name": "roads"
+    },
+    {
+      "Datasource": {
+        "type": "postgis",
+        "table": "osm_buildings",
+        "extent": "",
+        "key_field": "",
+        "geometry_field": "",
+        "host": "localhost",
+        "port": "5432",
+        "user": "user",
+        "password": "user",
+        "dbname": "valencia",
+        "id": "buildings",
+        "project": "base_espanya",
+        "srs": null
+      },
+      "id": "buildings",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "name": "buildings"
+    },
+    {
+      "geometry": "point",
+      "Datasource": {
+        "type": "postgis",
+        "table": "osm_places",
+        "extent": "",
+        "key_field": "",
+        "geometry_field": "",
+        "host": "localhost",
+        "port": "5432",
+        "user": "user",
+        "password": "user",
+        "dbname": "valencia"
+      },
+      "id": "names_location",
+      "class": "label-location",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "name": "names_location"
+    },
+    {
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from osm_roads where name is not null) as s2",
+        "extent": "",
+        "key_field": "",
+        "geometry_field": "",
+        "host": "localhost",
+        "port": "5432",
+        "user": "user",
+        "password": "user",
+        "dbname": "valencia"
+      },
+      "id": "names_road",
+      "class": "label-road",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "name": "names_road"
+    }
+  ],
+  "scale": 1,
+  "metatile": 2,
+  "name": "Valencia",
+  "description": "Proyecto de cartografía base en tonos de gris",
+  "attribution": ""
+}

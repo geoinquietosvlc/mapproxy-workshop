@@ -23,12 +23,12 @@ En la presente sección hablaremos solo del archivo principal de configuración
 Es muy importante respetar la indentación en los archivos, y esta debe
 realizarse con **espacios** y **NUNCA** con tabuladores.
 
-Para seguir el taller crearemos un proyecto llamado *girona01* y editaremos el
+Para seguir el taller crearemos un proyecto llamado *valencia01* y editaremos el
 contenido de su archivo :file:`mapproxy.yaml`::
 
-    $ cd /home/user/mapproxy-workshop/
-    $ mapproxy-util create -t base-config girona01
-    $ cd girona01
+    $ cd /home/user/mapproxy-workshop/confs/
+    $ mapproxy-util create -t base-config valencia01
+    $ cd valencia01
     $ leafpad mapproxy.yaml &
 
 .. note:: :command:`leafpad` es un editor de texto disponible en *OSGeo Live*.
@@ -105,7 +105,7 @@ continuación:
 
     services:
       wms:
-        srs: ['EPSG:3857', 'EPSG:900913', 'EPSG:4258', 'EPSG:4326', 'EPSG:25831']
+        srs: ['EPSG:3857', 'EPSG:900913', 'EPSG:4258', 'EPSG:4326', 'EPSG:25830']
         image_formats: ['image/jpeg', 'image/png']
         md:
           # metadata used in capabilities documents
@@ -141,9 +141,9 @@ continuación:
 .. code-block:: yaml
 
     layers:
-      - name: orto5m-icc-proxy
-        title: Ortofoto 1:5000 del ICC de la zona de Girona
-        sources: [icc_cache]
+      - name: orto-icv
+        title: Ortofoto 1:5000 del ICV de la zona de Valencia
+        sources: [icv_cache]
 
 
 Puede encontrarse más información sobre las capas así como otros parámetros configurables de las mismas en `la sección de layers de la página de configuración de la documentación de MapProxy`_
@@ -163,9 +163,9 @@ Remplaza el contenido de la sección *caches* por el contenido que hay a continu
 .. code-block:: yaml
 
     caches:
-      icc_cache:
-        grids: [utm_girona]
-        sources: [icc_wms]
+      icv_cache:
+        grids: [utm_valencia]
+        sources: [icv_wms]
 
 Puede encontrarse más información sobre las caches así como otros parámetros configurables de los mismos en `la sección de caches de la página de configuración de la documentación de MapProxy`_
 
@@ -179,14 +179,14 @@ Remplaza el contenido de la sección *sources* por el contenido que hay a contin
 .. code-block:: yaml
 
     sources:
-      icc_wms:
+      icv_wms:
         type: wms
         req:
-          url: http://shagrat.icc.es/lizardtech/iserv/ows
-          layers: orto5m
-        supported_srs: ['EPSG:4326', 'EPSG:25831']
+          url: http://terramapas.icv.gva.es/odcv05_etrs89h30_2010
+          layers: odcv05_etrs89h30_2010
+        supported_srs: ['EPSG:4326', 'EPSG:25830']
         coverage:
-          bbox: [2.67,41.88,2.97,42.07]
+          bbox: [-0.45, 39.26, -0.26, 39.56]
           bbox_srs: 'EPSG:4326'
 
 Puede encontrarse una descripción más completa de las claves de cada tipo en `la página de sources de la documentación de MapProxy`_
@@ -208,13 +208,13 @@ Remplaza el contenido de la sección *grids* por el contenido que hay a continua
 
 .. code-block:: yaml
 
-    grids:
-      utm_girona:
-        srs: 'EPSG:25831'
-        bbox: [2.67,41.88,2.97,42.07]
-        bbox_srs: 'EPSG:4326'
-        min_res: 2000
-        max_res: .5
+   grids:
+     utm_valencia:
+       srs: 'EPSG:25830'
+       bbox: [-0.45, 39.26, -0.26, 39.56]
+       bbox_srs: 'EPSG:4326'
+       min_res: 2000
+       max_res: .5
 
 .. attention:: La resolución se mide en unidades del SRS por pixel. Como estamos
    usando EPSG:25831, que es una proyección UTM, podemos suponer que la

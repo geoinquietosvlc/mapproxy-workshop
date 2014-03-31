@@ -16,13 +16,13 @@ El proceso de sembrado o *seeding* se puede lanzar a través de una
 herramienta de consola llamada **mapproxy-seed** y configurarse fácilmente a
 través de un script en *YAML* llamado *seed.yaml*
 
-Para seguir el taller seguiremos empleando el proyecto llamado girona01
+Para seguir el taller seguiremos empleando el proyecto llamado valencia01
 creado en la sección :ref:`elarchivodeconfig`. Editaremos el contenido del
 archivo :file:`seed.yaml`::
 
-    $ cd /home/user/mapproxy-workshop/girona01
+    $ cd /home/user/mapproxy-workshop/valencia01
     $ leafpad seed.yaml &
-    
+
 
 :file:`seed.yaml`
 =====================
@@ -52,13 +52,13 @@ continuación:
 .. code-block:: yaml
 
     seeds:
-      girona_icc:
-        caches: [icc_cache]
-        grids: [utm_girona]
+      valencia_icv:
+        caches: [icv_cache]
+        grids: [utm_valencia]
         levels:
           from: 1
           to: 7
-        coverages: [girona]
+        coverages: [valencia]
 
 Puede encontrarse más información sobre estas y otras claves de la sección en `la correspondiente sección sobre seeds de la página de seeding de la documentación de MapProxy`_
 
@@ -79,12 +79,12 @@ continuación:
 .. code-block:: yaml
 
     cleanups:
-      girona:
-        caches: [icc_cache]
-        grids: [GLOBAL_MERCATOR, GLOBAL_GEODETIC, utm_girona]
+      valencia_icv:
+        caches: [icv_cache]
+        grids: [GLOBAL_MERCATOR, GLOBAL_GEODETIC, utm_valencia]
         levels:
           from: 8
-        coverages: [girona]
+        coverages: [valencia]
         remove_before:
           weeks: 1
           days: 2
@@ -106,8 +106,8 @@ Añade el contenido hay a continuación a la sección *coverages*:
 .. code-block:: yaml
 
     coverages:
-      girona:
-        bbox: [2.67,41.88,2.97,42.07]
+      valencia:
+        bbox: [-0.45, 39.26, -0.26, 39.56]
         bbox_srs: "EPSG:4326"
 
 

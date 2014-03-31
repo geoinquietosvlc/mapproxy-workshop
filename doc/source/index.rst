@@ -33,7 +33,7 @@ En la segunda parte del taller se revisarán algunos casos de uso de la
 aplicación y se realizarán ejercicios que resuelvan algunas de las dudas más
 frecuentes a la hora de empezar a usar este software.
 
-.. note:: La url del taller es **http://bit.ly/cfp2014-mapproxy** 
+.. note:: La url del taller es `http://bit.ly/cfp2014-mapproxy <http://bit.ly/cfp2014-mapproxy>`_
 
 ¿Qué es Geoinquietos Valencia?
 ------------------------------
@@ -42,7 +42,7 @@ La idea detrás de Geoinquietos Valencia es la misma que la que hay detrás de
 los otros grupos de Geoinquietos (Barcelona, Cantabria, Zona norte y Madrid)
 se trata de compartir la pasión  que tenemos por todo lo geo y mantenernos
 al tanto de noticias y novedades.  ¿Cómo? Pues muy fácil, asistiendo a las
-reuniones que tienen lugar aproximadamente cada mes. 
+reuniones que tienen lugar aproximadamente cada mes.
 
 La estructura de estas reuniones no puede ser más sencilla... nos reunimos
 en un sitio con suficiente espacio y a ser posible conexión a Internet y a

@@ -4,7 +4,7 @@ Servir un fichero *MBTiles* creado con TileMill
 Te sugerimos que para resolver los ejercicios inicies un proyecto
 nuevo llamado *ej03*::
 
-    $ cd /home/user/mapproxy-workshop/
+    $ cd /home/user/mapproxy-workshop/confs/
     $ mapproxy-util create -t base-config ej03
     $ cd ej03
     $ leafpad mapproxy.yaml &

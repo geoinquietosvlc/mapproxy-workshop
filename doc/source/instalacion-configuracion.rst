@@ -40,7 +40,7 @@ anterior, si no te has cambiado estarás en la carpeta raíz del usuario. En el 
 *OSGeo Live* esta carpeta es :file:`/home/user`. Encontrándonos en esta carpeta ejecutar::
 
   $ mkdir mapproxy-workshop
-  $ wget -O mapproxy-workshop/mapproxy-workshop.pdf "http://bit.ly/mapproxy-workshop-gviii"
+  $ wget -O mapproxy-workshop/mapproxy-workshop.pdf "http://bit.ly/mapproxy-workshop-cfp2014"
 
 ..  $ git clone https://github.com/geoinquietosvlc/mapproxy-workshop.git
 
