@@ -1,26 +1,26 @@
 seeds:
-  girona_osm:
+  valencia_osm:
     caches: [osm_cache]
     grids: [GLOBAL_MERCATOR]
     levels:
       from: 1
       to: 10
-    coverages: [girona]
-  girona_icc:
-    caches: [icc_cache]
-    grids: [utm_girona]
+    coverages: [valencia]
+  valencia_icv:
+    caches: [icv_cache]
+    grids: [utm_valencia]
     levels:
       from: 1
       to: 7
-    coverages: [girona]
+    coverages: [valencia]
 
 cleanups:
-  girona:
-    caches: [icc_cache]
-    grids: [GLOBAL_MERCATOR, GLOBAL_GEODETIC, utm_girona]
+  valencia_icv:
+    caches: [icv_cache]
+    grids: [GLOBAL_MERCATOR, GLOBAL_GEODETIC, utm_valencia]
     levels:
       from: 8
-    coverages: [girona]
+    coverages: [valencia]
     remove_before:
       weeks: 1
       days: 2
@@ -28,6 +28,6 @@ cleanups:
       minutes: 4
 
 coverages:
-  girona:
-    bbox: [2.67,41.88,2.97,42.07]
+  valencia:
+    bbox: [-0.45, 39.26, -0.26, 39.56]
     bbox_srs: "EPSG:4326"
