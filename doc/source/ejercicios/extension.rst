@@ -6,6 +6,12 @@ repasados en el taller y van mas allá en las funcionalidades de MapProxy que
 no se han visitado en el taller.
 
 
+#. Modo multimapa
+
+   Hasta ahora solo hemos visto la generación de un servicio de MapProxy a
+   partir de un único archivo de configuración. MapProxy admite también un modo
+   *multimapa* en el que es posible publicar un número indeterminado de archivos de configuración.
+
 #. Ofrecer WMTS/TMS de servicios propios
 
    Esto es, a partir de un servicio WMS de nuestra organización (o de los
@@ -20,11 +26,23 @@ no se han visitado en el taller.
    usuarios de una forma diferente, integrando varios orígenes de datos en un
    único servicio, creando grupos de capas por diferentes temáticas, etc.
 
+   Puedes probar a arrancar un par de servidores de mapas del OSGeo Live y crear
+   un servicio en MapProxy que ofrezca capas de ambos en un mismo WMS.
+
 #. Redirigir el ``getLegendgraphic`` y el ``getFeatureInfo``
 
    El protocolo WMS dispone de dos peticiones adicionales a la petición de mapa
    ``getMap``. MapProxy permite dar acceso a estas dos peticiones e incluso
    transformarlos usando hojas de estilo XSL.
+
+   Más información en la `documentación del orígen WMS <http://mapproxy.org/docs/latest/sources.html#wms-opts>`_.
+
+#. Configurar coberturas con orígenes de datos OGR
+
+   Utilizar un *shapefile* o una tabla en PostGIS para delimitar las zonas que afectan
+   tanto a un *source* como a las tareas de *seeding* y *cleanup*. Por ejemplo, puedes
+   integrar varios servicios WMS municipales limitando cada origen a su límite
+   administrativo.
 
 #. Publicar servicios diseñados con TileMill (XML de Mapnik)
 
@@ -32,16 +50,3 @@ no se han visitado en el taller.
    archivo de configuración de Mapnik, que puede haber sido generado con
    TileMill por ejemplo. Esto convierte a MapProxy efectivamente en un
    servidor de mapas.
-
-#. Configurar coberturas con orígenes de datos OGR
-
-   Utilizar un *shapefile* o una tabla en PostGIS para delimitar las zonas que afectan
-   tanto a un *source* como a las tareas de *seeding* y *cleanup*. Por ejemplo, puedes
-   integrar varios servicios WMS municipales limitando cada origen a su límite 
-   administrativo.
-
-#. Modo multimapa
-
-   Hasta ahora solo hemos visto la generación de un servicio de MapProxy a
-   partir de un único archivo de configuración. MapProxy admite también un modo
-   *multimapa* en el que es posible publicar un número indeterminado de archivos de configuración.
