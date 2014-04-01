@@ -5,13 +5,6 @@ A continuación se proponen algunos ejercicios que afianzan los contenidos
 repasados en el taller y van mas allá en las funcionalidades de MapProxy que
 no se han visitado en el taller.
 
-
-#. Modo multimapa
-
-   Hasta ahora solo hemos visto la generación de un servicio de MapProxy a
-   partir de un único archivo de configuración. MapProxy admite también un modo
-   *multimapa* en el que es posible publicar un número indeterminado de archivos de configuración.
-
 #. Ofrecer WMTS/TMS de servicios propios
 
    Esto es, a partir de un servicio WMS de nuestra organización (o de los

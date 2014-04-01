@@ -1,3 +1,6 @@
+.. _ejer03:
+
+=====================================================
 Servir un fichero *MBTiles* creado con TileMill
 =====================================================
 
@@ -63,11 +66,11 @@ vacía porque el elemento es obligatorio). La cache ha configurar es de tipo
 carpeta :file:`cache_data`.
 
 .. figure:: ../_static/exercise-mbtiles.png
-	 :width: 50%
-	 :alt: TMS de la capa de *parkings* diseñada en TileMill
-	 :align: center
+   :width: 50%
+   :alt: TMS de la capa de *parkings* diseñada en TileMill
+   :align: center
 
-	 TMS de la capa de *parkings* diseñada en TileMill
+   TMS de la capa de *parkings* diseñada en TileMill
 
 Te recordamos que para lanzar un servidor debes usar la orden::
 
@@ -78,8 +81,8 @@ cliente GIS de escritorio (QGIS) en el que se ha establecido una transparencia
 del 35% a la capa de las calles.
 
 .. figure:: ../_static/exercise-mbtiles2.png
-	 :width: 50%
-	 :alt:  Acceso a las dos capas desde QGIS
-	 :align: center
+   :width: 50%
+   :alt:  Acceso a las dos capas desde QGIS
+   :align: center
 
-	 Acceso a las dos capas mediante WMS
+   Acceso a las dos capas mediante WMS
