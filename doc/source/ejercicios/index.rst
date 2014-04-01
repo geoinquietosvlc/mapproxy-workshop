@@ -1,3 +1,5 @@
+.. _ejercicios:
+
 =============================
 Ejercicios
 =============================
@@ -8,4 +10,5 @@ Ejercicios
    acelerar-wms.rst
    seeding.rst
    mbtiles.rst
+   multiapp.rst
    extension.rst

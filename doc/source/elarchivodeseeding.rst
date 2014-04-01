@@ -42,7 +42,7 @@ seeds
 ==========
 
 En la sección se define **qué** debe ser sembrado haciendo referencia tanto
-a las caches (**caches**), como a las rejillas (**gids**) y por supuesto a
+a las caches (**caches**), como a las rejillas (**grids**) y por supuesto a
 los niveles de zoom (**levels**) pudiendo emplearse además claves de zonas
 (**coverages**).
 

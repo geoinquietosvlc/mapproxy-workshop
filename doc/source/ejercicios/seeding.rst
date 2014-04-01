@@ -1,5 +1,7 @@
+.. _ejer02:
+
 ============================================
-Ejercicio: *seeding* y borrado de *caches*
+*Seeding* y borrado de *caches*
 ============================================
 
 Te sugerimos que para resolver los ejercicios inicies un proyecto

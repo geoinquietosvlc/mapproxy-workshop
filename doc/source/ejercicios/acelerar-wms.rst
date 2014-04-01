@@ -1,7 +1,8 @@
 .. _ejer01:
 
-Ejercicio: acelerar el acceso a un WMS
-----------------------------------------------
+===============================
+Acelerar el acceso a un WMS
+===============================
 
 Te sugerimos que para resolver los ejercicios inicies un proyecto
 nuevo llamado *ej01*::
@@ -15,7 +16,7 @@ y borres el contenido del archivo usando la combinación de
 teclas :kbd:`Control+A` y después la tecla :kbd:`Supr`.
 
 Primera parte: acceder a un servicio de ortoimágenes
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+------------------------------------------------------
 
 Supongamos que trabajamos en una oficina con un acceso restringido a Internet.
 Vamos a crear un *proxy* a la capa ``odcv05_etrs89h30_2010`` ofrecida por el Instituto Cartográfico Valenciano en su servicio de ortofotos
@@ -42,7 +43,7 @@ y para pararlo se debe pulsar la combinación de teclas :kbd:`Control+C`.
    Servicio de demostración del proxy de nuestro WMS
 
 Segunda parte: cachear un servicio de ortoimágenes
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------------------
 
 En nuestra oficina hay un cierto número de técnicos que necesitan acceder a
 diario a un servicio de ortoimágenes por WMS. Sería muy conveniente que
@@ -96,7 +97,7 @@ de forma que MapProxy no tenga que reproyectar las teselas todo el tiempo.
           configuramos MapProxy para que nuestra *cache* se almacene en este formato?
 
 Tercera parte: cachear las teselas de OpenStreetMap
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+------------------------------------------------------
 
 `OpenStreetMap <http://osm.org>`_ es la mayor base de datos de información
 geográfica generada por la comunidad. Este proyecto proporciona teselas que
