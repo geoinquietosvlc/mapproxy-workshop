@@ -22,14 +22,6 @@ no se han visitado en el taller.
    Puedes probar a arrancar un par de servidores de mapas del OSGeo Live y crear
    un servicio en MapProxy que ofrezca capas de ambos en un mismo WMS.
 
-#. Redirigir el ``getLegendgraphic`` y el ``getFeatureInfo``
-
-   El protocolo WMS dispone de dos peticiones adicionales a la petición de mapa
-   ``getMap``. MapProxy permite dar acceso a estas dos peticiones e incluso
-   transformarlos usando hojas de estilo XSL.
-
-   Más información en la `documentación del orígen WMS <http://mapproxy.org/docs/latest/sources.html#wms-opts>`_.
-
 #. Configurar coberturas con orígenes de datos OGR
 
    Utilizar un *shapefile* o una tabla en PostGIS para delimitar las zonas que afectan

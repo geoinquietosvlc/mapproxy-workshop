@@ -36,7 +36,7 @@ tal como se puede ver en la figura :ref:`fig01`.
 
 .. _fig01:
 .. figure:: ../_static/exercise-multiapp1.png
-   :width: 50%
+   :width: 70%
    :alt: Carpeta del ejercicio del MBTiles
    :align: center
 
@@ -52,7 +52,7 @@ quedar como en la figura :ref:`fig02`.
 
 .. _fig02:
 .. figure:: ../_static/exercise-multiapp2.png
-     :width: 50%
+     :width: 70%
      :alt: Carpeta con dos ficheros de configuración
      :align: center
 
