@@ -1,0 +1,35 @@
+services:
+  demo:
+  kml:
+  tms:
+  wmts:
+  wms:
+    srs: ['EPSG:3857', 'EPSG:900913', 'EPSG:4258', 'EPSG:4326', 'EPSG:25830']
+    image_formats: ['image/jpeg', 'image/png']
+    md:
+      # metadata used in capabilities documents
+      title: Taller MapProxy
+      abstract: Ejercicio de uso de OGR para definir coberturas
+
+layers:
+  - name: orto-icv-cache
+    title: Ortofoto 1:5000 del ICV de la zona de Valencia (cacheado)
+    sources: [icv_cache]
+
+caches:
+  icv_cache:
+    grids: [GLOBAL_MERCATOR, GLOBAL_GEODETIC]
+    sources: [icv_wms]
+    format: image/jpeg
+
+sources:
+  icv_wms:
+    type: wms
+    supported_formats: [image/jpeg]
+    req:
+      url: http://terramapas.icv.gva.es/odcv05_etrs89h30_2010
+      layers: odcv05_etrs89h30_2010
+    supported_srs: ['EPSG:4326', 'EPSG:25830']
+    coverage:
+      datasource: 'areas-interes.geojson'
+      srs: 'EPSG:4326'
