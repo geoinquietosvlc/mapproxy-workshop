@@ -141,7 +141,7 @@ biblioteca de *webmapping* `OpenLayers <http://www.openlayers.org>`_.
 .. note:: Para apagar el servidor de pruebas se debe pulsar la combinación de
 					teclas :kbd:`Control+C`.
 
-Si se observa cuidadosamente la salida de :command:`mapproxy-util`, se pueden tanto las peticiones que mapproxy hace al *source*...::
+Si se observa cuidadosamente la salida de :command:`mapproxy-util`, se pueden ver tanto las peticiones que mapproxy hace al *source*...::
 
     [2014-02-25 22:20:13,844] mapproxy.source.request - INFO - GET http://osm.omniscale.net/proxy/service?layers=osm&width=512&version=1.1.1&bbox=-20037508.3428,-20037508.3428,20037508.3428,20037508.3428&service=WMS&format=image%2Fpng&styles=&srs=EPSG%3A3857&request=GetMap&height=512 200 30.1 326
 
