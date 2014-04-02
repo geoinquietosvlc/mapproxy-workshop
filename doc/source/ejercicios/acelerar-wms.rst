@@ -35,6 +35,10 @@ Te recordamos que para lanzar un servidor debes usar la orden::
 
 y para pararlo se debe pulsar la combinación de teclas :kbd:`Control+C`.
 
+.. note:: Como estamos accediendo a un servicio de ortoimágenes, es interesante
+          que configures MapProxy para que se descargue las imágenes en formato
+          ``image/jpeg`` para que la descarga sea más rápida y eficiente.
+
 .. figure:: ../_static/exercise-wms3.png
    :width: 40%
    :alt: Servicio de demostración del proxy de nuestro WMS

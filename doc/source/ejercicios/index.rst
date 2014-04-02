@@ -12,4 +12,5 @@ Ejercicios
    mbtiles.rst
    multiapp.rst
    redirect.rst
+   ogr.rst
    extension.rst

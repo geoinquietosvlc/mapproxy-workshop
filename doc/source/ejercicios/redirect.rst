@@ -5,7 +5,12 @@ Redirigir el ``getLegendgraphic`` y el ``getFeatureInfo``
 =============================================================
 
 El protocolo WMS dispone de dos peticiones adicionales a la petición de mapa
-``getMap``, ``getLegendgraphic`` obtieneuna leyenda de la capa y con ``getFeatureInfo`` se pude solicitar información alfanumérica asociada a una posición en el mapa. MapProxy permite dar acceso a estas dos peticiones haciendo algo así como una *«redirección»*. Es decir estas peticiones no se guardan en ninguna *cache* y es necesario tener conexión con el servidor origen ya que en este caso MapProxy hace únicamente el papel de un *proxy*.
+``getMap``, ``getLegendgraphic`` obtieneuna leyenda de la capa y con
+``getFeatureInfo`` se pude solicitar información alfanumérica asociada a una
+posición en el mapa. MapProxy permite dar acceso a estas dos peticiones
+haciendo algo así como una *«redirección»*. Es decir estas peticiones no se
+guardan en ninguna *cache* y es necesario tener conexión con el servidor
+origen ya que en este caso MapProxy hace únicamente el papel de un *proxy*.
 
 Preparar la configuración de una capa WMS
 --------------------------------------------
@@ -16,7 +21,9 @@ Para hacer este ejercicio crearemos una nueva carpeta y copiaremos el fichero re
     $ mkdir ej05
     $ cp /home/user/mapproxy-workshop/confs/ej01/mapproxy.yaml ej05
 
-A continuación borraremos la información relativa a la capa *proxy* y la capa de OSM dejando únicamente la capa de cache de la Ortofoto, quedando algo parecido a esto:
+A continuación borraremos la información relativa a la capa *proxy* y la capa
+de OSM dejando únicamente la capa de *cache* de la ortofoto, quedando algo
+parecido a esto:
 
 .. code-block:: yaml
 
@@ -45,6 +52,7 @@ A continuación borraremos la información relativa a la capa *proxy* y la capa 
     sources:
       icv_wms:
         type: wms
+        supported_formats: ['image/jpeg']
         req:
           url: http://terramapas.icv.gva.es/odcv05_etrs89h30_2010
           layers: odcv05_etrs89h30_2010
@@ -53,7 +61,8 @@ A continuación borraremos la información relativa a la capa *proxy* y la capa 
           bbox: [-0.45, 39.26, -0.26, 39.56]
           bbox_srs: 'EPSG:4326'
 
-Añadiremos a la lista de *sources* una capa WMS que apunta al servidor de centros educativos del ICV:
+Añadiremos a la lista de *sources* una capa WMS que apunta al servidor de
+centros educativos del ICV:
 
 .. code-block:: yaml
 
@@ -78,7 +87,12 @@ para poder redireccionar las peticiones de leyenda e información por punto
 debemos añadir una nueva sección al *source* llamada ``wms_opts`` y en ella
 establecer las variables ``legendgraphic`` y ``featureinfo`` a verdadero.
 
-Una vez establecidas podemos cargar las capas por separado en un SIG de escritorio como QGIS y comprobar que se carga la leyenda automáticamente (junto al nombre de la capa) y que podemos realizar la operación de información por punto, que en esta capa devuelve un documento HTML con completa información sobre el colegio seleccionado, tal y como se muestra en la figura :ref:`fig01`.
+Una vez establecidas podemos cargar las capas por separado en un SIG de
+escritorio como QGIS y comprobar que se carga la leyenda automáticamente
+(junto al nombre de la capa) y que podemos realizar la operación de
+información por punto, que en esta capa devuelve un documento HTML con
+completa información sobre el colegio seleccionado, tal y como se muestra en
+la figura :ref:`fig01`.
 
 
 .. _fig01:

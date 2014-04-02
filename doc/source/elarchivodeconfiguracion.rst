@@ -181,6 +181,7 @@ Remplaza el contenido de la sección *sources* por el contenido que hay a contin
     sources:
       icv_wms:
         type: wms
+        supported_formats: ['image/jpeg']
         req:
           url: http://terramapas.icv.gva.es/odcv05_etrs89h30_2010
           layers: odcv05_etrs89h30_2010
