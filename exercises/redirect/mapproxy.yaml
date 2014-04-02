@@ -7,9 +7,8 @@ services:
     srs: ['EPSG:3857', 'EPSG:900913', 'EPSG:4258', 'EPSG:4326', 'EPSG:25830']
     image_formats: ['image/jpeg', 'image/png']
     md:
-      # metadata used in capabilities documents
       title: Taller MapProxy
-      abstract: Ejercicio de aceleración de WMS y OSM con MapProxy
+      abstract: Ejercicio de redireccion de leyenda e info por punto
 
 layers:
   - name: orto-icv-cache

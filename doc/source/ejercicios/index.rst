@@ -11,4 +11,5 @@ Ejercicios
    seeding.rst
    mbtiles.rst
    multiapp.rst
+   redirect.rst
    extension.rst
