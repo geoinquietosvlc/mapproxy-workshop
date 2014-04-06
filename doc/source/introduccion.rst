@@ -55,7 +55,7 @@ Algunos casos de uso:
 ============================
 
 Se trata de un software de servidor que se configura a través de ficheros
-escritos en `YAML`_ y *scripts* Python. Una vez correctamente configurado se
+escritos en `YAML`_ y *scripts* Python. Una vez configurado correctamente se
 *despliega* el servicio mediante alguno de los procedimientos para aplicaciones
 *Python* que siguen el estándar WSGI_.
 

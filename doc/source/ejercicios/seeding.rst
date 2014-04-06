@@ -21,7 +21,7 @@ teclas :kbd:`Control+A` y después la tecla :kbd:`Supr`.
    archivo con la configuración trabajada en el :ref:`ejer01`.
 
 .. note:: Puedes copiar el archivo :file:`mapproxy.yaml` del :ref:`ejer01` o
-   descargarlo de `aquí <https://raw.github.com/geoinquietosvlc/mapproxy-workshop/feature/sig_libre_viii/exercises/wms/mapproxy.yaml>`_.
+   descargarlo de `aquí <https://raw.github.com/geoinquietosvlc/mapproxy-workshop/feature/cfp_2014/exercises/wms/mapproxy.yaml>`_.
 
 Sembrar una *cache*
 =====================
@@ -34,7 +34,7 @@ casos de uso típicos para los que es adecuado sembrar:
 * Acelerar el acceso a las capas cacheadas, descargando todo (por ejemplo) la
   noche anterior
 
-En este ejercicio vamos a sembrar los datos de OSM en el área de Girona, pero
+En este ejercicio vamos a sembrar los datos de OSM en el área de Valencia, pero
 sólo para unos cuantos niveles de *zoom*. Una vez hecho el sembrado, veremos cómo
 MapProxy sirve las imágenes sin necesidad de pedirlas al origen.
 
@@ -57,9 +57,9 @@ Primera parte
 -------------
 
 Primero queremos sembrar la *cache* de la capa de OpenStreetMap, en la zona de
-Girona. Para hacer esto, escribid un fichero :file:`seed.yaml` que contenga una tarea
+Valencia. Para hacer esto, escribid un fichero :file:`seed.yaml` que contenga una tarea
 de sembrado que haga referencia a la *cache* apropiada y a una cobertura con el
-*bounding box* de Girona, para niveles de *zoom* del **1** al **7**.
+*bounding box* de Valencia, para niveles de *zoom* del **1** al **7**.
 
 Una vez escrito el fichero :file:`seed.yaml`, se puede hacer el sembrado ejecutando::
 
