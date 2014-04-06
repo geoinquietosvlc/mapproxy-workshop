@@ -92,4 +92,4 @@ escritos en `YAML`_ y *scripts* Python. Una vez correctamente configurado se
 .. _YAML: http://http://www.yaml.org
 .. _WSGI: http://www.python.org/dev/peps/pep-3333/
 .. _TileMill: https://www.mapbox.com/tilemill
-.. _HOT: hot.openstreetmap.org/
+.. _HOT: http://hot.openstreetmap.org/
