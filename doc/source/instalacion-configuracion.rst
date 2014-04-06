@@ -149,6 +149,10 @@ Si se observa cuidadosamente la salida de :command:`mapproxy-util`, se pueden ta
 
     [info] 127.0.0.1 - - [25/Feb/2014 22:20:13] "GET /tms/1.0.0/osm/webmercator/0/1/1.png HTTP/1.1" 200 -
 
+
+Inspeccionar una *cache*
+--------------------------
+
 Finalmente, podemos comprobar cómo el servidor ha guardado algunas teselas al
 visitar la demostración en la carpeta ``confs/test/cache_data`` que podemos ver
 desde la consola si navegamos hasta esa carpeta y ejecutamos el comando
@@ -165,10 +169,25 @@ desde la consola si navegamos hasta esa carpeta y ejecutamos el comando
 Como vemos MapProxy ha creado una carpeta para la *cache* de la capa ``osm`` y una
 estructura de carpetas donde se almacenan las imágenes.
 
-.. attention:: ¿Qué tamaño tienen las imágenes? ¿En qué formato están?
-   Si tenemos *imagemagick* instalado en nuestro ordenador, podemos ver
-   información sobre las imágenes del caché rápidamente ejecutando
-   :command:`identify \`find . | grep png\``
+¿Qué tamaño tienen las imágenes? ¿En qué formato están?
+Si tenemos *imagemagick* instalado en nuestro ordenador, podemos ver
+información sobre las imágenes del caché rápidamente ejecutando :command:`find`::
+
+  find . -name *.png -exec identify {} \;
+
+Podemos averiguar el tamaño en disco ocupado por un directorio y todos sus subdirectorios
+ejecutando el comando :command:`du`::
+
+  du -hs
+
+Igualmente podemos averiguar el número de ficheros contenidos usando la combinación de
+dos comandos :command:`find` y :command:`wc`::
+
+  find . -type f | wc -l
+
+
+
+
 
 Despliegue
 -----------------------
